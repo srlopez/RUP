@@ -1,6 +1,5 @@
 # ADOO
 
-- [- Preguntas](#ullipreguntasliul)
 - [Análisis y Diseño de sistemas orientado a Objetos](#análisis-y-diseño-de-sistemas-orientado-a-objetos)
 - [El proceso visto hasta ahora](#el-proceso-visto-hasta-ahora)
 - [Preguntas](#preguntas)
@@ -13,7 +12,7 @@
 Al observar la forma en que el análisis y el diseño orientado a objetos se enseña y se practica en algunos lugares, se puede concluir que muchos profesores simplemente adoptan un lenguaje de programación orientado a objetos, o utilizan fragmentos de un proceso de desarrollo basado en objetos. 
 No es suficiente organizar la arquitectura del sistema en niveles y módulos si el código implementado en su interior es desorganizado. Algunos programadores organizan el sistema adecuadamente en clases y paquetes, pero todavía escriben “código espagueti” dentro de los métodos de estas clases y paquetes. Además, otros desarrolladores todavía utilizan la descomposición funcional de arriba hacia abajo dentro de los métodos, lo que no es apropiado cuando se utiliza programación orientada a objetos (la descomposición de arriba hacia abajo es adecuada si se utiliza programación estructurada en su lugar). Para construir código realmente orientado a objetos, los desarrolladores deben aprender las técnicas de delegación y asignación de responsabilidades, que pueden conducir a código reutilizable y de bajo acoplamiento. El uso de diagramas no necesariamente mejorará la calidad del software, aunque puede ayudar. 
 
-Sin lugar a dudas utilizaremos el [UP y UML](../010-INTRO/120-UP.md).
+Sin lugar a dudas utilizaremos el [UP y UML](060UP.md).
 
 
 ## El proceso visto hasta ahora
