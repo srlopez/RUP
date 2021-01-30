@@ -179,15 +179,14 @@ Durante el modelado de negocios hay dos tipos de actores que deben ser abordados
     • Actores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso, pero que no forman parte de la empresa objetivo. Es decir, no están bajo el control de la empresa. Los actores del negocio pueden ser, por ejemplo, clientes, editores, auditores externos, empresas asociadas o incluso otros sistemas automáticos con los que la empresa objetivo pueda interactuar.
     • Trabajadores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso y que forman parte de la empresa objetivo. Pueden ser los empleados de la empresa, sus departamentos o incluso los sistemas de software existentes pertenecientes a la empresa. Gráficamente, se distinguen de los actores del negocio por el uso del estereotipo <<worker>>.
 
-TODO: FFFF Figura worker
-Figura 2.3 Actor del negocio (izda) y  trabajador del negocio (derecha).
+![Actor del negocio (izda) y  trabajador del negocio (derecha)](img/F2.3.jpg)  
+`Figura 2.3 Actor del negocio (izda) y  trabajador del negocio (derecha).`
 
 Esta diferenciación es importante porque los actores del negocio normalmente no pueden automatizarse, es decir, no serán sustituidos por sistemas computacionales. Sin embargo, los roles de los trabajadores de negocios pueden ser reemplazados por sistemas automáticos (English, 2007).
 Los agentes y trabajadores del negocio están vinculados a los casos de uso empresarial en los que participan mediante líneas de conexión sin flechas, como se muestra en la figura 2.4.
 
-TODO: FFFF
-
-Figura 2.4 Enlaces entre actores del negocio y casos de uso del negocio.
+![Enlaces entre actores del negocio y casos de uso del negocio](img/F2.4.jpg)
+`Figura 2.4 Enlaces entre actores del negocio y casos de uso del negocio.`
 
 ### 2.3.2 Oportunidades de automatización
 Una librería que pretende vender a través de Internet, como Livir, debe producir un modelo de negocio que identifique sus principales casos de uso empresarial, actores externos (clientes, editores, etc.), y trabajadores del negocio (gerentes, empleados, etc.). Si suponemos que la librería ya existe y no tiene ninguna o muy incipiente automatización, entonces los trabajadores del negocio serán, básicamente, personas reales. Estos trabajadores pueden ser candidatos a la automatización si hay interés en aumentar el nivel de automatización de la empresa. Por ejemplo, el papel del empleado que actualmente ayuda a los clientes a encontrar libros en las estanterías puede ser sustituido en la librería virtual por un sistema de guía automática. Sin embargo, la función de cliente no puede sustituirse por un sistema automático.
@@ -195,21 +194,19 @@ Por lo general, no se reemplazan todas las funciones de los trabajadores de una 
 Normalmente, durante un proceso de automatización dentro de una empresa, es útil sustituir al menos los roles de los trabajadores que corresponden a meros apoderados, es decir, los que simplemente realizan acciones en lugar de un actor externo. En el caso de la librería, el papel del vendedor sólo es necesario para ayudar al cliente en la tienda física. Pero, cuando las ventas se trasladan al espacio virtual, ese papel ya no es necesario, porque el cliente puede encontrar fácilmente su camino en el sitio web.
 La asociación de los casos de uso del negocio con los principales objetivos comerciales de la empresa ayuda a identificar el alcance del sistema, es decir, las actividades que se automatizarán eficazmente en el proyecto que se está iniciando. En el ejemplo de la Figura 2.5, todos los casos de uso son candidatos para la automatización con diferentes niveles de prioridad. Sin embargo, la empresa sólo podría estar interesada en implementar ventas y adquisiciones en este punto, dejando el marketing y los servicios al cliente en manos de un segundo proyecto.
 
-TODO: FFFF
-
-Figura 2.5 Caso de uso de Negocio: candidatos para automatizarse.
+![](img/F2.4.jpg)
+`Figura 2.5 Caso de uso de Negocio: candidatos para automatizarse.`
 
 El límite del sistema se puede utilizar para identificar el conjunto de casos de uso empresarial y de trabajadores del negocio que se automatizarán, como se muestra en la Figura 2.6.
 
-TODO: FFFF
-
-Figura 2.6 El límite del sistema que se utiliza para indicar el alcance del proyecto.
+![](img/F2.6.jpg)
+`Figura 2.6 El límite del sistema que se utiliza para indicar el alcance del proyecto.`
 
 El diagrama del caso de uso de negocio muestra que el proyecto de automatización incluirá los procesos de compra y venta de libros y el papel del empleado. También muestra que los procesos de publicidad y fidelización de clientes están fuera del alcance del proyecto.
 Sin embargo, un análisis más profundo puede mostrar que el trabajador que compra libros para la librería no puede ser fácilmente automatizado. Podría darse el caso de que todos los libros pudieran ser comprados automáticamente mediante un proceso automático que analizara las ventas y existencias potenciales, sin la participación de ningún ser humano. Pero, si ese no es el caso, lo mejor es considerar que el empleado realmente tiene dos roles diferentes: ayudar al cliente (ese rol será automatizado) y comprar libros para la librería (ese rol no será automatizado). La figura 2.7 muestra una evolución del diagrama en la que parte de la responsabilidad del empleado se reasigna a un trabajador llamado "Gestor de adquisiciones". No existe una equivalencia uno a uno entre un rol y una persona: una persona puede desempeñar muchos roles y un rol puede ser desempeñado por muchas personas diferentes.
 
-TODO: FFFF
-Figura 2.7 Un actor se divide porque sólo parte de su rol se automatiza.
+![](img/F2.7.jpg)
+`Figura 2.7 Un actor se divide porque sólo parte de su rol se automatiza.`
 
 Si el proyecto, por el contrario, consiste en una serie de subproyectos o etapas, en los que se automatizarían diferentes partes de la empresa, esto también podría indicarse mediante el uso de diferentes límites de sistema en el diagrama: uno para cada subproyecto o etapa.
 El siguiente paso que conduce al análisis de requisitos es el estudio detallado de los casos de uso empresarial que se automatizarán. El nivel de precisión y detalle depende de los objetivos del proyecto, como ya se discutió al principio de este capítulo.
@@ -227,10 +224,8 @@ Los flujos o dependencias entre actividades se representan con flechas. Los fluj
 Un camino es una secuencia de actividades enlazadas por flujos.
 En el ejemplo de Livir, el diagrama de actividades puede ser usado como una manera de visualizar los detalles de casos de uso de negocios como Vender libros. El modelo presentado en la Figura 2.8 muestra un primer acercamiento al proceso.
 
-TODO: FFFF 
-
-Figura 2.8 Primer enfoque para modelar el diagrama de actividad 
-del proceso de negocio “Vender Libros”.
+![](img/F2.8.jpg)
+`Figura 2.8 Primer enfoque para modelar el diagrama de actividad del proceso de negocio “Vender Libros”.`
 
 El diagrama que está comenzando a ser diseñado en la Figura 2.8 no pretende ser un modelo para el sistema que se va a construir y no debe ser pensado de esa manera. Su utilidad es ayudar al equipo a entender qué actividades y actores están involucrados en los principales procesos de negocio de la empresa, para que, utilizando esa información, puedan realizar un análisis de requerimientos más efectivo más adelante. La trayectoria lógica del diagrama debe ser comprensible y validada por los empresarios.
 Posteriormente, el analista examinará en detalle cada una de las actividades que se deben realizar. Si una actividad determinada pertenece al ámbito del sistema que se va a implementar, entonces debe ser un objetivo para un análisis más detallado.
@@ -241,16 +236,14 @@ Dos nodos de flujo de control son comunes en el diagrama de actividad: los nodos
     • Los nodos de paralelismo (nodos de horquilla y de unión) están representados por barras . Los flujos que salen de un nodo de horquilla se realizan en paralelo.
 El diagrama de la Figura 2.8 es todavía una representación muy bruta del proceso real de venta de libros. Sólo para ilustrar una posible evolución de ese diagrama, examinemos la situación cuando algunos de los libros encargados no están disponibles en stock. Sería necesario pedirlos a uno de los editores y añadirlos al pedido del cliente después de su llegada. La Figura 2.9 muestra esta situación al indicar que si algunos libros no están disponibles, entonces tienen que ser ordenados a los editores, y el pedido se envía sólo después de su llegada.
 
-TODO: FFFF
-
-Figura 2.9 Ejemplo de decisión de control de flujo.
+![](img/F2.9.jpg)
+`Figura 2.9 Ejemplo de decisión de control de flujo.`
 
 Justo debajo de la actividad Confirmar pago hay un nodo de rama representado por el diamante. Como se ha indicado anteriormente, el nodo de decisión sólo permite seguir un flujo de salida. Las condiciones de guardia ([some books missing] y [all books in stock])  son mutuamente excluyentes. Desde el nodo de rama, el flujo sigue uno de los caminos alternativos hasta llegar al nodo de fusión que se representa justo encima de la actividad Enviar libros.
 Más tarde, el analista podría descubrir que el modelo todavía no es satisfactorio. Por ejemplo, incluso si algunos libros no están en stock, el pedido puede ser enviado en dos o más entregas. De este modo, se podrían realizar dos recorridos en paralelo: enviar los libros disponibles en stock y, si fuera necesario, encargar los demás libros y enviarlos más tarde, como se muestra en la Figura 2.10.
 
-TODO: FFFF
-
-Figura 2.10 Ejemplo de los siguientes flujos..
+![](img/F2.10.jpg)
+`Figura 2.10 Ejemplo de los siguientes flujos.`
 
 La barra debajo de Confirmar actividad de pago en la Figura 2.10 representa un nodo de horquilla porque inicia dos rutas paralelas, y la otra barra representa un nodo de unión porque sincroniza las rutas paralelas en una sola ruta.
 La trayectoria única después de un nodo de unión sólo se puede seguir si se han seguido todas las trayectorias que llegan al nodo de unión. Se puede ver que en ese modelo, si todos los libros están en stock, sólo uno de los caminos paralelos tendrá actividades que realizar, porque el otro camino va inmediatamente a los nodos de fusión y unión.
@@ -258,8 +251,8 @@ Los nodos de bifurcación, unión, decisión y fusión, así como los nodos inic
 Otro nodo que puede ser útil a veces es el nodo final de flujo, , que termina una trayectoria (paralela o no) que se está realizando. La diferencia entre éste y el nodo final de la operación es que en el caso del nodo final de la operación, todos los movimientos del diagrama de actividades terminan cuando un solo movimiento lo alcanza, mientras que en el caso del nodo final de proceso sólo se termina un movimiento (entre otros movimientos paralelos), pero la operación continúa.
 En el caso de uso de la Figura 2.7, sólo un actor (cliente) y un trabajador (empleado) participan en el caso de uso Vender libros. Sin embargo, después de detallar las actividades relacionadas con ese caso de uso, como se hace en la Figura 2.10, se descubrió que son necesarios dos actores más: el editor y el operador de la tarjeta de crédito. Además, el Editor es un actor que tiene que estar vinculado al caso de uso Comprar libros. Por lo tanto, dependiendo del nivel de detalle deseado en este punto del proyecto, el diagrama del caso de uso de negocio puede actualizarse para reflejar esos descubrimientos, como se muestra en la Figura 2.11.
 
-Figura 2.11 Business use case diagram actualizado 
-con información descubierta con el diagrama de actividad.
+![](img/F2.11.jpg)
+`Figura 2.11 Business use case diagram actualizado con información descubierta con el diagrama de actividad.`
 
 Otras opciones para detallar un caso de uso de negocio son el diagrama de secuencia UML y el diagrama de comunicación. Sin embargo, estos diagramas se utilizan para representar los mensajes que se envían a los elementos. No siempre es natural encontrar nombres para etiquetar esos mensajes en el caso de un proceso empresarial, y los nombres sin sentido como "buscar datos" y "verificar resultado" se eligen finalmente. Por lo tanto, el diagrama de actividad es una opción más natural para describir lo que sucede en el mundo real, dentro de una organización de personas. Sin embargo, como se verá en la Sección 5.8, los diagramas de secuencia son muy útiles para detallar los casos de uso del sistema, porque los casos de uso del sistema generalmente consisten en una secuencia de flujos de información que se intercambian entre los actores y un sistema.
 
@@ -293,25 +286,23 @@ En el primer caso, la librería debe ponerse en contacto con el cliente y, depen
 El ciclo de vida del libro termina sólo cuando el transportista confirma la entrega.   
 Todos esos cambios de estado (transiciones) están representados en la Figura 2.12.
 
-TODO: FFFF
-
-Figura 2.12 Primer modelo de máquina para el ciclo de vida del libro.
+![](img/F2.12.jpg)
+`Figura 2.12 Primer modelo de máquina para el ciclo de vida del libro.`
 
 Sin embargo, el modelo presentado en la Figura 2.12 todavía está incompleto en cuanto a las posibles transiciones de un libro.  
 Por ejemplo, un libro entregado puede devolver dañado y, en ese caso, no puede ser reenviado o vendido de nuevo. 
 Esto puede representarse añadiendo una condición de guarda a la transición que va del estado Retornado al estado Enviado,   
 y añadiendo un nuevo estado final en el que el libro se desecha, como se muestra en la Figura 2.13.
 
-
-Figura 2.13 Diagrama de Máquina de Estado con requisitos de guarda.
+![](img/F2.13.jpg)
+`Figura 2.13 Diagrama de Máquina de Estado con requisitos de guarda.`
 
 Estas condiciones de guardia siguen siendo muy informales. Pero esto es aceptable durante el modelado de negocios, porque el objetivo es entender la organización del negocio, no especificar un sistema computacional. Sin embargo, se pueden obtener condiciones de protección precisas si se utiliza un lenguaje formal como el OCL (Object Constraint Language). Más adelante en este libro se introducen expresiones que utilizan OCL.
 En algunas situaciones es posible que un evento cause una transición desde más de un estado. En el ejemplo de la Figura 2.13, se puede imaginar que un libro no sólo puede ser dañado cuando está en estado Devuelto, sino también cuando está en otros estados como En almacén y Vendido. Entonces, debería existir una transición a Desechado desde esos tres estados. Sin embargo, para abreviar este conjunto de transiciones se puede utilizar un superestado.
 En la Figura 2.14, cualquier transición desde el superestado En almacén representa un conjunto de transiciones desde cada uno de sus subestados. En el caso de una transición al superestado, es necesario establecer cuál de los substados sería el inicial. Para ello es necesario incluir un estado inicial dentro del superestado o, en su lugar, hacer que la transición vaya directamente al subestado.
 
-TODO :FFFF
-
-Figura 2.14 Diagrama de Maquina de Estado con superestado.
+![](img/F2.14.jpg)
+`Figura 2.14 Diagrama de Maquina de Estado con superestado.`
 
 Un objeto puede estar simultáneamente en más de un estado. 
 Por ejemplo, un libro puede ser una oferta especial o no desde el momento en que se encarga a la editorial hasta el momento en que llega a su estado final 
@@ -320,9 +311,8 @@ Así, un libro puede ser modelado con dos estados concurrentes: el primero deter
 y el segundo determina su estado con respecto a las ventas.  
 En el diagrama de la Figura 2.15 los estados concurrentes se representan dentro de regiones ortogonales en un superestado.
 
-TODO: FFFF
-
-Figura 2.15 Diagrama de maquina de estado con regiones.
+![](img/F2.15.jpg)
+`Figura 2.15 Diagrama de maquina de estado con regiones.`
 
 Cuando una transición deja el superestado, entonces todos los subestados concurrentes también quedan. 
 Por ejemplo, cuando ocurre una confirmación de llegada o un evento de descarte en el diagrama de la Figura 2.15, 
