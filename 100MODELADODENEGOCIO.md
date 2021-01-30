@@ -122,9 +122,15 @@ El documento se divide en dos partes:
 Version 1.0
 
 Visión:
-Se iniciar un nuevo negocio: una librería virtual. El sistema a desarrollar debe manejar los procesos de adquisición y venta de la compañía. El acceso para los clientes y el personal de gestión debe ser realizado a través de un sitio Web.
-Cuando un libro sea ordenado, si está disponible en stock es enviado inmediatamente, en caso contrario, el libro es solicitado al editor, y el plazo estimado  se comunica al cliente. El sistema  calculará impuestos y gastos de envío, al mismo tiempo que aplicará descuentos cuando sea pertinente.
-El sistema permitirá al administrador generar informes sobre bestselers y sobre los clientes más rentables, al mismo tiempo que sugerirá libros para comprar basados en anteriores intereses del cliente.
+Se iniciar un nuevo negocio: una librería virtual. 
+El sistema a desarrollar debe manejar los procesos de adquisición y venta de la compañía. 
+El acceso para los clientes y el personal de gestión debe ser realizado a través de un sitio Web.
+Cuando un libro sea ordenado, si está disponible en stock es enviado inmediatamente, en caso contrario, 
+el libro es solicitado al editor, y el plazo estimado  se comunica al cliente. El sistema calculará 
+impuestos y gastos de envío, al mismo tiempo que aplicará descuentos cuando sea pertinente.
+
+El sistema permitirá al administrador generar informes sobre bestselers y sobre los clientes más rentables,
+al mismo tiempo que sugerirá libros para comprar basados en anteriores intereses del cliente.
 
 Restriciones:
         a) Los clientes podrán abonar sólo mediante Tarjeta de Cŕedito
@@ -133,24 +139,29 @@ Restriciones:
 ```
 `Figura 2.1 Vista general del proyecto Livir`
 
-Simplificaciones:
 
 La descripción y modelización de un proyecto real deberían ser mucho más extensa. Además, los modelos presentados a veces serían parciales en un momento dado y se perfeccionarían o modificarían posteriormente.  
 Se puede ver que la vista general es una vista no estructurada del proyecto. Incluye información del negocio para los gerentes e información operativa para los desarrolladores. A veces, incluso se pueden describir detalles sobre la tecnología que se va a utilizar, si es necesario. Lo que el analista debe tener en cuenta es que la visión general describe las principales preocupaciones de los clientes y que esas preocupaciones se estructurarán mejor más adelante durante el análisis y el diseño.  
 Un buen analista debe actuar como un psicoanalista, es decir, debe evitar hablar en lugar del cliente. El analista debe ayudar al cliente a hablar; cuando el cliente comienza a reportar algunas de sus necesidades, el analista debe escuchar, en lugar de presentar soluciones rápidas y prefabricadas (y a menudo erróneas).  
-El analista debe motivar al cliente a detallar sus requerimientos y debe cuestionarlos para que el cliente pueda decidir cuáles son urgentes y cuáles no.  
+>El analista debe motivar al cliente a detallar sus requerimientos y debe cuestionarlos para que el cliente pueda decidir cuáles son urgentes y cuáles no.  
 
 ## 2.3 Casos de uso del Negocio
-Jacobson (1994) presenta en detalle técnicas para el modelado de negocios con casos de uso de negocios. En general, en los modelos de negocio, existen entidades (personas o empresas) externas a la organización objetivo, llamadas actores del negocio, y entidades internas, llamadas trabajadores del negocio. Los casos de uso empresarial son los procesos realizados por aquellos actores y trabajadores que les permiten alcanzar algunos de los objetivos del negocio de la empresa.
-El modelo de caso de uso de negocio considera a toda la compañía como un sistema, y los actores pueden ser personas, compañías u otras organizaciones que crean negocios o mantienen relaciones con el negocio (Kroll y Kruchten, 2003).
-Lo primero que el equipo debe tener en cuenta al hacer el modelado de negocios es que lo que se está modelando no es un sistema de software. Una compañía está siendo modelada. La información de negocios se busca de los gerentes y especialistas de alto nivel, porque ellos conocen y a veces crean las metas de la compañía.
-La cantidad de casos de uso de negocio que se identificarán puede ser relativamente pequeña. Un proceso de negocio es un proceso de largo alcance que realiza la empresa; piense, por ejemplo, en la venta de productos, la realización de marketing, la prestación de servicios, la resolución de problemas de los clientes, etc. Cada proceso de este tipo debe contribuir a un objetivo empresarial. No es el momento de detallar tales procesos. Por ejemplo, la venta de productos puede incluir muchos subprocesos como el registro de clientes, la oferta de productos, el envío de productos, la aplicación de descuentos, etc. Pero esos procesos (que más tarde posiblemente serán identificados como casos de uso del sistema si van a ser automatizados) están involucrados en el proceso de más alto nivel, que es Vender libros.
 
-Aunque UML todavía no tiene un símbolo estándar para diferenciar los casos de uso empresarial de los casos de uso del sistema (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
+Jacobson (1994) presenta en detalle técnicas para el modelado de negocios con casos de uso de negocios. 
+En general, en los modelos de negocio, existen entidades (personas o empresas) externas a la organización objetivo, 
+llamadas actores del negocio, y entidades internas, llamadas trabajadores del negocio. 
+Los casos de uso empresarial son los procesos realizados por aquellos actores y trabajadores que les permiten alcanzar algunos de los objetivos del negocio de la empresa.
+El modelo de caso de uso de negocio considera a toda la compañía como un sistema, y los actores pueden ser personas, compañías u otras organizaciones que crean negocios o mantienen relaciones con el negocio (Kroll y Kruchten, 2003).
+Lo primero que el equipo debe tener en cuenta al hacer el modelado de negocios es que lo que se está modelando no es un sistema de software. 
+Una compañía está siendo modelada. La información de negocios se busca de los gerentes y especialistas de alto nivel, porque ellos conocen y a veces crean las metas de la compañía.
+La cantidad de casos de uso de negocio que se identificarán puede ser relativamente pequeña. 
+Un proceso de negocio es un proceso de largo alcance que realiza la empresa; piense, por ejemplo, en la venta de productos, la realización de marketing, la prestación de servicios, la resolución de problemas de los clientes, etc. Cada proceso de este tipo debe contribuir a un objetivo empresarial. No es el momento de detallar tales procesos. Por ejemplo, la venta de productos puede incluir muchos subprocesos como el registro de clientes, la oferta de productos, el envío de productos, la aplicación de descuentos, etc. Pero esos procesos (que más tarde posiblemente serán identificados como casos de uso del sistema si van a ser automatizados) están involucrados en el proceso de más alto nivel, que es Vender libros.
+
+Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema** (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
 
 TODO: FFFF Figura de caso de uso empresarial
 
-Figura 2.2 Caso de uso de Negocio.
+`Figura 2.2 Caso de uso de Negocio.`
 
 En este ejemplo, “Sell books” es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.
 Los nombres de los casos de uso deben elegirse cuidadosamente, ya que en esta etapa resumirán la información crítica sobre el sistema, y las decisiones equivocadas pueden impedir que el equipo y las partes interesadas compartan la comprensión de la intención real de los actores y trabajadores de la empresa. Blain4 presenta algunas de las mejores prácticas recogidas de muchas fuentes:
