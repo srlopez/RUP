@@ -1,16 +1,16 @@
 # MODELADO DE NEGOCIO
 
-El modelado de negocio es la primera actividad que se lleva a cabo durante el desarrollo de la mayoría de los proyectos en la industria del software. Aunque los diagramas de casos de uso de negocio y otros diagramas UML se utilizan actualmente para ayudar a los equipos a comprender los procesos de negocio, a veces las conexiones entre esos elementos no son claras. Este capítulo muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando diagramas de actividad de negocio y diagramas de máquinas de estado que describen los procesos clave de negocio y los objetos clave de negocio. También muestra cómo se pueden utilizar los diagramas de casos de uso del negocio para definir el alcance de un sistema.
+El **modelado de negocio** es la primera actividad que se lleva a cabo durante el desarrollo de la mayoría de los proyectos en la industria del software. Aunque los **diagramas de casos de uso de negocio** y otros diagramas UML se utilizan actualmente para ayudar a los equipos a **comprender los procesos de negocio*, a veces las conexiones entre esos elementos no son claras. Este capítulo muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando diagramas de actividad de negocio y diagramas de máquinas de estado que describen los procesos clave de negocio y los objetos clave de negocio. También muestra cómo se pueden utilizar los diagramas de casos de uso del negocio para definir el alcance de un sistema.
 
 ## Palabras clave
 `Modelado de negocio`; `diagrama de caso de uso de negocio`; `diagrama de actividad`; `diagrama de máquina de estados`; `alcance del proyecto`.
 
 ## Conceptos en este Módulo
 
-    • Vista general del sistema
-    • Diagrama de Caso de Uso de Negocio
-    • Diagrama de actividades
-    • Diagrama de la máquina de estado
+- Vista general del sistema
+- Diagrama de Caso de Uso de Negocio
+- Diagrama de actividades
+- Diagrama de la máquina de estado
 
 ## 2.1 Introdución al modelado del negocio
 La fase de **inicio** del proceso unificado (UP) consiste en un período de tiempo en el que los analistas buscan recopilar información 
