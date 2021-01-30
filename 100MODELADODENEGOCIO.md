@@ -159,7 +159,7 @@ Un proceso de negocio es un proceso de largo alcance que realiza la empresa; pie
 
 Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema** (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
 
-[Caso de uso de Negocio](img/F2.2.jpg)
+![Caso de uso de Negocio](img/F2.2.jpg)  
 `Figura 2.2 Caso de uso de Negocio.`
 
 En este ejemplo, “Sell books” es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.
