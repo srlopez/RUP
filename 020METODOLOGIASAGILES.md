@@ -1,4 +1,4 @@
-# METODOLOGÏAS ÁGILES
+# METODOLOGÍAS ÁGILES
 
   - [¿Qué es Agil?](#qué-es-agil)
   - [Ventajas](#ventajas)
