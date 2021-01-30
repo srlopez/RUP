@@ -1,4 +1,4 @@
-# METODOLOGÏAS CLÄSICAS
+# METODOLOGÍAS CLÁSICAS
 
 - [Conceptos de Metodologías de desarrollo](#conceptos-de-metodologías-de-desarrollo)
   - [Ciclo de vida](#ciclo-de-vida)
