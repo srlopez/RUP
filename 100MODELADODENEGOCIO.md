@@ -5,7 +5,7 @@ El modelado de negocio es la primera actividad que se lleva a cabo durante el de
 ## Palabras clave
 `Modelado de negocio`; `diagrama de caso de uso de negocio`; `diagrama de actividad`; `diagrama de máquina de estados`; `alcance del proyecto`.
 
-## Conceptos en este Capítulo
+## Conceptos en este Módulo
 
     • Vista general del sistema
     • Diagrama de Caso de Uso de Negocio
@@ -33,11 +33,12 @@ Otra información relevante también suele incluirse en la vista general, como; 
 La declaración de **alcance del proyecto** puede estar relacionada con las actividades de análisis de negocio.   
 Después de descubrir información útil sobre el negocio, el equipo está en mejores condiciones de determinar qué debe y qué no debe incluirse en el proyecto.   
 La vista general del sistema puede ser elaborada con la ayuda de algunos diagramas UML.   
-Se pueden utilizar diagramas de casos de uso de negocio (Sección 2.3) y diagramas de actividades de negocio (Sección 2.4), y ocasionalmente diagramas de estado de máquinas (Sección 2.5). Alternativamente, se puede utilizar el Business Process Model and Notation, BPMN, en lugar de los diagramas de actividad UML. 
+Se pueden utilizar diagramas de casos de uso de negocio (Sección 2.3) y diagramas de actividades de negocio (Sección 2.4, y ocasionalmente diagramas de estado de máquinas (Sección 2.5). Alternativamente, se puede utilizar el Business Process Model and Notation, BPMN, en lugar de los diagramas de actividad UML. 
 Estos diagramas ayudan a determinar si el alcance del proyecto es completo y consistente con los objetivos de la organización.
 
 El modelado de negocio consiste en estudiar y entender la organización y sus procesos, porque normalmente el sistema a desarrollar no será un producto aislado, 
 sino una parte orgánica del contexto de la organización. Los objetivos de esta disciplina son:  
+
 - Comprender la estructura y la dinámica de la organización objetivo en la que se utilizará el software.  
 - Comprender los problemas actuales de la organización objetivo e identificar las mejoras potenciales que se pueden obtener con el software.  
 - Asegurar que los clientes, usuarios y el equipo de desarrollo compartan un entendimiento consistente de la organización objetivo.  
@@ -54,6 +55,7 @@ En este caso, el contexto empresarial y las consecuencias de la instalación de 
 Puede ser menos importante cuando no se esperan tales cambios de comportamiento.
 Por lo tanto, el modelado de negocios puede tener diferentes niveles de importancia dependiendo de las necesidades del proyecto.   
 Kruchten (2003) identifica seis escenarios de creciente complejidad en términos de la necesidad de modelos de negocio:  
+
 - **Organigrama**: Puede que sólo sea necesario construir un organigrama para conocer los sectores y las responsabilidades relacionadas con el área en la que se inserta el proyecto. En este caso, el modelado de negocios, en general, es muy simple, y sólo ocurre durante el inicio. El organigrama ayudará a los analistas a localizar a las personas responsables de los diferentes aspectos relacionados con el futuro sistema, y qué grado de autoridad se asigna a cada uno a la hora de decidir los requisitos.  
 - **Modelado de dominios**: Si el objetivo del proyecto es construir aplicaciones para gestionar y presentar información, entonces el modelado de negocio puede realizarse durante el análisis de dominio, es decir, cuando se produce un modelo estático de la información (modelo conceptual). En este caso, el modelado de negocio se realiza durante el inicio y la elaboración.  
 - **Una compañía, muchos sistemas**: Puede ocurrir que el equipo esté desarrollando toda una familia de sistemas para una empresa. En este caso, el modelado de negocios no se trata sólo de un sistema, sino que se extiende a lo largo de muchos proyectos, e incluso podría ser un proyecto separado por sí mismo. Ayudará a descubrir los requisitos individuales del sistema, así como a determinar una arquitectura común para toda la familia.  
@@ -62,6 +64,7 @@ Kruchten (2003) identifica seis escenarios de creciente complejidad en términos
 - **Renovación**: Si una organización decide renovar completamente su forma de hacer negocios, entonces el modelado de negocios será un proyecto separado, realizado en varios pasos: visión del nuevo negocio, ingeniería inversa del negocio existente, ingeniería directa del nuevo negocio e instalación del nuevo negocio.  
 
 Otros factores que aumentan o disminuyen la necesidad de un modelo de negocio en un proyecto son:  
+
 - Los requisitos bien definidos y estables al principio del proyecto (por ejemplo, crear un sustituto para un sistema existente) reducen la necesidad de realizar un intenso modelado de negocio.  
 - Si el nuevo sistema va a cambiar la forma en que las personas hacen su trabajo, entonces se debe prestar especial atención al modelado de negocios, especialmente cuando el modelo de negocios va a ser cambiado o reconstruido después de la automatización de algunos casos de uso de negocios.  
 - Si el proyecto tiene riesgos importantes, especialmente riesgos de negocio, entonces el modelado de negocio debe ser más detallado e intenso.  
@@ -80,32 +83,42 @@ Para la mayoría de los proyectos, la primera pregunta que el analista debe resp
 
 ¿Cuál es la visión de la empresa para el proyecto? En otras palabras, ¿qué quiere la empresa con el proyecto? ¿Por qué se propone y por qué la empresa va a gastar dinero con ella?
 
-En ese momento, otra pregunta, a menudo olvidada, puede ser planteada: ¿Comprar o desarrollar? A veces, el producto que el cliente desea está disponible para su compra.
-Estas preguntas deben ser contestadas en un tiempo relativamente corto. Por ello, se sugiere que la fase inicial se lleve a cabo con relativa rapidez. ¿Por qué? Porque, en este momento, el cliente y el equipo de desarrollo no suelen tener una idea de la extensión real del proyecto y es, desde el punto de vista de ambos, una inversión de futuro y, por tanto, un riesgo.
-La visión general del sistema o resumen ejecutivo es un documento de formato libre, donde la analista puede reportar los puntos relevantes que descubrió sobre el sistema después de las entrevistas iniciales con las partes interesadas. El documento suele incluir la declaración del alcance del proyecto.
-No tenemos intención de proponer normas para la redacción de ese documento. Pero se sugiere que no sea demasiado largo. Unas pocas páginas de texto y algunos diagramas parecen ser suficientes para describir de forma resumida el alcance de la mayoría de los sistemas. Más que eso podría significar que se incluyeron demasiados detalles en el resumen. Estos detalles podrían ser tratados alternativamente en otros documentos, como la lista de riesgos, requisitos o casos de uso.
-La declaración de alcance en la visión general debe presentar, en líneas generales, el producto que debe desarrollarse: qué debe incluirse y qué puede incluirse pero no debe incluirse. Esta información puede obtenerse inicialmente entrevistando a las partes interesadas, y puede afinarse más tarde con el uso de los diagramas presentados en este capítulo.
-Si es posible, los principales entregables del proyecto también deben ser definidos en la vista general, así como el marco de tiempo en el que el cliente va a recibir algún tipo de entrega del equipo de desarrollo. Normalmente, esta lista de entregables consiste en versiones implementadas del software, pero la lista también puede incluir otros elementos, como diseño, manuales, medios de instalación, formación, etc. Puede ser muy difícil establecer plazos de entrega antes de realizar el análisis de los requisitos del sistema, ya que las técnicas de estimación del esfuerzo, como los puntos de función (Albrecht y Gaffney Jr., 1983), los puntos de caso de uso (Karner, 1993) o COCOMO II (Boehm, 2000), sólo pueden aplicarse después de que se conozca una buena parte de los requisitos. Por lo tanto, la información sobre los plazos en esta fase previa es más una suposición que un fuerte compromiso formal para el desarrollo.
-El documento de vista general también puede contener algunos criterios de aceptación del producto, es decir, elementos cuantificables que se utilizarán para decidir si el proyecto ha sido un éxito o no. Los criterios de aceptación del producto deben incluir al menos métricas de plazos, presupuesto y calidad. Si se utilizan criterios subjetivos como "satisfacción del cliente", "sistema fácil de usar" o "tecnología punta", deben cuantificarse, es decir, debe definirse cómo medir la "satisfacción del cliente", "facilidad de uso", "estado actual de la técnica", etc. Ejemplos de criterios de aceptación cuantificables son "el sistema debe soportar hasta 50.000 accesos simultáneos sin degradar el rendimiento", "el sistema debe eliminar la necesidad de utilizar papel para realizar los procesos x e y", y "el sistema debe permitir la venta de hasta 100 libros por minuto en Internet".
-Si es necesario, se puede añadir más información al documento de visión general (por ejemplo, los principales riesgos, las tecnologías que se utilizarán, etc.). La vista general del sistema es el documento base del acuerdo para el cliente y el desarrollador. Se tomará como base para la planificación del resto del proyecto.
+En ese momento, otra pregunta, a menudo olvidada, puede ser planteada: ¿Comprar o desarrollar? A veces, el producto que el cliente desea está disponible para su compra.  
+Estas preguntas deben ser contestadas en un tiempo relativamente corto. Por ello, se sugiere que la fase inicial se lleve a cabo con relativa rapidez. ¿Por qué? Porque, en este momento, el cliente y el equipo de desarrollo no suelen tener una idea de la extensión real del proyecto y es, desde el punto de vista de ambos, una inversión de futuro y, por tanto, un riesgo.  
+La visión general del sistema o resumen ejecutivo es un documento de formato libre, donde la analista puede reportar los puntos relevantes que descubrió sobre el sistema después de las entrevistas iniciales con las partes interesadas.   
+El documento suele incluir la declaración del alcance del proyecto.  
+No tenemos intención de proponer normas para la redacción de ese documento. Pero se sugiere que no sea demasiado largo. Unas pocas páginas de texto y algunos diagramas parecen ser suficientes para describir de forma resumida el alcance de la mayoría de los sistemas. Más que eso podría significar que se incluyeron demasiados detalles en el resumen.   
+Estos detalles podrían ser tratados alternativamente en otros documentos, como la lista de riesgos, requisitos o casos de uso.
+La declaración de alcance en la visión general debe presentar, en líneas generales, el producto que debe desarrollarse: qué debe incluirse y qué puede incluirse pero no debe incluirse. Esta información puede obtenerse inicialmente entrevistando a las partes interesadas, y puede afinarse más tarde con el uso de los diagramas presentados en este capítulo.  
+Si es posible, los principales entregables del proyecto también deben ser definidos en la vista general, así como el marco de tiempo en el que el cliente va a recibir algún tipo de entrega del equipo de desarrollo. Normalmente, esta lista de entregables consiste en versiones implementadas del software, pero la lista también puede incluir otros elementos, como diseño, manuales, medios de instalación, formación, etc.   
+Puede ser muy difícil establecer plazos de entrega antes de realizar el análisis de los requisitos del sistema, ya que las técnicas de estimación del esfuerzo, como los puntos de función (Albrecht y Gaffney Jr., 1983), los puntos de caso de uso (Karner, 1993) o COCOMO II (Boehm, 2000), sólo pueden aplicarse después de que se conozca una buena parte de los requisitos.   
+Por lo tanto, la información sobre los plazos en esta fase previa es más una suposición que un fuerte compromiso formal para el desarrollo.
+El documento de vista general también puede contener **algunos criterios de aceptación del producto**, es decir, elementos cuantificables que se utilizarán para decidir si el proyecto ha sido un éxito o no. Los criterios de aceptación del producto deben incluir al menos métricas de plazos, presupuesto y calidad. Si se utilizan criterios subjetivos como "_satisfacción del cliente_", "_sistema fácil de usar_" o "_tecnología punta_", deben cuantificarse, es decir, debe definirse cómo medir la "satisfacción del cliente", "facilidad de uso", "estado actual de la técnica", etc.   
+Ejemplos de criterios de aceptación cuantificables son "_el sistema debe soportar hasta 50.000 accesos simultáneos sin degradar el rendimiento_", "_el sistema debe eliminar la necesidad de utilizar papel para realizar los procesos x e y_", y "_el sistema debe permitir la venta de hasta 100 libros por minuto en Internet_".  
+Si es necesario, se puede añadir más información al documento de visión general (por ejemplo, los principales riesgos, las tecnologías que se utilizarán, etc.). 
+
+>La vista general del sistema es el documento base del acuerdo para el cliente y el desarrollador. Se tomará como base para la planificación del resto del proyecto.   
+
 Es importante mencionar que cuando se está construyendo la vista general, todavía no se ha completado el análisis de requisitos y, por lo tanto, la información mencionada en la vista general consiste en compromisos tempranos. Se espera que el análisis de los requisitos detalle el alcance en profundidad, pero no aumente su extensión. Por ejemplo, en el análisis de requisitos, el proceso de venta de libros puede detallarse con descuentos, ventas, entregas, etc. (teniendo en cuenta que "venta de libros" se menciona en la declaración de alcance), pero si la transferencia de pagos de la empresa no se mencionara en la declaración de alcance, entonces la inclusión de ese elemento en el proyecto requeriría una renegociación de la declaración de alcance.
-Pressman (2008) propone una serie de técnicas para comunicarse con los grupos de interés con el fin de descubrir, por ejemplo, los objetivos del negocio:
-    • Grupos focales tradicionales, donde un analista capacitado se reúne con un grupo de usuarios finales o personas que representan sus funciones.
-    • Grupos focales electrónicos, en los que las reuniones se llevan a cabo mediante el uso de medios electrónicos.
-    • Encuestas iterativas, en las que se realizan una serie de encuestas entre los usuarios finales, en las que se les presentan algunas preguntas y se les pide aclaración.
-    • Encuestas exploratorias, en las que se realiza una investigación exploratoria entre usuarios finales que utilizan un producto existente similar.
-    • Construcción de escenarios, donde un grupo de usuarios finales es guiado a producir una descripción de un número de escenarios para el uso del sistema.
-La última opción parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como historias de usuarios.
-La figura 2.1 presenta una visión general con una declaración de alcance muy preliminar para una librería virtual ficticia Livir, que se utilizará para ilustrar las técnicas de modelado dentro de este libro. Este texto se habría obtenido tras una rápida reunión preliminar con el cliente. Utilizando esto como base, se puede realizar un estudio más profundo con casos de uso de negocio y otros diagramas, de manera que la información contenida en ellos sea refinada, como se muestra a continuación en este capítulo. El documento se divide en dos partes:
+Pressman (2008) propone una serie de técnicas para comunicarse con los grupos de interés con el fin de descubrir, por ejemplo, los objetivos del negocio:  
 
-    • Una simple declaración de visión de lo que el proyecto ofrecerá a los clientes y al negocio que lo está creando.
-    • Las restricciones de la versión 1.0.
-    
-    
-    
+- Grupos focales tradicionales, donde un analista capacitado se reúne con un grupo de usuarios finales o personas que representan sus funciones.
+- Grupos focales electrónicos, en los que las reuniones se llevan a cabo mediante el uso de medios electrónicos.
+- Encuestas iterativas, en las que se realizan una serie de encuestas entre los usuarios finales, en las que se les presentan algunas preguntas y se les pide aclaración.
+- Encuestas exploratorias, en las que se realiza una investigación exploratoria entre usuarios finales que utilizan un producto existente similar.
+- Construcción de escenarios, donde un grupo de usuarios finales es guiado a producir una descripción de un número de escenarios para el uso del sistema.
 
+La última opción parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como **historias de usuarios**.
+La figura 2.1 presenta una visión general con una declaración de alcance muy preliminar para una librería virtual ficticia Livir, que se utilizará para ilustrar las técnicas de modelado dentro de este libro. Este texto se habría obtenido tras una rápida reunión preliminar con el cliente.   
+Utilizando esto como base, se puede realizar un estudio más profundo con casos de uso de negocio y otros diagramas, de manera que la información contenida en ellos sea refinada, como se muestra a continuación en este capítulo.   
 
-Vista general del proyecto Livir
+El documento se divide en dos partes:
+
+- Una simple declaración de visión de lo que el proyecto ofrecerá a los clientes y al negocio que lo está creando.
+- Las restricciones de la versión 1.0.
+
+```  
+**Vista general del proyecto Livir**
 Version 1.0
 
 Visión:
@@ -117,12 +130,15 @@ Restriciones:
         a) Los clientes podrán abonar sólo mediante Tarjeta de Cŕedito
         b) La tienda sólo servirá libros nuevos, no usados.
         c) El acceso al sistema estará disponible sólo a través de un sitio Web.
+```
+`Figura 2.1 Vista general del proyecto Livir`
 
-Figura 2.1 Vista general del proyecto Livir
+Simplificaciones:
 
-Para permitir la presentación de este proyecto en un libro, se consideró una serie de simplificaciones. La descripción y modelización de un proyecto real deberían ser mucho más extensa. Además, los modelos presentados a veces serían parciales en un momento dado y se perfeccionarían o modificarían posteriormente.
-Se puede ver que la vista general es una vista no estructurada del proyecto. Incluye información del negocio para los gerentes e información operativa para los desarrolladores. A veces, incluso se pueden describir detalles sobre la tecnología que se va a utilizar, si es necesario. Lo que el analista debe tener en cuenta es que la visión general describe las principales preocupaciones de los clientes y que esas preocupaciones se estructurarán mejor más adelante durante el análisis y el diseño.
-Un buen analista debe actuar como un psicoanalista, es decir, debe evitar hablar en lugar del cliente. El analista debe ayudar al cliente a hablar; cuando el cliente comienza a reportar algunas de sus necesidades, el analista debe escuchar, en lugar de presentar soluciones rápidas y prefabricadas (y a menudo erróneas). El analista debe motivar al cliente a detallar sus requerimientos y debe cuestionarlos para que el cliente pueda decidir cuáles son urgentes y cuáles no.
+La descripción y modelización de un proyecto real deberían ser mucho más extensa. Además, los modelos presentados a veces serían parciales en un momento dado y se perfeccionarían o modificarían posteriormente.  
+Se puede ver que la vista general es una vista no estructurada del proyecto. Incluye información del negocio para los gerentes e información operativa para los desarrolladores. A veces, incluso se pueden describir detalles sobre la tecnología que se va a utilizar, si es necesario. Lo que el analista debe tener en cuenta es que la visión general describe las principales preocupaciones de los clientes y que esas preocupaciones se estructurarán mejor más adelante durante el análisis y el diseño.  
+Un buen analista debe actuar como un psicoanalista, es decir, debe evitar hablar en lugar del cliente. El analista debe ayudar al cliente a hablar; cuando el cliente comienza a reportar algunas de sus necesidades, el analista debe escuchar, en lugar de presentar soluciones rápidas y prefabricadas (y a menudo erróneas).  
+El analista debe motivar al cliente a detallar sus requerimientos y debe cuestionarlos para que el cliente pueda decidir cuáles son urgentes y cuáles no.  
 
 ## 2.3 Casos de uso del Negocio
 Jacobson (1994) presenta en detalle técnicas para el modelado de negocios con casos de uso de negocios. En general, en los modelos de negocio, existen entidades (personas o empresas) externas a la organización objetivo, llamadas actores del negocio, y entidades internas, llamadas trabajadores del negocio. Los casos de uso empresarial son los procesos realizados por aquellos actores y trabajadores que les permiten alcanzar algunos de los objetivos del negocio de la empresa.
