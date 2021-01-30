@@ -159,8 +159,7 @@ Un proceso de negocio es un proceso de largo alcance que realiza la empresa; pie
 
 Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema** (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
 
-TODO: FFFF Figura de caso de uso empresarial
-
+[Caso de uso de Negocio](img/F2.2.jpg)
 `Figura 2.2 Caso de uso de Negocio.`
 
 En este ejemplo, “Sell books” es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.
@@ -387,24 +386,9 @@ Construir una vista general del sistema:
 3. ¿Cuál es la diferencia entre un trabajador empresarial y un actor empresarial?
 4. ¿Qué aspectos de un negocio pueden ser detallados en un diagrama de actividades? ¿Cuál puede ser detallado por un diagrama de máquina de estados?
 
+http://www.bpmn.org/
+3 ¿Por qué una librería virtual? Porque es un sistema de información comercial típico, y porque la mayoría de los lectores ya deberían tener experiencia con ese tipo de sistema, y también porque es lo suficientemente simple, aunque rico, para ilustrar las técnicas de modelado de este libro. Dichos sistemas ya están disponibles para adquisición y personalización, y puede que no tenga sentido desarrollar uno nuevo desde cero, pero el propósito aquí es simplemente didáctico.
+4 http://tynerblain.com/blog/2007/01/22/how-to-write-good-use-case-names/
 
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Si estamos modelando una empresa como un todo, por lo general los trabajadores de la empresa no aparecen, ya que son internos al sistema de la empresa. Pero si se muestran las conexiones entre los diferentes subsistemas de la empresa, entonces los trabajadores de la empresa deben aparecer.
+Algunos enfoques sugieren el uso de flechas para indicar si el actor sólo recibe o envía información al sistema. Pero esa práctica, además de no estar apoyada por UML 2, prácticamente no aporta información útil en este punto del análisis de negocio, ya que por el momento sólo es importante saber qué casos de uso existen realmente, y qué actores están involucrados con ellos. Los detalles sobre la interacción se darán más adelante con los diagramas de actividad que describirán cómo se realiza un caso de uso empresarial.
