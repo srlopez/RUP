@@ -1,4 +1,4 @@
-#SCRUM
+# SCRUM
 
 - [Descripción](#descripción)
 - [Fundamentos](#fundamentos)
