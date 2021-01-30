@@ -1,6 +1,3 @@
-# ENTORNOS DE DESARROLLO 2021
-Notas de trabajo
-
 
 # FUNDAMENTOS
 
