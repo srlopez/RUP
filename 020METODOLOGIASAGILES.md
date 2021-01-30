@@ -1,6 +1,5 @@
 # METODOLOGÏAS ÁGILES
 
-- [- Trabajo del Alumno](#ullitrabajo-del-alumnoliul)
   - [¿Qué es Agil?](#qué-es-agil)
   - [Ventajas](#ventajas)
   - [Trabajo del Alumno](#trabajo-del-alumno)
