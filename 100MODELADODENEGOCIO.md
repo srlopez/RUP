@@ -159,11 +159,13 @@ Un proceso de negocio es un proceso de largo alcance que realiza la empresa; pie
 
 Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema** (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
 
-![Caso de uso de Negocio](img/F2.2.jpg)  
+![Caso de uso de Negocio](img/F2.2.jpg)    
 `Figura 2.2 Caso de uso de Negocio.`
 
-En este ejemplo, “Sell books” es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.
-Los nombres de los casos de uso deben elegirse cuidadosamente, ya que en esta etapa resumirán la información crítica sobre el sistema, y las decisiones equivocadas pueden impedir que el equipo y las partes interesadas compartan la comprensión de la intención real de los actores y trabajadores de la empresa. Blain4 presenta algunas de las mejores prácticas recogidas de muchas fuentes:
+En este ejemplo, **“Sell books”** es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.  
+
+>Los nombres de los casos de uso deben elegirse cuidadosamente, ya que en esta etapa resumirán la información crítica sobre el sistema, y las decisiones equivocadas pueden impedir que el equipo y las partes interesadas compartan la comprensión de la intención real de los actores y trabajadores de la empresa. Blain4 presenta algunas de las mejores prácticas recogidas de muchas fuentes:  
+
     • Los buenos nombres de casos de uso reflejan los objetivos del usuario. Los nombres como Access system o Open main window deben evitarse porque reflejan tecnología y no un objetivo empresarial. También los nombres sin verbos como Factura deben evitarse porque no está claro lo que va a pasar con la factura. Mejores nombres pueden ser Generar factura, Cancelar factura, Pagar factura, etc.
     • Los buenos nombres de casos de uso son tan cortos como sea posible. Aunque algunas personas pueden proponer que el nombre de un caso de uso no debe tener más de dos o tres palabras (o cualquier otro número), no es factible definir dicho límite porque existe el riesgo de perder claridad sobre el objetivo empresarial si el nombre es demasiado corto. Como señala Blain, ¿qué palabra podría ser eliminada del nombre Cobrar pagos atrasados sin ocultar su significado? Sin embargo, ese nombre es mejor que Cobrar pagos atrasados de clientes que están atrasados.
     • Los buenos nombres de casos de uso utilizan verbos significativos. Los nombres de los caso de uso, no sólo deben tener verbos fuertes, sino que deben ser significativos. Un verbo sin sentido es aquel que no aclara lo que logra el caso de uso; por ejemplo, ¿qué logra un caso de uso como "Orden de proceso"? ¿Qué resultado produce? Un nombre como "artículos pedidos por separado para su envío" sería más significativo en ese caso.
@@ -171,92 +173,115 @@ Los nombres de los casos de uso deben elegirse cuidadosamente, ya que en esta et
     • Los buenos nombres de casos de uso utilizan el tiempo presente. El tiempo presente indica lo que el usuario está tratando de hacer. El pasado y el futuro pueden parecer confusos e innecesarios.
     • Los buenos nombres de casos de uso no identifican al actor. Como los casos de uso están vinculados a los actores, éstos no forman parte de sus nombres. Por lo tanto, el nombre de un caso de uso no debe identificar al actor, ya que el Administrador crea un informe de ventas. Simplemente nombre el caso de uso Crear informe de ventas y vincularlo a un gerente u otros actores si es necesario.
     • Los buenos nombres de casos de uso son consistentes. Las mismas reglas de nomenclatura y las mismas convenciones de nomenclatura deben aplicarse a lo largo de un proyecto o grupo de proyectos. Evite, por ejemplo, nombrar un caso de uso Generar informe de ventas y otro Informe de reservas de productos. Elige un verbo para ese significado y úsalo consistentemente.
+    
 Además, Probasco (2001) propone que la lista de nombres de casos de uso se asemeje a una lista de tareas pendientes. Por lo tanto, en lugar de escribir Retirada de efectivo, Transferencia de fondos y Servicio de cajero automático, sería mejor escribir Retirar efectivo, Transferir fondos y Servirse del cajero automático, respectivamente.
 Probasco también insiste en que el significado del nombre de un caso de uso debe ser preciso. Por ejemplo, ¿es la subasta un buen caso de uso? ¿Es un verbo o un sustantivo? Si considera que se trata de un sustantivo y que debe añadirse un verbo, ¿es Execute auction un buen nombre? El verbo Ejecutar sería probablemente la elección de un programador, pero probablemente no tiene ningún significado para un subastador (¿Va a morir de un disparo la subasta?). En este caso, una idea sería hablar con un especialista en dominios para obtener un nombre mejor. Por otra parte, incluso si "subasta" es en realidad un verbo, no está suficientemente claro. ¿Es la subasta de un solo artículo? ¿Es la subasta de un conjunto completo de artículos? ¿Es simplemente un participante de la subasta que hace una oferta? En ese caso, los nombres como Subastar un artículo, Subastar artículos o Realizar puja serían más claros.
 
 ### 2.3.1 Actores del negocio y trabajadores del negocio.
 Durante el modelado de negocios hay dos tipos de actores que deben ser abordados (Figura 2.3):
+
     • Actores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso, pero que no forman parte de la empresa objetivo. Es decir, no están bajo el control de la empresa. Los actores del negocio pueden ser, por ejemplo, clientes, editores, auditores externos, empresas asociadas o incluso otros sistemas automáticos con los que la empresa objetivo pueda interactuar.
     • Trabajadores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso y que forman parte de la empresa objetivo. Pueden ser los empleados de la empresa, sus departamentos o incluso los sistemas de software existentes pertenecientes a la empresa. Gráficamente, se distinguen de los actores del negocio por el uso del estereotipo <<worker>>.
 
-![Actor del negocio (izda) y  trabajador del negocio (derecha)](img/F2.3.jpg)  
+![Actor del negocio (izda) y  trabajador del negocio (derecha)](img/F2.3.jpg)    
 `Figura 2.3 Actor del negocio (izda) y  trabajador del negocio (derecha).`
 
 Esta diferenciación es importante porque los actores del negocio normalmente no pueden automatizarse, es decir, no serán sustituidos por sistemas computacionales. Sin embargo, los roles de los trabajadores de negocios pueden ser reemplazados por sistemas automáticos (English, 2007).
 Los agentes y trabajadores del negocio están vinculados a los casos de uso empresarial en los que participan mediante líneas de conexión sin flechas, como se muestra en la figura 2.4.
 
-![Enlaces entre actores del negocio y casos de uso del negocio](img/F2.4.jpg)
+![Enlaces entre actores del negocio y casos de uso del negocio](img/F2.4.jpg)  
 `Figura 2.4 Enlaces entre actores del negocio y casos de uso del negocio.`
 
 ### 2.3.2 Oportunidades de automatización
-Una librería que pretende vender a través de Internet, como Livir, debe producir un modelo de negocio que identifique sus principales casos de uso empresarial, actores externos (clientes, editores, etc.), y trabajadores del negocio (gerentes, empleados, etc.). Si suponemos que la librería ya existe y no tiene ninguna o muy incipiente automatización, entonces los trabajadores del negocio serán, básicamente, personas reales. Estos trabajadores pueden ser candidatos a la automatización si hay interés en aumentar el nivel de automatización de la empresa. Por ejemplo, el papel del empleado que actualmente ayuda a los clientes a encontrar libros en las estanterías puede ser sustituido en la librería virtual por un sistema de guía automática. Sin embargo, la función de cliente no puede sustituirse por un sistema automático.
-Por lo general, no se reemplazan todas las funciones de los trabajadores de una empresa. Dependerá del alcance del proyecto que se defina. Una ventaja de hacer el diagrama del caso de uso del negocio, entonces, es ayudar en la visualización y toma de decisiones sobre la automatización. Con el diagrama, es posible visualizar lo que debe permanecer dentro y fuera del ámbito de la automatización, dependiendo de los objetivos del proyecto.
-Normalmente, durante un proceso de automatización dentro de una empresa, es útil sustituir al menos los roles de los trabajadores que corresponden a meros apoderados, es decir, los que simplemente realizan acciones en lugar de un actor externo. En el caso de la librería, el papel del vendedor sólo es necesario para ayudar al cliente en la tienda física. Pero, cuando las ventas se trasladan al espacio virtual, ese papel ya no es necesario, porque el cliente puede encontrar fácilmente su camino en el sitio web.
+
+Una librería que pretende vender a través de Internet, como Livir, debe producir un modelo de negocio que identifique sus principales casos de uso empresarial, actores externos (clientes, editores, etc.), y trabajadores del negocio (gerentes, empleados, etc.). Si suponemos que la librería ya existe y no tiene ninguna o muy incipiente automatización, entonces los trabajadores del negocio serán, básicamente, personas reales. Estos trabajadores pueden ser candidatos a la automatización si hay interés en aumentar el nivel de automatización de la empresa. Por ejemplo, el papel del empleado que actualmente ayuda a los clientes a encontrar libros en las estanterías puede ser sustituido en la librería virtual por un sistema de guía automática. Sin embargo, la función de cliente no puede sustituirse por un sistema automático.  
+
+Por lo general, no se reemplazan todas las funciones de los trabajadores de una empresa. Dependerá del alcance del proyecto que se defina. Una ventaja de hacer el diagrama del caso de uso del negocio, entonces, es ayudar en la visualización y toma de decisiones sobre la automatización. Con el diagrama, es posible visualizar lo que debe permanecer dentro y fuera del ámbito de la automatización, dependiendo de los objetivos del proyecto.  
+
+Normalmente, durante un proceso de automatización dentro de una empresa, es útil sustituir al menos los roles de los trabajadores que corresponden a meros apoderados, es decir, los que simplemente realizan acciones en lugar de un actor externo. En el caso de la librería, el papel del vendedor sólo es necesario para ayudar al cliente en la tienda física. Pero, cuando las ventas se trasladan al espacio virtual, ese papel ya no es necesario, porque el cliente puede encontrar fácilmente su camino en el sitio web.  
+
 La asociación de los casos de uso del negocio con los principales objetivos comerciales de la empresa ayuda a identificar el alcance del sistema, es decir, las actividades que se automatizarán eficazmente en el proyecto que se está iniciando. En el ejemplo de la Figura 2.5, todos los casos de uso son candidatos para la automatización con diferentes niveles de prioridad. Sin embargo, la empresa sólo podría estar interesada en implementar ventas y adquisiciones en este punto, dejando el marketing y los servicios al cliente en manos de un segundo proyecto.
 
-![](img/F2.4.jpg)
+![](img/F2.4.jpg)  
 `Figura 2.5 Caso de uso de Negocio: candidatos para automatizarse.`
 
 El límite del sistema se puede utilizar para identificar el conjunto de casos de uso empresarial y de trabajadores del negocio que se automatizarán, como se muestra en la Figura 2.6.
 
-![](img/F2.6.jpg)
+![](img/F2.6.jpg)  
 `Figura 2.6 El límite del sistema que se utiliza para indicar el alcance del proyecto.`
 
-El diagrama del caso de uso de negocio muestra que el proyecto de automatización incluirá los procesos de compra y venta de libros y el papel del empleado. También muestra que los procesos de publicidad y fidelización de clientes están fuera del alcance del proyecto.
-Sin embargo, un análisis más profundo puede mostrar que el trabajador que compra libros para la librería no puede ser fácilmente automatizado. Podría darse el caso de que todos los libros pudieran ser comprados automáticamente mediante un proceso automático que analizara las ventas y existencias potenciales, sin la participación de ningún ser humano. Pero, si ese no es el caso, lo mejor es considerar que el empleado realmente tiene dos roles diferentes: ayudar al cliente (ese rol será automatizado) y comprar libros para la librería (ese rol no será automatizado). La figura 2.7 muestra una evolución del diagrama en la que parte de la responsabilidad del empleado se reasigna a un trabajador llamado "Gestor de adquisiciones". No existe una equivalencia uno a uno entre un rol y una persona: una persona puede desempeñar muchos roles y un rol puede ser desempeñado por muchas personas diferentes.
+El diagrama del caso de uso de negocio muestra que el proyecto de automatización incluirá los procesos de compra y venta de libros y el papel del empleado. También muestra que los procesos de publicidad y fidelización de clientes están fuera del alcance del proyecto.  
 
-![](img/F2.7.jpg)
+Sin embargo, un análisis más profundo puede mostrar que el trabajador que compra libros para la librería no puede ser fácilmente automatizado. Podría darse el caso de que todos los libros pudieran ser comprados automáticamente mediante un proceso automático que analizara las ventas y existencias potenciales, sin la participación de ningún ser humano. Pero, si ese no es el caso, lo mejor es considerar que el empleado realmente tiene dos roles diferentes: ayudar al cliente (ese rol será automatizado) y comprar libros para la librería (ese rol no será automatizado). La figura 2.7 muestra una evolución del diagrama en la que parte de la responsabilidad del empleado se reasigna a un trabajador llamado "Gestor de adquisiciones". No existe una equivalencia uno a uno entre un rol y una persona: una persona puede desempeñar muchos roles y un rol puede ser desempeñado por muchas personas diferentes.  
+
+![](img/F2.7.jpg)  
 `Figura 2.7 Un actor se divide porque sólo parte de su rol se automatiza.`
 
-Si el proyecto, por el contrario, consiste en una serie de subproyectos o etapas, en los que se automatizarían diferentes partes de la empresa, esto también podría indicarse mediante el uso de diferentes límites de sistema en el diagrama: uno para cada subproyecto o etapa.
+Si el proyecto, por el contrario, consiste en una serie de subproyectos o etapas, en los que se automatizarían diferentes partes de la empresa, esto también podría indicarse mediante el uso de diferentes límites de sistema en el diagrama: uno para cada subproyecto o etapa.  
+
 El siguiente paso que conduce al análisis de requisitos es el estudio detallado de los casos de uso empresarial que se automatizarán. El nivel de precisión y detalle depende de los objetivos del proyecto, como ya se discutió al principio de este capítulo.
 
 ## 2.4 Diagrama de actividad de Negocio
-El diagrama de actividad UML es una opción muy popular para estudiar los detalles de un caso de uso empresarial. Con este diagrama se pueden especificar las diferentes actividades que realizan los actores del negocio y los trabajadores para alcanzar el objetivo general del caso de uso.
-Para una mejor comprensión del funcionamiento de la empresa a través de sus casos de uso, es posible crear un diagrama de actividad para cada caso de uso empresarial que vaya a ser automatizado. Los diagramas de actividad pueden utilizarse para representar procesos a nivel de organización.
+El diagrama de actividad UML es una opción muy popular para estudiar los detalles de un caso de uso empresarial. Con este diagrama se pueden especificar las diferentes actividades que realizan los actores del negocio y los trabajadores para alcanzar el objetivo general del caso de uso.  
+
+Para una mejor comprensión del funcionamiento de la empresa a través de sus casos de uso, es posible crear un diagrama de actividad para cada caso de uso empresarial que vaya a ser automatizado. Los diagramas de actividad pueden utilizarse para representar procesos a nivel de organización.  
 
 ### 2.4.1 Elementos Básicos
-Gran parte del diagrama de actividades de UML es similar a un diagrama de flujo. Hay actividades enlazadas secuencialmente. Se pueden utilizar puntos de decisión y bucles e incluso se puede expresar el paralelismo en dichos diagramas.
-El diagrama de actividad puede dividirse en carriles o pistas, cada uno de los cuales representa a un actor o trabajador que participa en un conjunto de actividades. Como en el diagrama del caso de uso, un actor o trabajador puede ser una persona, un departamento, un sistema computacional o incluso una organización completa.
-El proceso representado en el diagrama suele tener un nodo inicial, representado por un círculo sólido, y un nodo final de actividad, representado por un círculo sólido inscrito en una circunferencia. El nodo inicial puede no ser considerado obligatorio en algunos casos cuando el inicio del proceso puede ser inferido observando una actividad que no tiene un antecesor. Sin embargo, el uso de esa marca mejora la legibilidad del diagrama porque es más fácil ver dónde comienza realmente el proceso.
-Las actividades están representadas por nodos de acción. Cuando una actividad se representa dentro de una pista de natación, significa que el actor correspondiente es el responsable de la actividad.
-Los flujos o dependencias entre actividades se representan con flechas. Los flujos suelen vincular dos actividades, indicando la precedencia entre ellas.
-Un camino es una secuencia de actividades enlazadas por flujos.
-En el ejemplo de Livir, el diagrama de actividades puede ser usado como una manera de visualizar los detalles de casos de uso de negocios como Vender libros. El modelo presentado en la Figura 2.8 muestra un primer acercamiento al proceso.
+Gran parte del diagrama de actividades de UML es similar a un diagrama de flujo. Hay actividades enlazadas secuencialmente. Se pueden utilizar puntos de decisión y bucles e incluso se puede expresar el paralelismo en dichos diagramas.  
 
-![](img/F2.8.jpg)
+El diagrama de actividad puede dividirse en carriles o pistas, cada uno de los cuales representa a un actor o trabajador que participa en un conjunto de actividades. Como en el diagrama del caso de uso, un actor o trabajador puede ser una persona, un departamento, un sistema computacional o incluso una organización completa.  
+
+El proceso representado en el diagrama suele tener un nodo inicial, representado por un círculo sólido, y un nodo final de actividad, representado por un círculo sólido inscrito en una circunferencia. El nodo inicial puede no ser considerado obligatorio en algunos casos cuando el inicio del proceso puede ser inferido observando una actividad que no tiene un antecesor. Sin embargo, el uso de esa marca mejora la legibilidad del diagrama porque es más fácil ver dónde comienza realmente el proceso.  
+
+Las actividades están representadas por nodos de acción. Cuando una actividad se representa dentro de una pista de natación, significa que el actor correspondiente es el responsable de la actividad.  
+
+Los flujos o dependencias entre actividades se representan con flechas. Los flujos suelen vincular dos actividades, indicando la precedencia entre ellas.
+Un camino es una secuencia de actividades enlazadas por flujos.  
+
+En el ejemplo de Livir, el diagrama de actividades puede ser usado como una manera de visualizar los detalles de casos de uso de negocios como Vender libros. El modelo presentado en la Figura 2.8 muestra un primer acercamiento al proceso.  
+
+
+![](img/F2.8.jpg)  
 `Figura 2.8 Primer enfoque para modelar el diagrama de actividad del proceso de negocio “Vender Libros”.`
 
-El diagrama que está comenzando a ser diseñado en la Figura 2.8 no pretende ser un modelo para el sistema que se va a construir y no debe ser pensado de esa manera. Su utilidad es ayudar al equipo a entender qué actividades y actores están involucrados en los principales procesos de negocio de la empresa, para que, utilizando esa información, puedan realizar un análisis de requerimientos más efectivo más adelante. La trayectoria lógica del diagrama debe ser comprensible y validada por los empresarios.
-Posteriormente, el analista examinará en detalle cada una de las actividades que se deben realizar. Si una actividad determinada pertenece al ámbito del sistema que se va a implementar, entonces debe ser un objetivo para un análisis más detallado.
+El diagrama que está comenzando a ser diseñado en la Figura 2.8 no pretende ser un modelo para el sistema que se va a construir y no debe ser pensado de esa manera. Su utilidad es ayudar al equipo a entender qué actividades y actores están involucrados en los principales procesos de negocio de la empresa, para que, utilizando esa información, puedan realizar un análisis de requerimientos más efectivo más adelante. La trayectoria lógica del diagrama debe ser comprensible y validada por los empresarios.  
+
+Posteriormente, el analista examinará en detalle cada una de las actividades que se deben realizar. Si una actividad determinada pertenece al ámbito del sistema que se va a implementar, entonces debe ser un objetivo para un análisis más detallado.  
+
 
 ### 2.4.2 Nodos de Flujo de Control
-Dos nodos de flujo de control son comunes en el diagrama de actividad: los nodos de decisión y los nodos de paralelismo.
+Dos nodos de flujo de control son comunes en el diagrama de actividad: los nodos de decisión y los nodos de paralelismo.  
+
     • Los nodos de decisión (nodos de rama y de fusión) están representados por diamantes. Los flujos que salen del nodo de decisión deben tener condiciones de guarda (una expresión lógica entre paréntesis). Dos o más movimientos pueden salir de un nodo de decisión, pero es importante que las condiciones de guarda sean mutuamente excluyentes, es decir, sólo una de ellas puede ser verdadera a la vez.
     • Los nodos de paralelismo (nodos de horquilla y de unión) están representados por barras . Los flujos que salen de un nodo de horquilla se realizan en paralelo.
-El diagrama de la Figura 2.8 es todavía una representación muy bruta del proceso real de venta de libros. Sólo para ilustrar una posible evolución de ese diagrama, examinemos la situación cuando algunos de los libros encargados no están disponibles en stock. Sería necesario pedirlos a uno de los editores y añadirlos al pedido del cliente después de su llegada. La Figura 2.9 muestra esta situación al indicar que si algunos libros no están disponibles, entonces tienen que ser ordenados a los editores, y el pedido se envía sólo después de su llegada.
+    
+El diagrama de la Figura 2.8 es todavía una representación muy bruta del proceso real de venta de libros. Sólo para ilustrar una posible evolución de ese diagrama, examinemos la situación cuando algunos de los libros encargados no están disponibles en stock. Sería necesario pedirlos a uno de los editores y añadirlos al pedido del cliente después de su llegada. La Figura 2.9 muestra esta situación al indicar que si algunos libros no están disponibles, entonces tienen que ser ordenados a los editores, y el pedido se envía sólo después de su llegada.  
 
-![](img/F2.9.jpg)
+
+![](img/F2.9.jpg)  
 `Figura 2.9 Ejemplo de decisión de control de flujo.`
 
-Justo debajo de la actividad Confirmar pago hay un nodo de rama representado por el diamante. Como se ha indicado anteriormente, el nodo de decisión sólo permite seguir un flujo de salida. Las condiciones de guardia ([some books missing] y [all books in stock])  son mutuamente excluyentes. Desde el nodo de rama, el flujo sigue uno de los caminos alternativos hasta llegar al nodo de fusión que se representa justo encima de la actividad Enviar libros.
+Justo debajo de la actividad Confirmar pago hay un nodo de rama representado por el diamante. Como se ha indicado anteriormente, el nodo de decisión sólo permite seguir un flujo de salida. Las condiciones de guardia ([some books missing] y [all books in stock])  son mutuamente excluyentes. Desde el nodo de rama, el flujo sigue uno de los caminos alternativos hasta llegar al nodo de fusión que se representa justo encima de la actividad Enviar libros.  
+
 Más tarde, el analista podría descubrir que el modelo todavía no es satisfactorio. Por ejemplo, incluso si algunos libros no están en stock, el pedido puede ser enviado en dos o más entregas. De este modo, se podrían realizar dos recorridos en paralelo: enviar los libros disponibles en stock y, si fuera necesario, encargar los demás libros y enviarlos más tarde, como se muestra en la Figura 2.10.
 
-![](img/F2.10.jpg)
+![](img/F2.10.jpg)  
 `Figura 2.10 Ejemplo de los siguientes flujos.`
 
-La barra debajo de Confirmar actividad de pago en la Figura 2.10 representa un nodo de horquilla porque inicia dos rutas paralelas, y la otra barra representa un nodo de unión porque sincroniza las rutas paralelas en una sola ruta.
-La trayectoria única después de un nodo de unión sólo se puede seguir si se han seguido todas las trayectorias que llegan al nodo de unión. Se puede ver que en ese modelo, si todos los libros están en stock, sólo uno de los caminos paralelos tendrá actividades que realizar, porque el otro camino va inmediatamente a los nodos de fusión y unión.
+La barra debajo de Confirmar actividad de pago en la Figura 2.10 representa un nodo de horquilla porque inicia dos rutas paralelas, y la otra barra representa un nodo de unión porque sincroniza las rutas paralelas en una sola ruta.  
+
+La trayectoria única después de un nodo de unión sólo se puede seguir si se han seguido todas las trayectorias que llegan al nodo de unión. Se puede ver que en ese modelo, si todos los libros están en stock, sólo uno de los caminos paralelos tendrá actividades que realizar, porque el otro camino va inmediatamente a los nodos de fusión y unión.  
+
 Los nodos de bifurcación, unión, decisión y fusión, así como los nodos inicial y final de la actividad, pueden colocarse dentro de los carriles. Sin embargo, esto no afecta su semántica. Por lo tanto, la elección de un carril de baño para colocar tales nodos se debe únicamente a la idoneidad visual.
-Otro nodo que puede ser útil a veces es el nodo final de flujo, , que termina una trayectoria (paralela o no) que se está realizando. La diferencia entre éste y el nodo final de la operación es que en el caso del nodo final de la operación, todos los movimientos del diagrama de actividades terminan cuando un solo movimiento lo alcanza, mientras que en el caso del nodo final de proceso sólo se termina un movimiento (entre otros movimientos paralelos), pero la operación continúa.
+Otro nodo que puede ser útil a veces es el nodo final de flujo, , que termina una trayectoria (paralela o no) que se está realizando. La diferencia entre éste y el nodo final de la operación es que en el caso del nodo final de la operación, todos los movimientos del diagrama de actividades terminan cuando un solo movimiento lo alcanza, mientras que en el caso del nodo final de proceso sólo se termina un movimiento (entre otros movimientos paralelos), pero la operación continúa.  
+
 En el caso de uso de la Figura 2.7, sólo un actor (cliente) y un trabajador (empleado) participan en el caso de uso Vender libros. Sin embargo, después de detallar las actividades relacionadas con ese caso de uso, como se hace en la Figura 2.10, se descubrió que son necesarios dos actores más: el editor y el operador de la tarjeta de crédito. Además, el Editor es un actor que tiene que estar vinculado al caso de uso Comprar libros. Por lo tanto, dependiendo del nivel de detalle deseado en este punto del proyecto, el diagrama del caso de uso de negocio puede actualizarse para reflejar esos descubrimientos, como se muestra en la Figura 2.11.
 
-![](img/F2.11.jpg)
+![](img/F2.11.jpg)  
 `Figura 2.11 Business use case diagram actualizado con información descubierta con el diagrama de actividad.`
 
 Otras opciones para detallar un caso de uso de negocio son el diagrama de secuencia UML y el diagrama de comunicación. Sin embargo, estos diagramas se utilizan para representar los mensajes que se envían a los elementos. No siempre es natural encontrar nombres para etiquetar esos mensajes en el caso de un proceso empresarial, y los nombres sin sentido como "buscar datos" y "verificar resultado" se eligen finalmente. Por lo tanto, el diagrama de actividad es una opción más natural para describir lo que sucede en el mundo real, dentro de una organización de personas. Sin embargo, como se verá en la Sección 5.8, los diagramas de secuencia son muy útiles para detallar los casos de uso del sistema, porque los casos de uso del sistema generalmente consisten en una secuencia de flujos de información que se intercambian entre los actores y un sistema.
 
-------------------------
 ## 2.5 Aspectos dependientes del Estado de un negocio  
 
 Además de los casos de uso de negocio, que pueden ser detallados por los diagramas de actividad, 
@@ -286,7 +311,7 @@ En el primer caso, la librería debe ponerse en contacto con el cliente y, depen
 El ciclo de vida del libro termina sólo cuando el transportista confirma la entrega.   
 Todos esos cambios de estado (transiciones) están representados en la Figura 2.12.
 
-![](img/F2.12.jpg)
+![](img/F2.12.jpg)  
 `Figura 2.12 Primer modelo de máquina para el ciclo de vida del libro.`
 
 Sin embargo, el modelo presentado en la Figura 2.12 todavía está incompleto en cuanto a las posibles transiciones de un libro.  
@@ -294,24 +319,24 @@ Por ejemplo, un libro entregado puede devolver dañado y, en ese caso, no puede 
 Esto puede representarse añadiendo una condición de guarda a la transición que va del estado Retornado al estado Enviado,   
 y añadiendo un nuevo estado final en el que el libro se desecha, como se muestra en la Figura 2.13.
 
-![](img/F2.13.jpg)
+![](img/F2.13.jpg)  
 `Figura 2.13 Diagrama de Máquina de Estado con requisitos de guarda.`
 
-Estas condiciones de guardia siguen siendo muy informales. Pero esto es aceptable durante el modelado de negocios, porque el objetivo es entender la organización del negocio, no especificar un sistema computacional. Sin embargo, se pueden obtener condiciones de protección precisas si se utiliza un lenguaje formal como el OCL (Object Constraint Language). Más adelante en este libro se introducen expresiones que utilizan OCL.
-En algunas situaciones es posible que un evento cause una transición desde más de un estado. En el ejemplo de la Figura 2.13, se puede imaginar que un libro no sólo puede ser dañado cuando está en estado Devuelto, sino también cuando está en otros estados como En almacén y Vendido. Entonces, debería existir una transición a Desechado desde esos tres estados. Sin embargo, para abreviar este conjunto de transiciones se puede utilizar un superestado.
+Estas condiciones de guardia siguen siendo muy informales. Pero esto es aceptable durante el modelado de negocios, porque el objetivo es entender la organización del negocio, no especificar un sistema computacional. Sin embargo, se pueden obtener condiciones de protección precisas si se utiliza un lenguaje formal como el OCL (Object Constraint Language). Más adelante en este libro se introducen expresiones que utilizan OCL.  
+En algunas situaciones es posible que un evento cause una transición desde más de un estado. En el ejemplo de la Figura 2.13, se puede imaginar que un libro no sólo puede ser dañado cuando está en estado Devuelto, sino también cuando está en otros estados como En almacén y Vendido. Entonces, debería existir una transición a Desechado desde esos tres estados. Sin embargo, para abreviar este conjunto de transiciones se puede utilizar un superestado.  
 En la Figura 2.14, cualquier transición desde el superestado En almacén representa un conjunto de transiciones desde cada uno de sus subestados. En el caso de una transición al superestado, es necesario establecer cuál de los substados sería el inicial. Para ello es necesario incluir un estado inicial dentro del superestado o, en su lugar, hacer que la transición vaya directamente al subestado.
 
-![](img/F2.14.jpg)
+![](img/F2.14.jpg)  
 `Figura 2.14 Diagrama de Maquina de Estado con superestado.`
 
-Un objeto puede estar simultáneamente en más de un estado. 
+Un objeto puede estar simultáneamente en más de un estado.   
 Por ejemplo, un libro puede ser una oferta especial o no desde el momento en que se encarga a la editorial hasta el momento en que llega a su estado final 
-como liberado o vendido.  
+como liberado o vendido.    
 Así, un libro puede ser modelado con dos estados concurrentes: el primero determina si es una oferta especial o no,  
-y el segundo determina su estado con respecto a las ventas.  
+y el segundo determina su estado con respecto a las ventas.   
 En el diagrama de la Figura 2.15 los estados concurrentes se representan dentro de regiones ortogonales en un superestado.
 
-![](img/F2.15.jpg)
+![](img/F2.15.jpg)  
 `Figura 2.15 Diagrama de maquina de estado con regiones.`
 
 Cuando una transición deja el superestado, entonces todos los subestados concurrentes también quedan. 
@@ -368,17 +393,17 @@ Construir una vista general del sistema:
 - Dibujar un diagrama de actividad para el caso de uso del negocio
 - Dibujar un diagrama de maquina de estado para los procesos clave del sistema
 
-
-
 ## 2.8 Preguntas
 1. ¿Cuál es el propósito del modelado de negocios?
 2. El modelado de negocios puede ocurrir con diferentes niveles de intensidad para diferentes tipos de proyectos. Explique y dé ejemplos!k
 3. ¿Cuál es la diferencia entre un trabajador empresarial y un actor empresarial?
 4. ¿Qué aspectos de un negocio pueden ser detallados en un diagrama de actividades? ¿Cuál puede ser detallado por un diagrama de máquina de estados?
 
-http://www.bpmn.org/
-3 ¿Por qué una librería virtual? Porque es un sistema de información comercial típico, y porque la mayoría de los lectores ya deberían tener experiencia con ese tipo de sistema, y también porque es lo suficientemente simple, aunque rico, para ilustrar las técnicas de modelado de este libro. Dichos sistemas ya están disponibles para adquisición y personalización, y puede que no tenga sentido desarrollar uno nuevo desde cero, pero el propósito aquí es simplemente didáctico.
-4 http://tynerblain.com/blog/2007/01/22/how-to-write-good-use-case-names/
+1 http://www.bpmn.org/  
 
-Si estamos modelando una empresa como un todo, por lo general los trabajadores de la empresa no aparecen, ya que son internos al sistema de la empresa. Pero si se muestran las conexiones entre los diferentes subsistemas de la empresa, entonces los trabajadores de la empresa deben aparecer.
+3 ¿Por qué una librería virtual? Porque es un sistema de información comercial típico, y porque la mayoría de los lectores ya deberían tener experiencia con ese tipo de sistema, y también porque es lo suficientemente simple, aunque rico, para ilustrar las técnicas de modelado de este libro. Dichos sistemas ya están disponibles para adquisición y personalización, y puede que no tenga sentido desarrollar uno nuevo desde cero, pero el propósito aquí es simplemente didáctico.  
+
+4 http://tynerblain.com/blog/2007/01/22/how-to-write-good-use-case-names/  
+
+Si estamos modelando una empresa como un todo, por lo general los trabajadores de la empresa no aparecen, ya que son internos al sistema de la empresa. Pero si se muestran las conexiones entre los diferentes subsistemas de la empresa, entonces los trabajadores de la empresa deben aparecer.  
 Algunos enfoques sugieren el uso de flechas para indicar si el actor sólo recibe o envía información al sistema. Pero esa práctica, además de no estar apoyada por UML 2, prácticamente no aporta información útil en este punto del análisis de negocio, ya que por el momento sólo es importante saber qué casos de uso existen realmente, y qué actores están involucrados con ellos. Los detalles sobre la interacción se darán más adelante con los diagramas de actividad que describirán cómo se realiza un caso de uso empresarial.
