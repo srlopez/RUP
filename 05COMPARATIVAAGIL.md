@@ -1,4 +1,4 @@
-#COMPARATIVA AGIL
+# COMPARATIVA AGIL
 
 - [tabla Comparativa entre metodologías ágiles](#tabla-comparativa-entre-metodologías-ágiles)
 - [Adopción de metodologías](#adopción-de-metodologías)
