@@ -40,7 +40,7 @@ Otra información relevante también suele incluirse en la vista general, como; 
 La declaración de **alcance del proyecto** puede estar relacionada con las actividades de análisis de negocio. Después de descubrir información útil sobre el negocio, el equipo está en mejores condiciones de determinar qué debe y qué no debe incluirse en el proyecto.   
 
 La vista general del sistema puede ser elaborada con la ayuda de algunos diagramas UML.   
-Se pueden utilizar diagramas de casos de uso de negocio (Sección 2.3) y diagramas de actividades de negocio (Sección 2.4, y ocasionalmente diagramas de estado de máquinas (Sección 2.5). Alternativamente, se puede utilizar el Business Process Model and Notation, BPMN, en lugar de los diagramas de actividad UML. 
+Se pueden utilizar diagramas de casos de uso de negocio y diagramas de actividades de negocio y ocasionalmente diagramas de estado de máquinas. Alternativamente, se puede utilizar el Business Process Model and Notation, BPMN, en lugar de los diagramas de actividad UML. 
 Estos diagramas ayudan a determinar si el alcance del proyecto es completo y consistente con los objetivos de la organización.
 
 > **El modelado de negocio consiste en estudiar y entender la organización y sus procesos, porque normalmente el sistema a desarrollar no será un producto aislado, sino una parte orgánica del contexto de la organización. Los objetivos de esta disciplina son:**
@@ -57,22 +57,7 @@ Otro aspecto importante del modelado de negocio es acercar **el equipo de expert
 El modelado de negocios es muy importante cuando se introducen cambios significativos en el comportamiento de un grupo de personas.   
 En este caso, el contexto empresarial y las consecuencias de la instalación de un nuevo sistema deben ser reconocidos y estudiados.   
 Puede ser menos importante cuando no se esperan tales cambios de comportamiento.
-
-> Por lo tanto, el modelado de negocios puede tener diferentes niveles de importancia dependiendo de las necesidades del proyecto. Kruchten (2003) identifica seis escenarios de creciente complejidad en términos de la necesidad de modelos de negocio:  
-
-- **Organigrama**: Puede que sólo sea necesario construir un organigrama para conocer los sectores y las responsabilidades relacionadas con el área en la que se inserta el proyecto. En este caso, el modelado de negocios, en general, es muy simple, y sólo ocurre durante el inicio. El organigrama ayudará a los analistas a localizar a las personas responsables de los diferentes aspectos relacionados con el futuro sistema, y qué grado de autoridad se asigna a cada uno a la hora de decidir los requisitos.  
-  
-- **Modelado de dominios**: Si el objetivo del proyecto es construir aplicaciones para gestionar y presentar información, entonces el modelado de negocio puede realizarse durante el análisis de dominio, es decir, cuando se produce un modelo estático de la información (modelo conceptual). En este caso, el modelado de negocio se realiza durante el inicio y la elaboración.  
-  
-- **Una compañía, muchos sistemas**: Puede ocurrir que el equipo esté desarrollando toda una familia de sistemas para una empresa. En este caso, el modelado de negocios no se trata sólo de un sistema, sino que se extiende a lo largo de muchos proyectos, e incluso podría ser un proyecto separado por sí mismo. Ayudará a descubrir los requisitos individuales del sistema, así como a determinar una arquitectura común para toda la familia.  
-
-- **Modelo de negocio genérico**: Si el objetivo es construir uno o más sistemas que sirvan a un grupo de organizaciones, entonces el modelado de negocios es útil para alinear las diferentes organizaciones a una visión común de negocios, o, si esto no es posible, para obtener una visión de negocios en la que los detalles de las organizaciones sean visibles.  
-
-- **Nuevos negocios**: Si una organización decide iniciar un nuevo negocio, y se debe desarrollar todo un conjunto de sistemas para darle soporte, entonces se debe realizar un esfuerzo significativo de modelado de negocios. En este caso, el objetivo del modelado de negocios no es sólo encontrar requisitos, sino verificar la viabilidad efectiva del nuevo negocio. Por lo tanto, el modelado de negocios, en esa situación, podría ser un proyecto independiente.  
-
-- **Renovación**: Si una organización decide renovar completamente su forma de hacer negocios, entonces el modelado de negocios será un proyecto separado, realizado en varios pasos: visión del nuevo negocio, ingeniería inversa del negocio existente, ingeniería directa del nuevo negocio e instalación del nuevo negocio.  
-
-Otros factores que aumentan o disminuyen la necesidad de un modelo de negocio en un proyecto son:  
+Algunos factores que aumentan o disminuyen la necesidad de un modelo de negocio en un proyecto son:  
 
 - **Los requisitos bien definidos y estables** al principio del proyecto (por ejemplo, crear un sustituto para un sistema existente) reducen la necesidad de realizar un intenso modelado de negocio.  
 - Si el nuevo sistema va a **cambiar** la forma en que las personas hacen su trabajo, entonces se debe prestar especial atención al modelado de negocios, especialmente cuando el modelo de negocios va a ser cambiado o reconstruido después de la automatización de algunos casos de uso de negocios.  
@@ -90,7 +75,9 @@ Las actividades relacionadas con la definición del **alcance de un proyecto** d
 
 Para la mayoría de los proyectos, la primera pregunta que el analista debe responder es la siguiente: 
 
-> ¿Cuál es la visión de la empresa para el proyecto? En otras palabras, ¿qué quiere la empresa con el proyecto? ¿Por qué se propone y por qué la empresa va a gastar dinero con ella?
+```diff
+- ¿Cuál es la visión de la empresa para el proyecto? En otras palabras, ¿qué quiere la empresa con el proyecto? ¿Por qué se propone y por qué la empresa va a gastar dinero con ella?
+```
 
 En ese momento, otra pregunta, a menudo olvidada, puede ser planteada: 
 > ¿Comprar o desarrollar? A veces, el producto que el cliente desea está disponible para su compra.  
@@ -111,22 +98,18 @@ Si es posible, los **principales entregables** del proyecto también deben ser d
 Puede ser muy difícil establecer plazos de entrega antes de realizar el análisis de los requisitos del sistema, ya que las técnicas de estimación del esfuerzo, como los puntos de función (Albrecht y Gaffney Jr., 1983), los puntos de caso de uso (Karner, 1993) o COCOMO II (Boehm, 2000), sólo pueden aplicarse después de que se conozca una buena parte de los requisitos.   
 
 Por lo tanto, la información sobre los plazos en esta fase previa es más una suposición que un fuerte compromiso formal para el desarrollo.
-El documento de vista general también puede contener **algunos criterios de aceptación del producto**, es decir, elementos cuantificables que se utilizarán para decidir si el proyecto ha sido un éxito o no. Los criterios de aceptación del producto deben incluir al menos métricas de plazos, presupuesto y calidad. Si se utilizan criterios subjetivos como "_satisfacción del cliente_", "_sistema fácil de usar_" o "_tecnología punta_", deben cuantificarse, es decir, debe definirse cómo medir la "satisfacción del cliente", "facilidad de uso", "estado actual de la técnica", etc.   
+El documento de vista general también puede contener algunos **criterios de aceptación del producto**, es decir, elementos cuantificables que se utilizarán para decidir si el proyecto ha sido un éxito o no. Los criterios de aceptación del producto deben incluir al menos métricas de plazos, presupuesto y calidad. Si se utilizan criterios subjetivos como "_satisfacción del cliente_", "_sistema fácil de usar_" o "_tecnología punta_", deben cuantificarse, es decir, debe definirse cómo medir la "satisfacción del cliente", "facilidad de uso", "estado actual de la técnica", etc.   
 Ejemplos de criterios de aceptación cuantificables son "_el sistema debe soportar hasta 50.000 accesos simultáneos sin degradar el rendimiento_", "_el sistema debe eliminar la necesidad de utilizar papel para realizar los procesos x e y_", y "_el sistema debe permitir la venta de hasta 100 libros por minuto en Internet_".  
 Si es necesario, se puede añadir más información al documento de visión general (por ejemplo, los principales riesgos, las tecnologías que se utilizarán, etc.). 
 
 >La vista general del sistema es el documento base del acuerdo para el cliente y el desarrollador. Se tomará como base para la planificación del resto del proyecto.   
 
 Es importante mencionar que cuando se está construyendo la vista general, todavía no se ha completado el análisis de requisitos y, por lo tanto, la información mencionada en la vista general consiste en compromisos tempranos. Se espera que el análisis de los requisitos detalle el alcance en profundidad, pero no aumente su extensión. Por ejemplo, en el análisis de requisitos, el proceso de **“Sell books”** puede detallarse con descuentos, ventas, entregas, etc. (teniendo en cuenta que **“Sell books”** se menciona en la declaración de alcance), pero si la transferencia de pagos de la empresa no se mencionara en la declaración de alcance, entonces la inclusión de ese elemento en el proyecto requeriría una renegociación de la declaración de alcance.
-Pressman (2008) propone una serie de técnicas para comunicarse con los grupos de interés con el fin de descubrir, por ejemplo, los objetivos del negocio:  
+Pressman (2008) propone una serie de técnicas para comunicarse con los grupos de interés con el fin de descubrir, por ejemplo, los objetivos del negocio, por ejemplo
 
-- Grupos focales tradicionales, donde un analista capacitado se reúne con un grupo de usuarios finales o personas que representan sus funciones.
-- Grupos focales electrónicos, en los que las reuniones se llevan a cabo mediante el uso de medios electrónicos.
-- Encuestas iterativas, en las que se realizan una serie de encuestas entre los usuarios finales, en las que se les presentan algunas preguntas y se les pide aclaración.
-- Encuestas exploratorias, en las que se realiza una investigación exploratoria entre usuarios finales que utilizan un producto existente similar.
 - **Construcción de escenarios, donde un grupo de usuarios finales es guiado a producir una descripción de un número de escenarios para el uso del sistema**.
 
-La última opción parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como **historias de usuarios**.
+Ésta opción parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como **historias de usuarios**.
 La figura 2.1 presenta una visión general con una declaración de alcance muy preliminar para una librería virtual ficticia Livir, que se utilizará para ilustrar las técnicas de modelado dentro de este libro. Este texto se habría obtenido tras una rápida reunión preliminar con el cliente.   
 Utilizando esto como base, se puede realizar un estudio más profundo con casos de uso de negocio y otros diagramas, de manera que la información contenida en ellos sea refinada, como se muestra a continuación en este capítulo.   
 
@@ -140,11 +123,8 @@ El documento se divide en dos partes:
 Version 1.0
 
 !Visión:
-  Se inicia un nuevo negocio: una librería virtual. 
-  El sistema a desarrollar debe manejar los procesos de adquisición y venta de la compañía. 
-  El acceso para los clientes y el personal de gestión debe ser realizado a través de un sitio Web.
+  Se inicia un nuevo negocio: una librería virtual. El sistema a desarrollar debe manejar los procesos de adquisición y venta de la compañía. El acceso para los clientes y el personal de gestión debe ser realizado a través de un sitio Web.
   Cuando un libro sea ordenado, si está disponible en stock es enviado inmediatamente, en caso contrario, el libro es solicitado al editor, y el plazo estimado  se comunica al cliente. El sistema calculará impuestos y gastos de envío, al mismo tiempo que aplicará descuentos cuando sea pertinente.
-
   El sistema permitirá al administrador generar informes sobre bestselers y sobre los clientes más rentables, al mismo tiempo que sugerirá libros para comprar basados en anteriores intereses del cliente.
 
 !Restriciones:
@@ -152,6 +132,7 @@ Version 1.0
     b) La tienda sólo servirá libros nuevos, no usados.
     c) El acceso al sistema estará disponible sólo a través de un sitio Web.
 ```
+
 `Figura 2.1 Vista general del proyecto Livir`
 
 
@@ -482,7 +463,7 @@ gain -- mar
 
 Otras opciones para detallar un caso de uso de negocio son el **diagrama de secuencia** UML y el **diagrama de comunicación**. Sin embargo, estos diagramas se utilizan para representar los mensajes que se envían a los elementos. No siempre es natural encontrar nombres para etiquetar esos mensajes en el caso de un proceso empresarial, y los nombres sin sentido como "buscar datos" y "verificar resultado" se eligen finalmente. 
 
-Por lo tanto, el diagrama de actividad es una opción más natural para describir lo que sucede en el mundo real, dentro de una organización de personas. Sin embargo, como se verá en la Sección 5.8, los diagramas de secuencia son muy útiles para detallar los **casos de uso del sistema**, porque los casos de uso del sistema generalmente consisten en una secuencia de flujos de información que se intercambian entre los actores y un sistema.
+Por lo tanto, el diagrama de actividad es una opción más natural para describir lo que sucede en el mundo real, dentro de una organización de personas. Sin embargo, como se verá, los diagramas de secuencia son muy útiles para detallar los **casos de uso del sistema**, porque los casos de uso del sistema generalmente consisten en una secuencia de flujos de información que se intercambian entre los actores y un sistema.
 
 ## 2.5 Aspectos dependientes del Estado de un negocio  
 
@@ -567,7 +548,7 @@ Por ejemplo, sería posible determinar que un libro en estado Vendido,
 Devuelto o Enviado no pueda cambiar el precio de precio normal a oferta especial y viceversa. 
 Eso podría ser modelado agregando una condición de guardia a las transiciones desde los estados Precio normal y Oferta especial: 
 [no en el estado Vendido, Enviado o Devuelto].
-La utilización de un diagrama de máquina de estado para representar un objeto de negocio es útil para mejorar el descubrimiento de los requisitos del sistema relacionados con algunos objetos de negocio clave, como se muestra en la Sección 3.4.
+La utilización de un diagrama de máquina de estado para representar un objeto de negocio es útil para mejorar el descubrimiento de los requisitos del sistema relacionados con algunos objetos de negocio clave.
 
 ## 2.6 Observaciones
 
@@ -619,15 +600,7 @@ Construir una vista general del sistema:
 
 ## 2.8 Preguntas
 1. ¿Cuál es el propósito del modelado de negocios?
-2. El modelado de negocios puede ocurrir con diferentes niveles de intensidad para diferentes tipos de proyectos. Explique y dé ejemplos!k
+2. El modelado de negocios puede ocurrir con diferentes niveles de intensidad para diferentes tipos de proyectos. Explique y dé ejemplos
 3. ¿Cuál es la diferencia entre un trabajador empresarial y un actor empresarial?
 4. ¿Qué aspectos de un negocio pueden ser detallados en un diagrama de actividades? ¿Cuál puede ser detallado por un diagrama de máquina de estados?
 
-1 http://www.bpmn.org/  
-
-3 ¿Por qué una librería virtual? Porque es un sistema de información comercial típico, y porque la mayoría de los lectores ya deberían tener experiencia con ese tipo de sistema, y también porque es lo suficientemente simple, aunque rico, para ilustrar las técnicas de modelado de este libro. Dichos sistemas ya están disponibles para adquisición y personalización, y puede que no tenga sentido desarrollar uno nuevo desde cero, pero el propósito aquí es simplemente didáctico.  
-
-4 http://tynerblain.com/blog/2007/01/22/how-to-write-good-use-case-names/  
-
-Si estamos modelando una empresa como un todo, por lo general los trabajadores de la empresa no aparecen, ya que son internos al sistema de la empresa. Pero si se muestran las conexiones entre los diferentes subsistemas de la empresa, entonces los trabajadores de la empresa deben aparecer.  
-Algunos enfoques sugieren el uso de flechas para indicar si el actor sólo recibe o envía información al sistema. Pero esa práctica, además de no estar apoyada por UML 2, prácticamente no aporta información útil en este punto del análisis de negocio, ya que por el momento sólo es importante saber qué casos de uso existen realmente, y qué actores están involucrados con ellos. Los detalles sobre la interacción se darán más adelante con los diagramas de actividad que describirán cómo se realiza un caso de uso empresarial.
