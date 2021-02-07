@@ -951,7 +951,6 @@ Elaborar los diagramas de secuencia del sistema:
 - Representar los comandos y consultas del sistema utilizando estrategias de estado o sin estado. 
 - Completar los diagramas de secuencia del sistema con flujos alternativos. 
   
-
 ### GPI
 Estimar el esfuerzo total, el cronograma ideal y el tamaño medio del equipo para el proyecto.   
 
