@@ -2,13 +2,13 @@
 
 > El **modelado de negocio** es la primera actividad que se lleva a cabo durante el desarrollo de la mayoría de los proyectos en la industria del software. Aunque los **diagramas de casos de uso de negocio** y otros diagramas UML se utilizan actualmente para ayudar a los equipos a **comprender los procesos de negocio**, a veces las conexiones entre esos elementos no son claras. 
 
-Este archivo muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando **diagramas de actividad de negocio** y **diagramas de máquinas de estado** que describen los procesos clave de negocio y los objetos clave de negocio.   
+Este documento muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando **diagramas de actividad de negocio** y **diagramas de máquinas de estado** que describen los procesos clave de negocio y los objetos clave de negocio.   
 También muestra cómo se pueden utilizar los diagramas de casos de uso del negocio para definir el alcance de un sistema.
 
-## Palabras clave
+#### Palabras clave
 `Modelado de negocio`; `diagrama de caso de uso de negocio`; `diagrama de actividad`; `diagrama de máquina de estados`; `alcance del proyecto`.
 
-## Conceptos en este Módulo
+#### Conceptos en este Módulo
 
 - Vista general del sistema
 - Diagrama de Caso de Uso de Negocio
@@ -28,7 +28,7 @@ Esta visión puede ser obtenida por la disciplina UP llamada modelado de negocio
 
 > El modelado de negocio es, por lo tanto, una actividad que apoya el descubrimiento de los requisitos del sistema ayudando al equipo a percibir el contexto empresarial más amplio en el que operará el futuro sistema. 
 
-Diferentes artefactos de texto o diagramas pueden apoyarla, como se presenta en este capítulo.
+Diferentes artefactos de texto o diagramas pueden apoyarla, como se presenta en este documento.
 
 Los **artefactos** en esta fase usualmente no necesitan ser demasiado detallados.  
 Las reuniones con las partes interesadas podrían producir un registro (actas) que probablemente pueda recoger varias ideas sobre los objetivos de la empresa y las oportunidades de automatización. Al usar esta información, el equipo puede construir una visión general del negocio.
@@ -39,8 +39,8 @@ Otra información relevante también suele incluirse en la vista general, como; 
 
 La declaración de **alcance del proyecto** puede estar relacionada con las actividades de análisis de negocio. Después de descubrir información útil sobre el negocio, el equipo está en mejores condiciones de determinar qué debe y qué no debe incluirse en el proyecto.   
 
-La vista general del sistema puede ser elaborada con la ayuda de algunos diagramas UML.   
-Se pueden utilizar diagramas de casos de uso de negocio y diagramas de actividades de negocio y ocasionalmente diagramas de estado de máquinas. Alternativamente, se puede utilizar el Business Process Model and Notation, BPMN, en lugar de los diagramas de actividad UML. 
+La vista general del sistema puede ser elaborada con la ayuda de algunos diagramas `UML`.   
+Se pueden utilizar diagramas de casos de uso de negocio y diagramas de actividades de negocio y ocasionalmente diagramas de estado de máquinas. Alternativamente, se puede utilizar el Business Process Model and Notation, `BPMN`, en lugar de los diagramas de actividad UML.   
 Estos diagramas ayudan a determinar si el alcance del proyecto es completo y consistente con los objetivos de la organización.
 
 > **El modelado de negocio consiste en estudiar y entender la organización y sus procesos, porque normalmente el sistema a desarrollar no será un producto aislado, sino una parte orgánica del contexto de la organización. Los objetivos de esta disciplina son:**
@@ -68,7 +68,7 @@ Algunos factores que aumentan o disminuyen la necesidad de un modelo de negocio 
 
 No importa el nivel de detalle y esfuerzo que se deba poner en el modelado de negocios, cada proyecto debe comenzar con documentación preliminar que permita comprender su alcance. Un proyecto con un alcance mal definido puede dar lugar a molestias o incluso peleas entre el cliente y el equipo de desarrollo, en cuanto a la inclusión (o falta de inclusión) de ciertas características.
 
-## 2.2 Visión general del sistema
+## 2.2 Vista general del sistema
 
 Las actividades relacionadas con la definición del **alcance de un proyecto** deben tomar generalmente una fracción relativamente pequeña del tiempo de todo el proyecto, aunque pueden existir variaciones dependiendo del tipo de proyecto: los proyectos con requisitos simples y bien definidos pueden requerir no más de un par de días de modelado de negocios, mientras que los proyectos complejos y grandes pueden requerir semanas o meses. En el momento de la definición del alcance, toda la información sobre el negocio de la empresa debe ser explorada mediante entrevistas a los usuarios, clientes y especialistas en la materia, así como mediante el examen de documentos, informes, sistemas existentes y bibliografía relacionada.
 
@@ -91,7 +91,7 @@ No tenemos intención de proponer normas para la redacción de ese documento. Pe
 
 Estos detalles podrían ser tratados alternativamente en otros documentos, como la **lista de riesgos**, **requisitos** o **casos de uso**.  
 
-La declaración de alcance en la visión general debe presentar, en líneas generales, el producto que debe desarrollarse: qué debe incluirse y qué puede incluirse pero no debe incluirse. Esta información puede obtenerse inicialmente entrevistando a las partes interesadas, y puede afinarse más tarde con el uso de los diagramas presentados en este capítulo.  
+La declaración de alcance en la visión general debe presentar, en líneas generales, el producto que debe desarrollarse: qué debe incluirse y qué puede incluirse pero no debe incluirse. Esta información puede obtenerse inicialmente entrevistando a las partes interesadas, y puede afinarse más tarde con el uso de los diagramas presentados en este documento.  
 
 Si es posible, los **principales entregables** del proyecto también deben ser definidos en la vista general, así como el marco de tiempo en el que el cliente va a recibir algún tipo de entrega del equipo de desarrollo. Normalmente, esta lista de entregables consiste en versiones implementadas del software, pero la lista también puede incluir otros elementos, como diseño, manuales, medios de instalación, formación, etc.   
 
@@ -105,13 +105,12 @@ Si es necesario, se puede añadir más información al documento de visión gene
 >La vista general del sistema es el documento base del acuerdo para el cliente y el desarrollador. Se tomará como base para la planificación del resto del proyecto.   
 
 Es importante mencionar que cuando se está construyendo la vista general, todavía no se ha completado el análisis de requisitos y, por lo tanto, la información mencionada en la vista general consiste en compromisos tempranos. Se espera que el análisis de los requisitos detalle el alcance en profundidad, pero no aumente su extensión. Por ejemplo, en el análisis de requisitos, el proceso de **“Sell books”** puede detallarse con descuentos, ventas, entregas, etc. (teniendo en cuenta que **“Sell books”** se menciona en la declaración de alcance), pero si la transferencia de pagos de la empresa no se mencionara en la declaración de alcance, entonces la inclusión de ese elemento en el proyecto requeriría una renegociación de la declaración de alcance.
-Pressman (2008) propone una serie de técnicas para comunicarse con los grupos de interés con el fin de descubrir, por ejemplo, los objetivos del negocio, por ejemplo
 
-- **Construcción de escenarios, donde un grupo de usuarios finales es guiado a producir una descripción de un número de escenarios para el uso del sistema**.
+Una técnica para comunicarse con los grupos de interés con el fin de descubrir, los objetivos del negocio, es la **Construcción de escenarios, donde un grupo de usuarios finales es guiado a producir una descripción de un número de escenarios para el uso del sistema**.
 
-Ésta opción parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como **historias de usuarios**.
-La figura 2.1 presenta una visión general con una declaración de alcance muy preliminar para una librería virtual ficticia Livir, que se utilizará para ilustrar las técnicas de modelado dentro de este libro. Este texto se habría obtenido tras una rápida reunión preliminar con el cliente.   
-Utilizando esto como base, se puede realizar un estudio más profundo con casos de uso de negocio y otros diagramas, de manera que la información contenida en ellos sea refinada, como se muestra a continuación en este capítulo.   
+Ésta técnica parece ser muy popular entre los profesionales de métodos ágiles, donde los escenarios a veces se identifican como **historias de usuarios**.
+La Figura 2.1 presenta una visión general con una declaración de alcance muy preliminar para una librería virtual ficticia Livir, que se utilizará para ilustrar las técnicas de modelado dentro de este libro. Este texto se habría obtenido tras una rápida reunión preliminar con el cliente.   
+Utilizando esto como base, se puede realizar un estudio más profundo con casos de uso de negocio y otros diagramas, de manera que la información contenida en ellos sea refinada, como se muestra a continuación.   
 
 El documento se divide en dos partes:
 
@@ -156,7 +155,7 @@ La cantidad de casos de uso de negocio que se identificarán puede ser relativam
 
 Un proceso de negocio es un proceso de largo alcance que realiza la empresa; piense, por ejemplo, en la venta de productos, la realización de marketing, la prestación de servicios, la resolución de problemas de los clientes, etc. Cada proceso de este tipo debe contribuir a un objetivo empresarial. No es el momento de detallar tales procesos. Por ejemplo, la venta de productos puede incluir muchos subprocesos como el registro de clientes, la oferta de productos, el envío de productos, la aplicación de descuentos, etc. Pero esos procesos (que más tarde posiblemente serán identificados como casos de uso del sistema si van a ser automatizados) están involucrados en el proceso de más alto nivel, que es **“Sell books”**.
 
-Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema** (Capítulo 3), es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
+Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos de uso empresarial** de los **casos de uso del sistema**, es habitual representar los casos de uso empresarial con el negocio estereotipado, o cortando la elipse de caso de uso con un borde como se muestra en la Figura 2.2.
 
 <!-- 
 @startuml
@@ -316,7 +315,7 @@ gain -- mar
 
 > Si el proyecto, por el contrario, consiste en una serie de subproyectos o etapas, en los que se automatizarían diferentes partes de la empresa, esto también podría indicarse mediante el uso de diferentes límites de sistema en el diagrama: uno para cada subproyecto o etapa.  
 
-El siguiente paso que conduce al **análisis de requisitos** es el **estudio detallado de los casos de uso empresarial que se automatizarán**. El nivel de precisión y detalle depende de los objetivos del proyecto, como ya se discutió al principio de este capítulo.
+El siguiente paso que conduce al **análisis de requisitos** es el **estudio detallado de los casos de uso empresarial que se automatizarán**. El nivel de precisión y detalle depende de los objetivos del proyecto, como ya se discutió al principio.
 
 ## 2.4 Diagrama de actividad de Negocio
 
@@ -373,7 +372,7 @@ Dos **nodos de flujo de control** son comunes en el diagrama de actividad: los *
 
 - Los nodos de decisión (nodos de **rama** y de **fusión**) están representados por diamantes. Los flujos que salen del nodo de decisión deben tener condiciones de guarda (una expresión lógica entre paréntesis). Dos o más movimientos pueden salir de un nodo de decisión, pero es importante que las condiciones de guarda sean mutuamente excluyentes, es decir, sólo una de ellas puede ser verdadera a la vez.
 
-- Los nodos de paralelismo (nodos de horquilla y de unión) están representados por barras . Los flujos que salen de un nodo de horquilla se realizan en paralelo.
+- Los nodos de paralelismo (nodos de horquilla `fork` y de unión `join`) están representados por barras . Los flujos que salen de un nodo de horquilla se realizan en paralelo.
     
 El diagrama de la Figura 2.8 es todavía una representación muy bruta del proceso real de venta de libros. Sólo para ilustrar una posible evolución de ese diagrama, examinemos la situación cuando algunos de los libros encargados no están disponibles en stock. Sería necesario pedirlos a uno de los editores y añadirlos al pedido del cliente después de su llegada. La Figura 2.9 muestra esta situación al indicar que si algunos libros no están disponibles, entonces tienen que ser ordenados a los editores, y el pedido se envía sólo después de su llegada.  
 
@@ -428,7 +427,7 @@ Los nodos de bifurcación, unión, decisión y fusión, así como los nodos inic
 
 Otro nodo que puede ser útil a veces es el **nodo final de flujo**, que termina una trayectoria (paralela o no) que se está realizando. La diferencia entre éste y el nodo final de la operación es que en el caso del nodo final de la operación, todos los movimientos del diagrama de actividades terminan cuando un solo movimiento lo alcanza, mientras que en el caso del nodo final de proceso sólo se termina un movimiento (entre otros movimientos paralelos), pero la operación continúa.  
 
-En el caso de uso de la Figura 2.7, sólo un actor (Customer) y un trabajador (Clerk) participan en el caso de uso `Sell books`. Sin embargo, después de detallar las actividades relacionadas con ese caso de uso, como se hace en la Figura 2.10, se descubrió que son necesarios dos actores más: el `Publisher` y el `Credit card Operator`. Además, el `Publisher` es un actor que tiene que estar vinculado al caso de uso `Buy books`. Por lo tanto, dependiendo del nivel de detalle deseado en este punto del proyecto, el diagrama del caso de uso de negocio puede actualizarse para reflejar esos descubrimientos, como se muestra en la Figura 2.11.
+En el caso de uso de la Figura 2.7, sólo un actor (`Customer`) y un trabajador (`Clerk`) participan en el caso de uso `Sell books`. Sin embargo, después de detallar las actividades relacionadas con ese caso de uso, como se hace en la Figura 2.10, se descubrió que son necesarios dos actores más: el `Publisher` y el `Credit card Operator`. Además, el `Publisher` es un actor que tiene que estar vinculado al caso de uso `Buy books`. Por lo tanto, dependiendo del nivel de detalle deseado en este punto del proyecto, el diagrama del caso de uso de negocio puede actualizarse para reflejar esos descubrimientos, como se muestra en la Figura 2.11.
 
 
 <p hidden>
@@ -522,7 +521,7 @@ Sent --> [*]: Confirmation Arrival
 ![](img/F2.13.jpg)  
 `Figura 2.13 Diagrama de Máquina de Estado con requisitos de guarda.`
 
-Estas condiciones de guardia siguen siendo muy informales. Pero esto es aceptable durante el modelado de negocios, porque el objetivo es entender la organización del negocio, no especificar un sistema computacional. Sin embargo, se pueden obtener condiciones de protección precisas si se utiliza un lenguaje formal como el OCL (Object Constraint Language). Más adelante en este libro se introducen expresiones que utilizan OCL.  
+Estas *condiciones de guardia* siguen siendo muy informales. Pero esto es aceptable durante el modelado de negocios, porque el objetivo es entender la organización del negocio, no especificar un sistema computacional. Sin embargo, se pueden obtener condiciones de protección precisas si se utiliza un lenguaje formal como el OCL (Object Constraint Language). Más adelante en este libro se introducen expresiones que utilizan OCL.  
 
 En algunas situaciones es posible que un evento cause una transición desde más de un estado. En el ejemplo de la Figura 2.13, se puede imaginar que un libro no sólo puede ser dañado cuando está en estado Devuelto, sino también cuando está en otros estados como En almacén y Vendido. Entonces, debería existir una transición a Desechado desde esos tres estados. Sin embargo, para abreviar este conjunto de transiciones se puede utilizar un superestado.  
 
@@ -571,10 +570,12 @@ Un estado no corresponde necesariamente a una actividad. Un televisor, por ejemp
 Un diagrama de actividades es útil para modelar personas, organizaciones o sistemas **que hacen cosas** ft _Rajoy_.   
 Por otro lado, el diagrama de máquina de estados es útil cuando una sola entidad pasa por diferentes estados en los que no necesariamente está haciendo algo. Además, el diagrama de actividad suele detallar un caso de uso de negocio (es decir, un proceso como la venta, la compra, la comprobación, etc.), mientras que el diagrama de máquina de estados suele asociarse a un objeto de negocio (como libros, personas, pedidos, etc.).
 
-Sin embargo, el modelado de negocios no se trata sólo de construir diagramas.   
+```diff
+-Sin embargo, el modelado de negocios no se trata sólo de construir diagramas.   
 
-El propósito de los diagramas es ayudar a entender el contexto y los requisitos generales iniciales de un proyecto y un sistema. 
-El modelado de negocios es una de las actividades clave que ayuda a un equipo a identificar y prepararse para los riesgos del proyecto. 
++El propósito de los diagramas es ayudar a entender el contexto y los requisitos generales iniciales de un proyecto y un sistema. 
+!El modelado de negocios es una de las actividades clave que ayuda a un equipo a identificar y prepararse para los riesgos del proyecto. 
+```
 También se pueden realizar otras actividades de mitigación de riesgos durante la fase inicial, como pruebas de concepto, talleres, prototipos, pruebas previas, etc. Cualquier estrategia que ayude a comprender el panorama general e identificar los principales riesgos y complejidades de un proyecto es válida.
 
 ## 2.7 El proceso hasta ahora

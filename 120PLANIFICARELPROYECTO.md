@@ -1,96 +1,108 @@
 # PLANIFICAR el proyecto basado en CASOS DE USO
 
 **Panificar el proyecto basándose en los casos de uso**
+**PARTIMOS DE QUE YA HEMOS CALCULADO LA DURACIÓN DEL PROYECTO**
 
-Explica cómo organizar una serie de iteraciones incrementales basadas en una lista priorizada de casos de uso y riesgos, que es la columna vertebral del plan de desarrollo con el Proceso Unificado.
+Explica cómo organizar una serie de `iteraciones incrementales` basadas en una `lista priorizada de casos de uso y riesgos`, que es la columna vertebral del plan de desarrollo con el Proceso Unificado.
 
-## 4.3 Planificación de un proyecto iterativo
+```diff
+- Hemos ahorrado las fórmulas de estimación de esfuerzo y los conceptos en los que subyacen.
+```
 
-El objetivo de la planificación del proyecto es construir un plan para el proyecto en su conjunto. Entre otras cosas, es importante que la persona o grupo responsable de la planificación utilice las mejores herramientas disponibles para evaluar la cantidad de esfuerzo que se debe invertir en el proyecto. Esta estimación conducirá al cronograma y presupuesto del proyecto.
+## 4.3 Planificación un proyecto iterativo
+
+El objetivo de `la planificación del proyecto` es construir un `plan` para el proyecto en su conjunto. Entre otras cosas, es importante que la persona o grupo responsable de la planificación utilice las mejores herramientas disponibles para evaluar la cantidad de esfuerzo que se debe invertir en el proyecto. Esta estimación conducirá al cronograma y presupuesto del proyecto.
 
 
-Hay varios aspectos a considerar al principio. La declaración de alcance ya ha definido los objetivos del proyecto y los criterios de aceptación. Además, ya se ha completado el modelado de negocio necesario y se han incorporado los requisitos de alto nivel a los casos de uso del sistema.
+Hay varios aspectos a considerar desde principio. La `declaración de alcance ya ha definido los objetivos del proyecto `y `los criterios de aceptación`. Además, ya se ha completado el `modelado de negocio` necesario y se han incorporado los `requisitos de alto nivel` a los casos de uso del sistema.
 
 
-Con la técnica de análisis de casos de uso, se puede estimar el esfuerzo total para desarrollar el proyecto, así como el tiempo de calendario ideal y el tamaño medio del equipo; estas son medidas globales para el proyecto.
+Con la técnica de análisis de casos de uso, se puede estimar el esfuerzo total para desarrollar el proyecto, así como el tiempo de calendario ideal y el tamaño medio del equipo; estas son medidas globales para el proyecto. **<- ESTO NOS LO SALTAMOS**.
 
 Ahora es necesario definir la duración y el número de iteraciones.
 
 ### 4.3.1 Estimación de la duración de las iteraciones
-**Una iteración comienza con la planificación y termina con una nueva versión del sistema que se libera internamente o se entrega al cliente**. La duración de una iteración en UP y metodologías ágiles suele oscilar entre una y ocho semanas,15 y depende, entre otros factores, de la complejidad del proyecto y del tamaño del equipo.
 
-Los equipos pequeños con hasta cinco personas pueden hacer la planificación juntos un lunes por la mañana, realizar el trabajo durante la semana y generar un comunicado el viernes.
+**Una iteración comienza con la planificación y termina con una nueva versión del sistema que se libera internamente o se entrega al cliente**. La duración de una iteración en `UP` y metodologías ágiles suele oscilar entre `una` y `ocho` semanas, y depende, entre otros factores, de la complejidad del proyecto y del tamaño del equipo.
 
-Los grupos con más de 20 personas pueden necesitar más tiempo para distribuir y sincronizar las actividades. Considera que la cantidad de trabajo es normalmente mayor. Además, la generación de una versión lleva más tiempo, porque habrá una mayor cantidad de partes de software que integrar, verificar y arreglar. Por lo tanto, en ese caso, se permitirían iteraciones de tres a cuatro semanas.
+Los equipos pequeños con hasta cinco personas pueden hacer la planificación juntos un lunes por la mañana, realizar el trabajo durante la `semana` y generar un `entregable` el viernes.
 
-Los grupos de más de 40 personas necesitan trabajar en un entorno más estructurado y formal, con más documentación intermedia, para que el flujo de información sea naturalmente más lento. Por lo tanto, una iteración de seis a ocho semanas sería aconsejable.
+Los grupos con más de 20 personas pueden necesitar más tiempo para distribuir y sincronizar las actividades. Considera que la cantidad de trabajo es normalmente mayor. Además, la generación de una versión lleva más tiempo, porque habrá una mayor cantidad de partes de software que integrar, verificar y arreglar. Por lo tanto, en ese caso, se permitirían iteraciones de `tres a cuatro semanas`.
+
+Los grupos de más de 40 personas necesitan trabajar en un entorno más estructurado y formal, con más documentación intermedia, para que el flujo de información sea naturalmente más lento. Por lo tanto, una iteración de `seis a ocho semanas` sería aconsejable.
+
 Otros factores que pueden afectar la duración de las iteraciones son los siguientes:
 
 - La generación automática de código y las herramientas de software de ciclo de vida integradas permiten iteraciones más cortas.
-- Un equipo que es muy competente en UP y en técnicas de análisis, diseño y codificación permite iteraciones más cortas.
-- Si la calidad es una preocupación crítica y, en consecuencia, las pruebas y revisiones son intensas, entonces las iteraciones deben ser más largas, a menos que se utilice una automatización extensa y patrones de codificación de calidad eficaces.
+- Un equipo que es muy competente en `UP` y en técnicas de análisis, diseño y codificación permite iteraciones más cortas.
+- Si la `calidad` es una preocupación crítica y, en consecuencia, las pruebas y revisiones son intensas, entonces las iteraciones deben ser más largas, a menos que se utilice una automatización extensa y patrones de codificación de calidad eficaces.
 
 ### 4.3.2 Número de iteraciones
-El número de iteraciones de un proyecto depende del tiempo de calendario dividido por la duración de cada iteración. Por ejemplo, para el proyecto Livir, con el equipo de novicios, el proyecto duraría unos 10 meses con un equipo de seis personas. Así, se utilizaría una iteración de dos semanas, con un total de 20 iteraciones.
+**El número de iteraciones de un proyecto depende del tiempo de calendario dividido por la duración de cada iteración**. Por ejemplo, para el proyecto Livir, con el equipo de novicios, el proyecto duraría unos 10 meses con un equipo de seis personas. Así, se utilizaría una iteración de dos semanas, con un total de 20 iteraciones.
 
-El número de iteraciones que se considerarían para la Elaboración y Construcción depende fundamentalmente de la necesidad de abordar los problemas arquitectónicos. Esto puede estimarse aproximadamente por la cantidad proporcional de casos de uso complejos que deben ser estudiados y desarrollados. Como el hito de la fase de Elaboración es una arquitectura estable, se puede asumir que la Elaboración no terminará mientras haya casos complejos de uso de alta prioridad que necesiten ser analizados. Kruchten (2003) estima que la Elaboración tomaría alrededor del 30% del tiempo lineal de un proyecto típico y la Construcción tomaría alrededor del 50% del tiempo de un proyecto típico, mientras que la Iniciación y la Transición tomaría alrededor del 10% cada una.
+El número de iteraciones que se considerarían para la `Elaboración` y `Construcción` depende fundamentalmente de la necesidad de abordar los problemas arquitectónicos. Esto puede estimarse aproximadamente por la cantidad proporcional de casos de uso complejos que deben ser estudiados y desarrollados. Como el hito de la fase de Elaboración es una `**arquitectura estable**`, se puede asumir que la Elaboración no terminará mientras haya casos complejos de uso de alta prioridad que necesiten ser analizados. Kruchten (2003) estima que la Elaboración tomaría alrededor del 30% del tiempo lineal de un proyecto típico y la Construcción tomaría alrededor del 50% del tiempo de un proyecto típico, mientras que la Iniciación y la Transición tomaría alrededor del 10% cada una.
 
-Otra pregunta que viene a la mente en este punto es si la estimación del esfuerzo incluye la fase de inicio o no (porque el inicio está prácticamente terminado cuando se hace la estimación). El método COCOMO II, por ejemplo, cuando se aplica al Proceso Unificado, estima sólo el esfuerzo que se va a gastar en Elaboración y Construcción, dejando que Iniciación y Transición se calcule como un porcentaje del esfuerzo total. Normalmente, se cree que el análisis de casos de uso estima el esfuerzo total de un proyecto, desde su inicio hasta la entrega del producto. Sin embargo, si el equipo utiliza otra interpretación, lo importante es mantenerla coherente de un proyecto a otro. Cualquier discrepancia en las medidas de estimación sería absorbida por el índice de productividad del equipo.
+Otra pregunta que viene a la mente en este punto es si la estimación del esfuerzo incluye la fase de Inicio o no (porque el Inicio está prácticamente terminado cuando se hace la estimación). El método COCOMO II, por ejemplo, cuando se aplica al Proceso Unificado, estima sólo el esfuerzo que se va a gastar en Elaboración y Construcción, dejando que Iniciación y Transición se calcule como un porcentaje del esfuerzo total. Normalmente, se cree que el análisis de casos de uso estima el esfuerzo total de un proyecto, desde su inicio hasta la entrega del producto. Sin embargo, si el equipo utiliza otra interpretación, lo importante es mantenerla coherente de un proyecto a otro. Cualquier discrepancia en las medidas de estimación sería absorbida por el índice de productividad del equipo.
 
 
 ### 4.3.5 Definición de la prioridad del caso de uso
-Una de las principales técnicas para reducir el riesgo en un proyecto es tratar primero los casos de uso más complejos, especialmente si son los que representan los procesos de negocio más críticos, porque con ellos el equipo puede aprender más sobre el sistema que con otros casos de uso. Los casos de uso de patrones como `CRUD` (complejidad media) e informes (complejidad mínima) pueden ser tratados más adelante durante la construcción.
+Una de las principales técnicas para reducir el riesgo en un proyecto es **tratar primero los casos de uso más complejos**, especialmente si son los que representan los procesos de negocio más críticos, porque con ellos el equipo puede aprender más sobre el sistema que con otros casos de uso. Los casos de uso de patrones como `CRUD` (complejidad media) e `reports` (complejidad mínima) pueden ser tratados más adelante durante la construcción.
 
 
-La planificación indica cuándo se va a analizar, diseñar e implementar cada caso de uso. El Proceso Unificado, como la mayoría de las técnicas ágiles, no espera que el plan general del proyecto defina cuándo se va a implementar cada caso de uso. Sin embargo, se colocan en una lista dinámica de prioridades y, aunque puede actualizarse sobre la marcha, es posible saber cuándo debe completarse cada caso de uso. La planificación de una iteración comienza eligiendo qué casos de uso, riesgos o requisitos de cambio se tratarán en la siguiente iteración. Al planificar una iteración, se deben tener en cuenta los siguientes aspectos a la hora de elegir los casos de uso a tratar:
+La planificación indica cuándo se va a analizar, diseñar e implementar cada caso de uso. El Proceso Unificado, como la mayoría de las técnicas ágiles, no espera que el plan general del proyecto defina cuándo se va a implementar cada caso de uso. Sin embargo, se colocan en una lista dinámica de prioridades y, aunque puede actualizarse sobre la marcha, es posible saber cuándo debe completarse cada caso de uso. **La planificación de una iteración comienza eligiendo qué casos de uso, riesgos o requisitos de cambio se tratarán en la siguiente iteración**. Al planificar una iteración, se deben tener en cuenta los siguientes aspectos a la hora de elegir los casos de uso a tratar:
 
-- Usar la complejidad de los casos: Los casos de uso de mayor riesgo y complejidad deben abordarse en primer lugar en la mayoría de los casos, a menos que condiciones especiales (por ejemplo, un caso de uso relativamente simple con alto riesgo tecnológico) justifiquen la elección de casos de uso diferentes.
-- Dependencias entre casos de uso: Los casos de uso que tienen una fuerte dependencia de los que ya estaban acomodados en la iteración deben ser tratados en conjunto si es posible, ya que evita la fragmentación del trabajo en las clases.
-- Capacidad de carga del equipo: El trabajo de desarrollo debe ser asignado a los miembros del equipo en base a su capacidad de carga.
+- Usar la *complejidad de los casos*: Los casos de uso de mayor riesgo y complejidad deben abordarse en primer lugar en la mayoría de los casos, a menos que condiciones especiales (por ejemplo, un caso de uso relativamente simple con alto riesgo tecnológico) justifiquen la elección de casos de uso diferentes.
+- *Dependencias* entre casos de uso: Los casos de uso que tienen una fuerte dependencia de los que ya estaban acomodados en la iteración deben ser tratados en conjunto si es posible, ya que evita la fragmentación del trabajo en las clases.
+- *Capacidad de carga* del equipo: El trabajo de desarrollo debe ser asignado a los miembros del equipo en base a su capacidad de carga.
   
-Una sugerencia para priorizar los casos de uso del ejemplo de Livir representado en la Figura 3.11 se presenta en la Tabla 4.7.
 
-
-Tabla 4.7  
+Tabla e4.7  
 Sugerencia de prioridades de Caso de Uso para el ejemplo de Livir
 
+| |   |  |
+|--|--|--|
+| 1. | Order books | Pedidos de libros |  
+| 2. | Pay order | Orden de pago  |  
+| 3. | Deliver order  | Entregar pedido  |  
+| 4. | Register delivery confirmation  |  Registrar confirmación de entrega  |  
+| 5. | Receive books  |  Recibir libros  |  
+| 6. | Resend order   |  Reenviar pedido  |  
+| 7. | Register order return   | Registrar la devolución de pedidos |   
+| 8. | Discard books    |   Descartar libros  |  
+| 9. | Cancel order   |    Cancelar pedido  |
+| 10. | Create/remove special offer  |     Crear/eliminar oferta especial  |  
+| 11. | Manage customers `<<crud>>`   |     Mantenimiento de libros | 
+| 12. | Manage books `<<crud>>`   |     Mantenimiento de libros  |
+| 13. | Manage publishers`<<crud>>`  |    Mantenimiento de Editores | 
+| 14. | Order status `<<report>>`  |    Informe de estado del pedido | 
+| 15. | Past sales `<<report>>`   |    Informe de ventas anterior  |
+| 16. | Book sales by period `<<report>>`  |     Ventas de libros por informe de período  |
+| 17. | Books available for sale `<<report>>`  |    Informe de libros disponibles para la venta  |
+| 18. | Book returns by period `<<report>>`  |    Devoluciones de libros en un periódo  |
+| 19. | Upcoming orders by period `<<report>>`   |    Pedidos previstos por periodo   |
+| 20. | Deliveries by period `<<report>>`   |   Entregas previstas por periodo  |
+| 21. | Discarded books by period `<<report>>`  |    Informe de Libros descartados en un período  |
 
-1.Order books    - Pedidos de libros  
-2.Pay order     - Orden de pago  
-3.Deliver order    - Entregar pedido  
-4.Register delivery confirmation  - Registrar confirmación de entrega  
-5.Receive books  - Recibir libros  
-6.Resend order  - Reenviar pedido  
-7.Register order return  - Registrar la devolución de pedidos  
-8.Discard books    -    Descartar libros  
-9.Cancel order  -    Cancelar pedido  
-10.Create/remove special offer -    Crear/eliminar oferta especial  
-11.Manage customers `<<crud>>`  -    Mantenimiento de libros  
-12.Manage books `<<crud>>`  -     Mantenimiento de libros  
-13.Manage publishers`<<crud>>` -    Mantenimiento de Editores  
-14.Order status `<<report>>`  -    Informe de estado del pedido  
-15.Past sales `<<report>>`  -    Informe de ventas anterior  
-16.Book sales by period `<<report>>` -     Ventas de libros por informe de período  
-17.Books available for sale `<<report>>` -     Informe de libros disponibles para la venta  
-18.Book returns by period `<<report>>`  -    Devoluciones de libros en un periódo  
-19.Upcoming orders by period `<<report>>`  -     Pedidos previstos por periodo   
-20.Deliveries by period `<<report>>`  -   Entregas previstas por periodo  
-21.Discarded books by period `<<report>>`  
-   Informe de Libros descartados en un período  
+Una sugerencia para priorizar los casos de uso del ejemplo de Livir representado en la Figura 3.11 se presenta en la Tabla e4.7.
 
-El orden de esta lista es el más crítico para los casos de uso complejos, porque una elección errónea en términos de sus prioridades podría llevar a una refactorización innecesaria en iteraciones posteriores. Consideramos que los casos de uso más importantes para este negocio son los relacionados con el proceso de venta de libros, porque eso es lo que genera beneficios para la empresa. Sin embargo, el orden de los casos de uso con menor riesgo, como los cruds y los informes, no es tan crítico.
+
+El orden de esta lista es el más crítico para los casos de uso complejos, porque una elección errónea en términos de sus prioridades podría llevar a una `refactorización` innecesaria en iteraciones posteriores. Consideramos que los casos de uso más importantes para este negocio son los relacionados con el proceso de venta de libros, porque eso es lo que genera beneficios para la empresa. Sin embargo, el orden de los casos de uso con menor riesgo, como los `cruds` y los `informes`, no es tan crítico.
 
 ### 4.3.6 Fase de planificación e iteraciones
-Con la información obtenida en las secciones anteriores, es posible elaborar el plan de liberación preliminar utilizando las prioridades de los casos de uso, el esfuerzo y la capacidad de carga del equipo.
+Con la información obtenida en las secciones anteriores, es posible elaborar el plan de `release` preliminar utilizando las prioridades de los casos de uso, el esfuerzo y la capacidad de carga del equipo.
 
 Los objetivos de una iteración pueden ser de tres tipos:
 
-- Implementar total o parcialmente uno o más casos de uso.
-- Mitigar uno o más riesgos, generando o realizando un plan de reducción de probabilidad, reducción de impacto o recuperación de desastres.
-- Implementar total o parcialmente uno o más cambios solicitados. A medida que la arquitectura del sistema evoluciona durante las iteraciones, se pueden solicitar cambios debido a la falta de conformidad con los requisitos o a errores de diseño. Incorporar estos cambios en el software puede ser uno de los objetivos de una interacción. Este tipo de objetivo suele surgir sólo después de la primera iteración.
+- Implementar total o parcialmente uno o más `casos de uso`.
+- Mitigar uno o más `riesgos`, generando o realizando un plan de reducción de probabilidad, reducción de impacto o recuperación de desastres.
+- Implementar total o parcialmente uno o más `cambios solicitados`. A medida que la arquitectura del sistema evoluciona durante las iteraciones, se pueden solicitar cambios debido a la falta de conformidad con los requisitos o a errores de diseño. Incorporar estos cambios en el software puede ser uno de los objetivos de una interacción. Este tipo de objetivo suele surgir sólo después de la primera iteración.
   
 
-Para cada elemento (caso de uso, riesgo o cambio solicitado) debe haber una estimación del esfuerzo. Los elementos serán seleccionados para su inclusión en una iteración u otra dependiendo de su prioridad (las prioridades pueden cambiar a medida que el proyecto avanza - por lo tanto, la planificación también puede cambiar). Se debe dar mayor prioridad a los elementos más complejos y arriesgados, que son los que tienen mayor potencial para aprender sobre el sistema. La sugerencia es elegir primero:
+Para cada elemento (caso de uso, riesgo o cambio solicitado) debe haber una estimación del esfuerzo. Los elementos serán seleccionados para su inclusión en una iteración u otra dependiendo de su prioridad (las prioridades pueden cambiar a medida que el proyecto avanza - por lo tanto, la planificación también puede cambiar). 
+```diff
+-Se debe dar mayor prioridad a los elementos más complejos y arriesgados, que son los que tienen mayor potencial para aprender sobre el sistema. 
+```
+La sugerencia es elegir primero:
 
 - Casos de uso que representen los procesos de negocio más críticos, por ejemplo, aquellos que ayuden a la empresa a alcanzar sus objetivos organizativos, como la obtención de beneficios.
 - Riesgos de alta importancia (o de alta exposición), es decir, aquellos con un alto impacto y una alta probabilidad de convertirse en problemas.
@@ -108,14 +120,14 @@ Una vez concluida la fase de planificación (normalmente al final de Inicio), se
 
 El propósito de un plan de iteración incluye lo siguiente (Kroll 2004):
 1. Definir el alcance de la iteración definiendo sus objetivos en términos de los artefactos que se producirán, tales como:
-- Detallar e implementar casos de uso específicos.
-- Mitigación de riesgos conocidos.
-- Realizar los cambios solicitados.
+   - Detallar e implementar casos de uso específicos.
+   - Mitigación de riesgos conocidos.
+   - Realizar los cambios solicitados.
 2. Crear un plan detallado sobre cómo debe desarrollarse la iteración.
 3. Crear, identificar y gestionar dependencias de tareas.
 4. Asignar tareas a personas.
 
-Tabla 4.8
+Tabla e4.8
 Ejemplo genérico de planificación de fase para el Livir
 
 | Fase | Iteración | Objetivo Principal (Riesgos y Casos de Uso A bordados) | Semanario |
@@ -153,13 +165,13 @@ Por ejemplo, considera que estás planificando la primera iteración de elaborac
 - Probar y refinar la arquitectura preliminar.
 - Realizar planes de mitigación de riesgo K1: Requerimientos inestables.
   
-Luego, la planificación puede continuar definiendo los entregables de la iteración y las tareas necesarias para producirlos, y asignándolos a los desarrolladores. Los equipos ágiles pueden preferir producir este plan en una reunión de equipo, mientras que los equipos que siguen a el UP pueden preferir instanciar algunos de los flujos de trabajo del UP y determinar qué tareas deben realizarse para lograr los objetivos de la iteración. Explicar esto está fuera del alcance de este libro, pero los lectores interesados en aprender más pueden empezar consultando a West (2002) o Crain (2004).
+Luego, la planificación puede continuar definiendo los entregables de la iteración y las tareas necesarias para producirlos, y asignándolos a los desarrolladores. 
 
 ## 4.4 El proceso visto hasta ahora
 
 
 
-| | Inicio | Elaboración | Construcción | Transición |
+| | *I*nicio | *E*laboración | *C*onstrucción | *T*ransición |
 | -- | -- | -- | -- | -- |
 | **M**odelado del Negocio | [MI](#MI) | | | | 
 | **R**equerimientos | [RI](#RI) | | | | 

@@ -1,14 +1,19 @@
 # REQUISITOS DE ALTO NIVEL
 
-Este capítulo presenta diagramas de caso de uso del sistema y especificaciones suplementarias. Explica cómo se conectan los casos de uso del sistema con los casos de uso del negocio y qué actores del negocio se convierten en actores del sistema. El capítulo explica cómo los casos de uso de alto nivel representan los requisitos de más alto nivel de un sistema (funcional y no funcional), y cómo se pueden obtener las especificaciones suplementarias basadas en el recientemente consolidado modelo de calidad del ISO 25010 SQuaRE Model. El capítulo también explica cómo elegir la granularidad de un caso de uso para evitar diagramas tan detallados que el número de elementos dificulta la comprensión, y cómo evitar diagramas que pasan por alto casos de uso importantes para que el análisis pueda ser engañado por la aparente simplicidad de un sistema realmente más complejo. Al final del capítulo, presentamos el modelo conceptual preliminar, que es un diagrama de clase utilizado para representar los conceptos que son relevantes para el sistema. Este modelo se detalla en los capítulos 6 y 7, pero aquí se introduce brevemente sólo para resaltar su importancia a fin de encontrar el conjunto correcto y completo de requisitos que un sistema debe implementar.
+En este documento presenta diagramas de `caso de uso del sistema` y `especificaciones suplementarias`. Explica cómo se conectan `los casos de uso del sistema` con los `casos de uso del negocio` y qué `actores del negocio` se convierten en `actores del sistema`. 
+Se explica cómo los casos de uso de alto nivel representan los requisitos de más alto nivel de un sistema (funcional y no funcional), y cómo se pueden obtener las especificaciones suplementarias basadas en el recientemente consolidado modelo de calidad del ISO 25010 SQuaRE Model. 
+También se explica cómo elegir la `granularidad de un caso de uso` para evitar diagramas tan detallados que el número de elementos dificulta la comprensión, y cómo evitar diagramas que pasan por alto casos de uso importantes para que el análisis pueda ser engañado por la aparente simplicidad de un sistema realmente más complejo. 
+
+Al final, presentamos el **modelo conceptual preliminar**, que es un **diagrama de clase** utilizado para representar los conceptos que son relevantes para el sistema. Este modelo se detalla más adelante, pero aquí se introduce brevemente sólo para resaltar su importancia a fin de encontrar el conjunto correcto y completo de requisitos que un sistema debe implementar.
 
 
-Palabras clave  
+#### Palabras clave  
 `Casos de uso`; `actores`; `requirimientos`; `ISO 25010`; `SQuaRE`; `especificaciones suplementarias`; `modelo conceptual preliminar`
+```diff
+-CLASES/TIPOS/MODOS DE USO
+```
 
-
-Conceptos en este Capítulo
-
+#### Conceptos en este Documento
 
 - Actores del sistema
 - Casos de uso del sistema
@@ -22,15 +27,14 @@ Conceptos en este Capítulo
 
 Una vez que el negocio ha sido razonablemente entendido y modelado, el **análisis de requerimientos** puede comenzar. Aunque existen varios enfoques para representar los requisitos, este libro presenta una **técnica basada en casos de uso**.
 
-El **caso de uso del sistema** es un proceso individual que se identifica a partir de las actividades de negocio. Los **casos de uso de sistemas de alto nivel** (o breves) representan los requisitos funcionales más generales de un sistema. Las anotaciones en estos casos de uso representan los requisitos no funcionales, es decir, las limitaciones y cualidades relacionadas con esas funciones. Los requisitos suplementarios son requisitos no funcionales que se aplican al sistema en su conjunto, no sólo a funciones individuales. Podrán figurar en el **documento complementario de especificación** (punto 3.5.8).
+El **caso de uso del sistema** es un proceso individual que se identifica a partir de las actividades de negocio. Los **casos de uso de sistemas de alto nivel** (o breves) representan los requisitos funcionales más generales de un sistema. Las **anotaciones** en estos casos de uso representan los requisitos no funcionales, es decir, las limitaciones y cualidades relacionadas con esas funciones. Los requisitos suplementarios son requisitos no funcionales que se aplican al sistema en su conjunto, no sólo a funciones individuales. Podrán figurar en el **documento complementario de especificación** (punto 3.5.8).
 
-Los casos de uso de sistemas son útiles para muchas actividades relacionadas con el desarrollo de sistemas, tales como:
+Los **casos de uso de sistemas** son útiles para muchas actividades relacionadas con el desarrollo de sistemas, tales como:
 
 - **Definición y validación de la arquitectura del sistema**: En general, las clases, asociaciones y atributos que forman parte de la arquitectura del sistema se obtienen a partir de los textos de los caso de uso.
 - **Creación de casos de prueba**: Los casos de uso pueden ser vistos como una base para las pruebas de sistema y aceptación, donde la funcionalidad es probada desde el punto de vista del usuario.
 - **Planificación de iteraciones**: Cada caso de uso recibe una prioridad, y se estima el esfuerzo para desarrollarlo, de modo que el equipo pueda decidir qué casos de uso desarrollar en cada iteración.
-- **Base para la documentación del usuario**: Los casos de uso son descripciones de los flujos de operación normales del sistema, así como de los movimientos alternativos que representan cómo tratar con eventuales condiciones excepcionales (Capítulo 5). Estas descripciones son una base excelente para iniciar el manual de usuario, ya que allí se describen todas las funcionalidades posibles de forma estructurada y completa.
-
+- **Base para la documentación del usuario**: Los casos de uso son descripciones de los flujos de operación normales del sistema, así como de los movimientos alternativos que representan cómo tratar con eventuales condiciones excepcionales. Estas descripciones son una base excelente para iniciar el manual de usuario, ya que allí se describen todas las funcionalidades posibles de forma estructurada y completa.
 
 Cada caso de uso representa un **conjunto coherente de requisitos funcionales del sistema**. Por lo general, más de una función está relacionada con un solo caso de uso, especialmente si es compleja. Algunas funciones, por otro lado, pueden estar asociadas a más de un caso de uso.
 
@@ -40,7 +44,7 @@ Existen al menos tres enfoques para los requisitos y los casos de uso:
 - Cree una lista de requisitos funcionales y, a continuación, identifique los casos de uso asociados a ellos.
 - Cree un conjunto de casos de uso y, a continuación, extraiga los requisitos funcionales de los mismos.
 - Considere que **los casos de uso son requisitos**. La versión breve de los casos de uso corresponde a los requisitos de alto nivel y los casos de uso ampliado corresponden al conjunto completo de requisitos.
-En este libro se adopta el tercer enfoque, porque es más simple, más directo y evita la generación de documentos diferentes con el mismo objetivo. La obtención y análisis de requisitos corresponde, por tanto, al descubrimiento de casos de uso del sistema y sus propiedades.
+En este documento se adopta el tercer enfoque, porque es más simple, más directo y evita la generación de documentos diferentes con el mismo objetivo. La obtención y análisis de requisitos corresponde, por tanto, al descubrimiento de casos de uso del sistema y sus propiedades.
 
 
 ## 3.2 Actores del sistema
@@ -61,18 +65,21 @@ Algunos enfoques consideran que hay dos tipos de actores: **primarios y secundar
 
 
 ## 3.3 Casos de uso del Sistema
-> Los casos de uso del sistema difieren de los casos de uso de negocio en algunos aspectos. Por ejemplo, los actores del negocio pueden pasar días o incluso semanas realizando un caso de uso empresarial, mientras que los casos de uso del sistema a menudo se ejecutan en un corto período de tiempo, generalmente en minutos, con uno o unos pocos actores interactuando con un sistema y obteniendo un resultado consistente y completo para al menos uno de sus objetivos. Los casos de uso del sistema también deben realizarse sin interrupciones, mientras que los casos de uso de negocio no están restringidos en ese sentido.
+
+PLURAL -> SINGULAR
+
+Los casos de uso del sistema difieren de los casos de uso de negocio en algunos aspectos. Por ejemplo, los actores del negocio pueden pasar días o incluso semanas realizando un caso de uso empresarial, mientras que **los casos de uso del sistema a menudo se ejecutan en un corto período de tiempo, generalmente en minutos, con uno o unos pocos actores interactuando con un sistema y obteniendo un resultado consistente y completo** para al menos uno de sus objetivos. Los casos de uso del sistema también deben realizarse **sin interrupciones**, mientras que los casos de uso de negocio no están restringidos en ese sentido.
 
 Otra diferencia fundamental entre un caso de uso de negocio y un caso de uso de sistema es que el caso de uso de negocio es usualmente realizado por muchos actores humanos, mientras que **el caso de uso de sistema es normalmente realizado por unos pocos (a veces sólo uno) actores humanos**. El hecho es que si un caso de uso de un sistema va a ser realizado por más de un actor humano, entonces deberían estar interactuando al mismo tiempo con el sistema, y esa no es una situación común. Por lo general, cada actor humano accede al sistema en el momento que le resulta conveniente, accediendo a los datos necesarios y realizando las acciones necesarias.
 
-Esto conduce a una secuencia de casos de uso del sistema y no a un solo caso de uso, como se explica más adelante. Sin embargo, a veces puede haber más de un actor humano disponible online; por ejemplo, en un supermercado cuando un cliente compra bienes, un supervisor puede ser convocado para realizar acciones que el cajero no está autorizado a realizar (por ejemplo, cancelar una venta). El hecho es que la supervisora debe estar disponible online y los demás actores deben esperar a que ella se presente antes de proceder.
+Esto conduce a una **secuencia de casos de uso del sistema** y no a un solo caso de uso, como se explica más adelante. Sin embargo, a veces puede haber más de un actor humano disponible online; por ejemplo, en un supermercado cuando un cliente compra bienes, un supervisor puede ser convocado para realizar acciones que el cajero no está autorizado a realizar (por ejemplo, cancelar una venta). El hecho es que la supervisora debe estar disponible online y los demás actores deben esperar a que ella se presente antes de proceder.
 
-Por otro lado, los sistemas computacionales externos pueden ser considerados actores en línea, ya que están disponibles de forma continua. Por ejemplo, se puede suponer que un Operador de tarjetas de crédito está disponible en línea de forma continua. En el momento en que un cliente decide hacer un pago con su tarjeta de crédito, el actor del sistema Operador de tarjetas de crédito estará disponible.
+Por otro lado, los sistemas computacionales externos pueden ser considerados **actores en línea**, ya que están disponibles de forma continua. Por ejemplo, se puede suponer que un Operador de tarjetas de crédito está disponible en línea de forma continua. En el momento en que un cliente decide hacer un pago con su tarjeta de crédito, el actor del sistema Operador de tarjetas de crédito estará disponible.
 
-> Un caso de uso de sistema de alto nivel está representado sólo por un nombre dentro de una elipse. Normalmente se asocia a uno o más actores, como se muestra en la Figura 3.1.
+Un caso de uso de sistema de alto nivel está **representado sólo por un nombre dentro de una elipse**. Normalmente se asocia a uno o más actores, como se muestra en la Figura 3.1.
 
 
-![](img/F3.1.jpg) 
+![](img/F3.1.jpg)  
 `Figura 3.1 Diagrama de casos de uso del sistema.`
 
 
@@ -82,9 +89,9 @@ En el diagrama de la Figura 3.1, las elipses representan casos de uso del sistem
 - El diagrama de caso de uso es un diagrama UML muy popular, pero también es frecuentemente malinterpretado. Es habitual ver estos diagramas con docenas de casos de uso y también algunos de sus fragmentos añadidos. Sin embargo, durante el Inicio, lo importante es saber cuáles son los principales procesos del sistema, y no detallarlos. Por lo tanto, la presencia de fragmentos en el diagrama y el uso de las relaciones de inclusión y extensión entre casos de uso (que a veces revelan parte de su estructura interna) no es aconsejable. Las preocupaciones sobre fragmentos y casos de uso que incluyan o amplíen otros pueden dejarse para el momento en que esos procesos de alto nivel se detallen en los diagramas de secuencia del sistema.
 ```
 
-Por lo general, no hay suficiente información para descubrir todos los fragmentos en este momento. ¿Por qué sólo se deben mostrar algunos de los fragmentos de casos de uso y otros no? Simplemente no muestre ninguna en absoluto en el diagrama durante el inicio! Esto evita que el diagrama tenga un gran número de elipses, lo que puede dificultar su comprensión. Por lo tanto, se necesitan criterios sólidos para decidir qué casos de uso deben mantenerse en el diagrama a fin de evitar, por una parte, un gran número de procesos excesivamente detallados y, por otra, un número demasiado reducido de procesos que podrían carecer de características importantes del sistema.
+Por lo general, no hay suficiente información para descubrir todos los fragmentos en este momento. ¿Por qué sólo se deben mostrar algunos de los fragmentos de casos de uso y otros no?  Simplemente no muestre ninguna en absoluto en el diagrama durante el inicio! Esto evita que el diagrama tenga un gran número de elipses, lo que puede dificultar su comprensión. Por lo tanto, se necesitan criterios sólidos para decidir qué casos de uso deben mantenerse en el diagrama a fin de evitar, por una parte, un gran número de procesos excesivamente detallados y, por otra, un número demasiado reducido de procesos que podrían carecer de características importantes del sistema.
 
-La regla es considerar como caso de uso sólo aquellos procesos que pueden ser realizados en forma aislada. Los procesos parciales que necesariamente deben realizarse durante otros procesos no deben representarse en el diagrama de casos de uso del sistema.
+La regla es considerar como caso de uso **sólo aquellos procesos que pueden ser realizados en forma aislada**. Los procesos parciales que necesariamente deben realizarse durante otros procesos no deben representarse en el diagrama de casos de uso del sistema.
 
 Sin embargo, incluso siguiendo esta guía, el número de casos de uso en un sistema del mundo real puede ser demasiado alto, por lo que puede resultar difícil tratarlos. Para reducir el número sin perder información y precisión se puede utilizar una segunda regla. Consiste en agrupar los casos de uso que están algo relacionados, especialmente si se puede hacer más de una vez, como un patrón. Por ejemplo, podría haber cuatro casos de uso como `Crear libro`, `Recuperar libro`, `Actualizar libro` y `Eliminar libro`, o sólo un caso de uso llamado `Administrar libro` que incluya los cuatro procesos individuales. Esto es un patrón, porque puede repetirse para otros conceptos: Se puede utilizar Administrar editor en lugar de Crear editor, Recuperar editor, Actualizar editor y Eliminar editor. Este patrón se conoce como CRUD, que es un acrónimo de Create, Retrieve, Update, and Delete.
 
@@ -98,7 +105,7 @@ Los casos de uso deben realizarse como procesos individuales. Los procesos que s
 
 En el caso del sistema **`Livir`**, el cálculo de los impuestos es algo que sólo ocurrirá durante el proceso de pedido de libros. Supongamos que los requerimientos del sistema no determinan que deba ser considerado un proceso independiente (aunque podría serlo, si los requerimientos fueran diferentes). En este caso, el Cálculo de impuestos no es un caso de uso, y debido a ello, no debe incluirse en el diagrama. La figura 3.2 ilustra la situación que debe evitarse, utilizando fragmentos del diagrama.
 
-![](img/F3.2.jpg) 
+![](img/F3.2.jpg)   
 `Figura 3.2 Ejemplo de un fragmento de caso de uso.`
 
 
@@ -112,7 +119,7 @@ En el ejemplo representado en la Figura 3.1, hay dos escenarios posibles que pod
   
 Por otra parte, los libros no se entregan automáticamente cuando se paga el pedido: alguien es responsable de verificar, de vez en cuando, qué pedidos se han emitido; esa persona recoge los libros en stock y envía el paquete. El proceso de entrega puede ocurrir justo después de pagar el pedido, pero también puede ocurrir al día siguiente (o incluso de seis a ocho semanas después). Este hecho caracteriza a *Delivery* como un caso de uso diferente. El caso de uso de *Delivery* tiene como condición previa la compra de libros, pero la compra no forma parte de la entrega: la entrega sólo se produce después de ella. Por lo tanto, la compra y la entrega, aunque sean secuenciales e incluso parte del mismo caso de uso empresarial, deben considerarse como casos de uso del sistema diferentes, como se muestra en la Figura 3.3, donde se presenta el caso de uso de *Send books*.
 
-![](img/F3.3.jpg) 
+![](img/F3.3.jpg)   
 `Figura 3.3 Casos de uso relacionados con el proceso de negocio de la venta de libros.`
 
 
@@ -129,20 +136,20 @@ Para decidir si un caso de uso tiene un resultado consistente, uno podría pensa
 
 Esto excluye de la definición de caso de uso fragmentos como Calcular impuestos, en el caso del ejemplo de la librería, porque esos impuestos se calculan sólo dentro del proceso de pedido, y no como un proceso aislado. Esto también excluye operaciones como **Login**, ya que realizar un login y luego apagar el ordenador no puede ser visto como un proceso completo. Puede ser sólo parte de uno o más casos de uso (Figura 3.4).
 
-![](img/F3.4.jpg) 
+![](img/F3.4.jpg)   
 `Figura 3.4  El inicio de sesión no debe considerarse un caso de uso completo.`
 
 Para evitar representar el **Login** como un caso de uso o incluso como parte de uno, simplemente se puede asumir que cada operación del sistema sólo puede ser realizada por un usuario que esté regularmente identificado y autorizado para realizarla. Este mecanismo forma parte del diseño tecnológico del sistema y no necesita ser considerado en el modelo de caso de uso de alto nivel.
 
 Por otro lado, es posible que los casos de uso completos ocurran dentro de otros casos de uso. Por ejemplo, el proceso de registro de un cliente puede considerarse un caso de uso completo. Pero ese proceso también puede ocurrir durante el pedido de libros, especialmente si es la primera vez que el cliente utiliza el sistema, o cuando necesita actualizar los datos (Figura 3.5).
 
-![](img/F3.5.jpg) 
+![](img/F3.5.jpg)   
 `Figura 3.5 Casos de uso independientes que puedan estar relacionados.`
 
 
 La asociación de dependencia entre los casos de uso es estereotipada y extendida para indicar que el proceso de **Pedir libros** puede ser ocasionalmente `extendido` por el proceso de **Registro del cliente**. Ambos procesos pueden ocurrir independientemente uno del otro, pero el registro del cliente también puede ocurrir durante el pedido de libros.
 
-Para evitar abusar de la `<<extend>>` en el diagrama de casos de uso, es importante tener en cuenta que sólo los casos de uso completos deben mantenerse en el diagrama. Se deben evitar fragmentos como los que se muestran en las figuras 3.2 y 3.4, incluso si son puntos de extensión de un caso de uso. Estos fragmentos se abordarán adecuadamente más adelante, cuando se detallen los casos de uso de alto nivel (capítulo 5). En la práctica, en este punto, cualquier asociación entre casos de uso como extender o incluir debe evitarse en el diagrama, ya que normalmente no añaden información útil para la fase de inicio.
+Para evitar abusar de la `<<extend>>` en el diagrama de casos de uso, es importante tener en cuenta que sólo los casos de uso completos deben mantenerse en el diagrama. Se deben evitar fragmentos como los que se muestran en las figuras 3.2 y 3.4, incluso si son puntos de extensión de un caso de uso. Estos fragmentos se abordarán adecuadamente más adelante, cuando se detallen los casos de uso de alto nivel. En la práctica, en este punto, cualquier asociación entre casos de uso como extender o incluir debe evitarse en el diagrama, ya que normalmente no añaden información útil para la fase de inicio.
 
 
 ### 3.3.4 Esencial
@@ -190,7 +197,7 @@ En primer lugar, se deben **identificar los actores** que están realmente inter
 - Empleado, porque es un trabajador de negocios que será automatizado.
 - Departamento de Marketing, ya que es un trabajador de negocios que no interactúa con ningún caso de uso dentro del ámbito de la automatización.
   
-Los trabajadores de las empresas cuyas funciones serán parcial o totalmente apoyadas por el sistema pueden ser fuentes importantes de información, porque saber cómo realizan sus tareas actualmente puede ser crucial para entender cómo debe funcionar el sistema. Además, saber cómo se realizan realmente las tareas puede ser valioso porque a veces lo que sucede en la práctica no es lo que está escrito en los libros de procedimientos.
+>Los trabajadores del negocio cuyas funciones serán parcial o totalmente apoyadas por el sistema pueden ser fuentes importantes de información, porque saber cómo realizan sus tareas actualmente puede ser crucial para entender cómo debe funcionar el sistema. Además, saber cómo se realizan realmente las tareas puede ser valioso porque a veces lo que sucede en la práctica no es lo que está escrito en los libros de procedimientos.
 
 Otra fuente de requisitos son los actores del negocio que se convertirán en actores del sistema. Sin embargo, no siempre estarán disponibles para la obtención de requisitos y, en ese caso, deberían ser sustituidos por especialistas del dominio. Por ejemplo, puede que no sea posible entrevistar al cliente de una librería que aún no existe. Así, alguien que conozca el negocio y pueda explicar cómo se supone que debe funcionar será una persona clave para obtener los requisitos adecuados. Si los editores y los operadores de tarjetas de crédito tampoco están disponibles, debería ser posible examinar la documentación existente sobre los protocolos de comunicación y los servicios ofrecidos, de modo que se puedan conocer los requisitos de interfaz con ellos. En el caso del cliente, sin embargo, tal posibilidad no sería factible.
 
@@ -219,7 +226,7 @@ Como ese aspecto del sistema no depende del dominio, no es adecuado modelarlo de
 
 El diagrama de máquina de estado presentado en la Figura 2.15 también es particularmente útil en términos de los casos de uso del sistema que deben ser analizados. Cada cambio de estado de un libro (objeto principal de negocio), debe ser hecho por alguien, y ese "alguien" es un actor que realiza un caso de uso. Por lo tanto, las transiciones en ese diagrama descubrieron un nuevo conjunto de casos de uso del sistema, como se muestra en la Figura 3.6.
 
-![](img/F3.6.jpg) 
+![](img/F3.6.jpg)   
 `Figura 3.6 El modelo de caso de uso del sistema se completó con información descubierta en el diagrama de estados de la Figura 2.15.`
 
 
@@ -247,15 +254,14 @@ Estas funciones se incorporarán en uno o más casos de uso.
 
 Por otra parte, durante la obtención de requisitos, el analista puede enfrentarse a **reglas de negocio o restricciones** sobre cómo el sistema debe realizar las funciones. Por ejemplo, una regla de negocios podría establecer que la librería sólo envía libros después de que se confirme el pago. Este tipo de regla es un requisito no funcional que puede ser registrado como una anotación u observación sobre el caso de uso en sí, para ser recordado y verificado cuando el caso de uso tiene que ser detallado (Figura 3.7). Alternativamente, podría registrarse por separado como una lista numerada o una hoja de cálculo, con una referencia a los casos de uso a través de un número único.
 
-![](img/F3.7.jpg)  
+![](img/F3.7.jpg)    
 `Figura 3.7 Requerimientos no funcionales anotados en casos de uso.`
 
 
 Como puede verse en la Figura 3.7, el diagrama de casos de uso con notas se volverá demasiado complejo para ser útil. Por esta razón, se recomienda que dichas anotaciones se registren dentro de las especificaciones del caso de uso o en un documento separado. La mayoría de las herramientas CASE (Computer-Aided Software Engineering) permiten que un elemento del diagrama, como un caso de uso, tenga una ventana de especificación, como se muestra en la Figura 3.8. Una excepción a esta regla sería el caso cuando la anotación es absolutamente necesaria para ayudar a comprender el diagrama. Sin embargo, esto rara vez es así.
 
 
-![](img/F3.8.jpg) 
-
+![](img/F3.8.jpg)   
 `Figura 3.8 Ejemplo de ventana de especificación para un caso de uso. Imagen producida con la herramienta CASE Visual Paradigm ™ Community Edition.`
 
 
@@ -279,7 +285,7 @@ El documento de requisitos, que puede estar formado por los esquemas de casos de
 - Cómo recuperar los requisitos durante el desarrollo para verificar si todos han sido implementados.
 - Cómo gestionar el cambio de requisitos.
   
-**Sería inútil desarrollar un buen diagrama de casos de uso, y luego no poder saber si los requisitos que allí se incorporan fueron incluidos en el diseño**. La existencia de mecanismos automáticos para llevar a cabo esta verificación es crucial. Por lo tanto, es importante mantener relaciones de trazabilidad entre los casos de uso y otras partes del diseño. Los siguientes capítulos muestran cómo se obtienen esas relaciones entre los artefactos de diseño.
+**Sería inútil desarrollar un buen diagrama de casos de uso, y luego no poder saber si los requisitos que allí se incorporan fueron incluidos en el diseño**. La existencia de *mecanismos automáticos* para llevar a cabo esta verificación es crucial. Por lo tanto, es importante mantener relaciones de trazabilidad entre los casos de uso y otras partes del diseño. 
 
 Es necesario tener en cuenta que los requisitos cambian necesariamente durante el desarrollo de un proyecto. Por lo tanto, el cambio debe ser gestionado, no evitado, después del  Inicio.
 
@@ -387,7 +393,6 @@ La tabla 3.2 presenta un ejemplo de requisitos suplementarios que podrían asign
 
 `Tabla 3.2 Requisitos complementarios para el sistema **Livir**`
 
-
 No se rellenaron todos los campos porque, como ya se ha dicho, los requisitos no deben ser inventados, sino que deben ser solicitados por el cliente. Por lo tanto, por lo general no hay requisitos en todas las categorías. Las preguntas que generan los requisitos mencionados en la Tabla 3.1 son una buena base para encontrar posibles necesidades. Pero no es obligatorio tener una respuesta a todas esas preguntas.
 
 
@@ -399,8 +404,7 @@ Analizando el diagrama de casos de uso del sistema, se pueden descubrir muchos c
 La Figura 3.9 presenta un posible modelo conceptual preliminar para el diagrama de casos de uso presentado en la Figura 3.6. 
 > El proceso de descubrimiento de las clases consiste en pensar en los casos de uso e imaginar qué información (de alto nivel) se intercambia entre los actores y el sistema para permitir que el proceso funcione. Las asociaciones entre clases representan dependencias o relaciones entre las piezas de información representadas por ellas.
 
-![](img/F3.9.jpg) 
-
+![](img/F3.9.jpg)   
 `Figura 3.9 Modelo conceptual preliminar para los casos de uso de la Figura 3.6.`
 
 
@@ -419,8 +423,7 @@ Mirando la Figura 3.6 con el propósito de encontrar los conceptos mostrados en 
   
 La identificación de ese modelo conceptual preliminar es especialmente útil para facilitar la visualización de la estructura de la información que va a ser manejada por el sistema; esto ayuda a unificar el vocabulario entre los miembros del equipo y otros actores. Las decisiones sobre el cambio de nombres de casos de uso para limpiar el vocabulario ya están implementadas en la Figura 3.10.
 
-![](img/F3.10.jpg) 
-
+![](img/F3.10.jpg)   
 `Figura 3.10 Un modelo de caso de uso con nombres revisados y añadidos los CRUDs.`
 
 
@@ -441,8 +444,7 @@ Para el ejemplo en curso, se podrían identificar algunos informes que son inter
   
 El cliente podrá exigir otros informes, y los anteriores son sólo ejemplos. Los que se utilizan exclusivamente dentro de uno de los casos de uso existentes deben excluirse de la lista de informes. Por ejemplo, el gestor de depósitos podría estar interesado en la lista de pedidos que están llegando. Si esa lista va a ser consultada sólo en el momento en que realmente llega un pedido y debe ser registrado, entonces la consulta debe ser considerada como parte del caso de uso Recibir libros, y no debe ser incluida en el diagrama. Sólo deben incluirse en el diagrama los informes que no son necesariamente parte de otros casos de uso; de lo contrario, la lista podría crecer rápidamente mucho más allá de lo manejable, y sería redundante e incompleta (porque es la expansión de casos de uso con diagramas de secuencias lo que realmente indicará qué pasos, incluyendo consultas, son necesarios para cada caso de uso). La Figura 3.11 muestra el diagrama de casos de uso actualizado con los informes (estereotipado con el informe) tal y como se ha indicado anteriormente.
 
-![](img/F3.11.jpg) 
-
+![](img/F3.11.jpg)   
 `Figura 3.11  Diagrama de caso de usos con informes.`
 
 
