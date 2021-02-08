@@ -9,9 +9,9 @@ Con la búsqueda de un nuevo entorno y marco de trabajo que se ajuste mejor a la
 
 ![Mi amigo Martin Fowler](img/martin.jpg)
 
-El termino “Metodologías ágiles” como tal, tiene su origen un 17 de Febrero de 2001, donde diecisite expertos en modelos de desarrollo de software basados en procesos se reúnen en Snowbird (Utah) para debatir sobre las nuevas técnicas de desarrollo de software que estaban apareciendo años anteriores. Convocados por Kent Beck, el cual había publicado años antes un libro sobre una nueva metodología (Extreme Programing), deciden introducir una nueva terminología que definiese a las nuevas metodologías que estaban surgiendo a lo largo de la década de los 90. Metodologías que sustituirían a las tradicionales y que supondrían una alternativa al carácter rígido y pesado que definía a los modelos anteriores. De este modo, se apostó por el término “ágil” para su referencia. En dicha reunión, quedan determinados y definidos los principios en los que se basan las metodologías ágiles, todos ellos resumidos en cuatro postulados que se recogen en el “Manifiesto Ágil”. No obstante, muchos métodos basados en la metodología ágil, como pueden ser Scrum (1986), Crystal Clear o el ya nombrado Extreme Programing (1999), fueron creados con anterioridad a este manifiesto.
+El termino _“Metodologías ágiles”_ como tal, tiene su origen un 17 de Febrero de 2001, donde 17 expertos en modelos de desarrollo de software basados en procesos se reúnen en Snowbird (Utah) para debatir sobre las nuevas técnicas de desarrollo de software que estaban apareciendo años anteriores. Convocados por Kent Beck, el cual había publicado años antes un libro sobre una nueva metodología (_Extreme Programing_), deciden introducir una nueva terminología que definiese a las nuevas metodologías que estaban surgiendo a lo largo de la década de los 90.   **Metodologías que sustituirían a las tradicionales y que supondrían una alternativa al carácter rígido y pesado que definía a los modelos anteriores**. De este modo, se apostó por el término _“ágil”_ para su referencia. En dicha reunión, quedan determinados y definidos los principios en los que se basan las metodologías ágiles, todos ellos resumidos en cuatro postulados que se recogen en el _“Manifiesto Ágil”_. No obstante, muchos métodos basados en la metodología ágil, como pueden ser `Scrum` (1986), `Crystal Clear` o el ya nombrado `Extreme Programing` (1999), fueron creados con anterioridad a este manifiesto.
 
-En el Manifiesto Ágil, firmado por los críticos: Kent Beck, James Grenning, Jim Highsmith, Andrew Hunt, Mike Beedle, Steve Mellor, Arie van Bennekum, War Cunningham, Robert C. Martin, Brian Marick, Alistair Cockburn, Jeff Sutherland, Ken Schwaber, Dave Thomas, Ron Jeffries, Jon Kern y Martin Fowler, queda escrito lo siguiente: _“Estamos poniendo al descubierto mejores métodos para desarrollar software, haciéndolo y ayudando a otros a que lo hagan. Con este trabajo hemos llegado a valorar_:  
+En el Manifiesto Ágil, firmado por los críticos: Kent Beck, James Grenning, Jim Highsmith, Andrew Hunt, Mike Beedle, Steve Mellor, Arie van Bennekum, War Cunningham, Robert C. Martin, Brian Marick, Alistair Cockburn, Jeff Sutherland, Ken Schwaber, Dave Thomas, Ron Jeffries, Jon Kern y Martin Fowler, queda escrito lo siguiente: _“Estamos poniendo al descubierto mejores métodos para desarrollar software, haciéndolo y ayudando a otros a que lo hagan._ Con este trabajo hemos llegado a valorar:  
 
 * A los **individuos** y su interacción, por encima de **los procesos y las herramientas**. 
 * El software que **funciona**, por encima de la **documentación** exhaustiva. 
@@ -20,20 +20,20 @@ En el Manifiesto Ágil, firmado por los críticos: Kent Beck, James Grenning, Ji
 
 _Aunque hay valor en los elementos de la derecha, valoramos más los de la izquierda.”_
 
-A partir de estos 4 valores fundamentales se establecen un conjunto de 12 principios en los que se recogen las ideas más importantes de esta metodología. Los principios son los siguientes: 
+A partir de estos _4 valores fundamentales_ se establecen un conjunto de _12 principios_ en los que se recogen las ideas más importantes de esta metodología. Los principios son los siguientes: 
 
-1.- Satisfacer al cliente a través de la entrega temprana y continua de software de valor. Es la mayor prioridad.  
-2.- Son bienvenidos los requisitos cambiantes, incluso en etapas tardías del desarrollo. Los procesos ágiles se doblegan al cambio como ventaja competitiva para el cliente.  
-3.- Iteraciones constantes. Entregar con frecuencia software que funcione, en periodos de un par de semanas hasta un par de meses.  
-4.- Trabajo colaborativo. Los responsables del negocio y los desarrolladores deben trabajar juntos de forma cotidiana durante el proyecto.  
-5.- Motivación del equipo. Construcción de proyectos en torno a individuos motivados, dándoles la oportunidad, el entorno y el respaldo que necesitan y procurándoles confianza para que realicen la tarea.  
-6.- Contacto directo con los clientes. La forma más eficiente y efectiva de comunicar información de ida y vuelta dentro de un equipo de desarrollo es mediante la conversación cara a cara.  
-7.- Medida de progreso. El software que funciona es la principal medida del progreso.  
-8.- Desarrollo sostenido. Los procesos ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios deben mantener un ritmo constante de forma indefinida.  
-9.- Búsqueda de la excelencia. La atención continua a la excelencia técnica y al buen diseño mejora la agilidad.  
-10.- La simplicidad, como arte de maximizar la cantidad de trabajo que se hace, es esencial.   
-11.- Autorregulación. Las mejores arquitecturas, requisitos y diseños emergen de equipos que se autoorganizan.  
-12.- Revisión permanente. En intervalos regulares, el equipo reflexiona sobre la forma de ser más efectivo y perfecciona su comportamiento en consecuencia. 
+1.- *Satisfacer al cliente a través de la entrega temprana y continua de software de valor*. Es la mayor prioridad.  
+2.- Son *bienvenidos los requisitos cambiante*s, incluso en etapas tardías del desarrollo. Los procesos ágiles se doblegan al cambio como ventaja competitiva para el cliente.  
+3.- Iteraciones constantes. *Entregar con frecuencia software que funcione*, en periodos de un par de semanas hasta un par de meses.  
+4.- *Trabajo colaborativo*. Los responsables del negocio y los desarrolladores deben trabajar juntos de forma cotidiana durante el proyecto.  
+5.- *Motivación del equipo*. Construcción de proyectos en torno a individuos motivados, dándoles la oportunidad, el entorno y el respaldo que necesitan y procurándoles confianza para que realicen la tarea.  
+6.- *Contacto directo con los clientes*. La forma más eficiente y efectiva de comunicar información de ida y vuelta dentro de un equipo de desarrollo es mediante la conversación cara a cara.  
+7.- *Medida de progreso*. El software que funciona es la principal medida del progreso.  
+8.- Desarrollo sostenido. Los procesos ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios deben *mantener un ritmo constante de forma indefinida*.  
+9.- *Búsqueda de la excelencia*. La atención continua a la excelencia técnica y al buen diseño mejora la agilidad.  
+10.- *La simplicidad*, como arte de maximizar la cantidad de trabajo que se hace, es esencial.   
+11.- Autorregulación. Las mejores arquitecturas, requisitos y diseños emergen de *equipos que se autoorganiza*n.  
+12.- Revisión permanente. En intervalos regulares, el equipo *reflexiona sobre la forma de ser más efectiv*o y perfecciona su comportamiento en consecuencia. 
 
 Años después, y con la intención de promover el “movimiento ágil” en proyectos y otras aplicaciones, varios de estos críticos se unen para fundar La Alianza Ágil.
 
@@ -50,7 +50,7 @@ Estos doce principios se reconocerán en mayor o menor medida en todos o casi to
 * **Motivación**. Un equipo no motivado no generará un producto de calidad, por lo tanto el cuidado del entorno de trabajo y las personas son la base de la **mejora continua**.
 * **Evolución**. Para que un producto pueda ser evolucionado de manera sencilla, debe tener un **diseño simple** que satisfaga los requisitos del cliente.
  
-Se puede definir el desarrollo ágil como aquellas metodologías de desarrollo de software que se basan en un proceso iterativo e incremental, y que permiten adaptar el entorno y marco laboral a las condiciones del proyecto, con el fin de conseguir flexibilidad y una respuesta rápida para que su desarrollo sea lo más efectivo posible. Tanto las necesidades como las soluciones van evolucionando a lo largo del desarrollo. Los equipos de trabajos que emplean esta metodología se caracterizan por ser multidisciplinarios y enfatizar la comunicación cara a cara frente a la documentación. Al igual que las metodologías de desarrollo tradicionales, el desarrollo ágil se compone de un ciclo de vida iterativo que está compuesto por las etapas: planificación, análisis de requisitos, diseño, codificación, pruebas y documentación.
+Se puede definir `el desarrollo ágil como aquellas metodologías de desarrollo de software que se basan en un proceso iterativo e incremental, y que permiten adaptar el entorno y marco laboral a las condiciones del proyecto, con el fin de conseguir flexibilidad y una respuesta rápida para que su desarrollo sea lo más efectivo posible`. Tanto las necesidades como las soluciones van evolucionando a lo largo del desarrollo. Los equipos de trabajos que emplean esta metodología se caracterizan por ser multidisciplinarios y enfatizar la comunicación cara a cara frente a la documentación. Al igual que las metodologías de desarrollo tradicionales, el desarrollo ágil se compone de un ciclo de vida iterativo que está compuesto por las etapas: planificación, análisis de requisitos, diseño, codificación, pruebas y documentación.
 
 ![Agil](https://www.researchgate.net/profile/Shlomo_Mark/publication/325823140/figure/fig9/AS:650520423321601@1532107563069/Agile-sprint-testing-artifacts.png)
 
@@ -59,13 +59,13 @@ De entre todas las etapas que componen el desarrollo del proyecto, la fase “fi
 ### Ventajas 
 Son numerosas las ventajas que aporta la metodología de desarrollo ágil, entre ellas se pueden destacar las siguientes: 
 
-* Un trabajo de mayor eficiencia y velocidad. El hecho de trabajar con un proyecto dividido en particiones más pequeñas agiliza la producción y ofrece entregas de calidad en intervalos de tiempos más cortos. 
-* Ahorro de tiempo y costes. Al tratarse de un método de trabajo que se basa en la rapidez y eficiencia, permite el cumplimiento de los plazos de entregas acordados, así como llevar a cabo un adecuado presupuesto durante el desarrollo del proyecto. 
-* Mejora de la calidad del producto. Debido a la continua comunicación que existe entre los desarrolladores y el cliente a lo largo del desarrollo, se asegura que el producto final cumpla las expectativas que el cliente buscaba. De este modo se intenta que el producto sea lo más perfecto en cuanto a calidad se refiere. 
-* Posibilidad de reacción rápida frente a problemas y errores. Gracias a la continua evaluación que se realiza a lo largo del proyecto es posible detectar fallos y darles una solución de manera rápida y concisa.
-* Clientes más satisfechos. Las ventajas anteriores se traducen en una mejora significativa de la satisfacción del cliente, el cual se sentirá importante en el desarrollo del proyecto debido a su compromiso e implicación. 
-* Equipo de desarrollo más implicado y motivado. Conocer el estado del proyecto en cualquier instante permite al equipo debatir y aceptar los compromisos y requisitos del mismo. 
-* Inversiones más rentables. Cabe destacar que las tempranas entregas al cliente le permitirá explotar antes sus productos o servicios, con lo cual, el retorno de la inversión será más rápido.
+* Un trabajo de `mayor eficiencia y velocidad`. El hecho de trabajar con un proyecto dividido en particiones más pequeñas agiliza la producción y ofrece entregas de calidad en intervalos de tiempos más cortos. 
+* `Ahorro de tiempo y costes`. Al tratarse de un método de trabajo que se basa en la rapidez y eficiencia, permite el cumplimiento de los plazos de entregas acordados, así como llevar a cabo un adecuado presupuesto durante el desarrollo del proyecto. 
+* Mejora de la `calidad del producto`. Debido a la continua comunicación que existe entre los desarrolladores y el cliente a lo largo del desarrollo, se asegura que el producto final cumpla las expectativas que el cliente buscaba. De este modo se intenta que el producto sea lo más perfecto en cuanto a calidad se refiere. 
+* Posibilidad de `reacción rápida frente a problemas y errores`. Gracias a la continua evaluación que se realiza a lo largo del proyecto es posible detectar fallos y darles una solución de manera rápida y concisa.
+* `Clientes más satisfechos`. Las ventajas anteriores se traducen en una mejora significativa de la satisfacción del cliente, el cual se sentirá importante en el desarrollo del proyecto debido a su compromiso e implicación. 
+* `Equipo de desarrollo más implicado y motivado`. Conocer el estado del proyecto en cualquier instante permite al equipo debatir y aceptar los compromisos y requisitos del mismo. 
+* `Inversiones más rentables`. Cabe destacar que las tempranas entregas al cliente le permitirá explotar antes sus productos o servicios, con lo cual, el retorno de la inversión será más rápido.
 
  ![Tradicional vs Agile](https://martechtoday.com/wp-content/uploads/2020/05/project-management-methodologies-800x379.png)
  

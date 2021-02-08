@@ -1,22 +1,23 @@
 
 # FUNDAMENTOS
 
-- [¿Qué es desarrollo de softoware?](#qué-es-desarrollo-de-softoware)
-- [Evolución del Software](#evolución-del-software)
-- [Necesidad de la Ingeniería de Software](#necesidad-de-la-ingeniería-de-software)
-- [Qué es buen código](#qué-es-buen-código)
+- [FUNDAMENTOS](#fundamentos)
+  - [¿Qué es desarrollo de softoware?](#qué-es-desarrollo-de-softoware)
+  - [Evolución del Software](#evolución-del-software)
+  - [Necesidad de la Ingeniería de Software](#necesidad-de-la-ingeniería-de-software)
+  - [Qué es buen código](#qué-es-buen-código)
 
 ---
 
 ## ¿Qué es desarrollo de softoware?
 
-El desarrollo de software es una actividad tan creativa como la música o la pintura, y debe ser tan exacta t preciso como el control de un Formula1 o una operación en medicina.
+`El desarrollo de software es una actividad tan creativa como la música o la pintura`, y debe ser tan exacta t preciso como el control de un Formula1 o una operación en medicina.
 
 Para empezar entendamos a qué se refiere el concepto de Ingeniería de software. El término consta de dos palabras, software e ingeniería.
 
-**Software** es mucho más que un código de **programa**. Un programa es un código ejecutable, usado para propósitos computacionales. El Software se considera una colección de códigos ejecutables de programación, associada a las bibliotecas y a la documentación. El Software, cuando se ha hecho para cubrir requisitos específicos se llama **producto software**.
+**Software** es mucho más que un código de **programa**. Un programa es un código ejecutable, usado para propósitos computacionales. `El Software se considera una colección de códigos ejecutables de programación, associada a las bibliotecas y a la documentación`. El Software, cuando se ha hecho para cubrir requisitos específicos se llama **producto software**.
 
-**Ingeniería** Por otro lado, trata de desarrollar productos, utilizando métodos y principios científicos bien definidos.
+**Ingeniería** Por otro lado, trata de `desarrollar productos`, utilizando métodos y principios científicos bien definidos.
 
 **La ingeniería de Software** es una rama de la ingeniería asociada al desarrollo del producto software que usa métodos, principios y procedimientos científicos. El resultado de la Ingeniería de software es un producto software eficiente y de confianza.
 
@@ -26,10 +27,10 @@ El proceso de desarrollo de un producto software usando principios y métodos de
 
 ![Producto de Software](https://www.tutorialspoint.com/es/software_engineering/images/software_product.png)
 
-La evolución empieza con un proceso de recogida de requisitos. Luego los desarrolladores crean un prototipo inicial del software y se muestra a los consumidores para tener un feedback en un etapa temprana del desarrollo del producto de software. Los consumidores sugieren cambios, los cuales irán mejorando con actualizaciones y tareas de mantenimiento de manera progresiva. Este proceso cambia el software original hasta llegar al producto deseado.
+La evolución empieza con un proceso de `recogida de requisitos`. Luego los desarrolladores crean un `prototipo` inicial del software y se muestra a los consumidores para tener un feedback en un etapa temprana del desarrollo de`cambios`l producto de software. Los consumidores sugieren , los cuales irán mejorando con `actualizaciones` y tareas de `mantenimiento` de manera progresiva. Este proceso cambia el software original hasta llegar al `producto deseado`.
 
-Incluso después de que el consumidor tenga el software en sus manos, el avance de la tecnología y los cambios de requisitos fuerzan al producto software a cambiar en acorde a estos. Volver a cerar software des de cero, e ir cumpliendo uno por uno los requisitos no es viable. La única solución viable y económica es actualizar el software ya existente para que se adecue satisfactoriamente con los requisitos más recientes.
-La herramienta principal del desarrollador es su Lenguaje de Programación, y debe saber manejarlo tan bien como un poeta compone versos en paraedos o cuaderna vía. 
+Incluso después de que el consumidor tenga el software en sus manos, el avance de la tecnología y los cambios de requisitos fuerzan al producto software a cambiar en acorde a estos. Volver a cerar software desde cero, e ir cumpliendo uno por uno los requisitos no es viable. `La única solución viable y económica es actualizar el software ya existente para que se adecue satisfactoriamente con los requisitos más recientes`.
+La herramienta principal del desarrollador es su `Lenguaje de Programación`, y debe saber manejarlo tan bien como un poeta compone versos en paraedos o cuaderna vía. 
 
 ## Necesidad de la Ingeniería de Software
 
@@ -58,7 +59,7 @@ Es muy complicado definir qué es buen código. Entran en juego toda una serie d
   El código es reutilizable si podemos usar la misma funcionalidad con distintos datos, incluso en otros contextos.
 
   - **Testeable**.  
-  Decimos que el código es testeable cuando podemos construir un test que verifique su comportamiento, con la seguridad de que el resultado del test es función de la ejecución del código probado y no está influenciado por factores externos.
+  Decimos que el código es testeable cuando podemos construir un `test` que verifique su comportamiento, con la seguridad de que el resultado del test es función de la ejecución del código probado y no está influenciado por factores externos.
 
   - **Bien organizado**.  
   El código bien organizado nos permite localizar e identificar fácilmente una determinada sección que nos interesa examinar, incluso aunque no lo conozcamos bien.
@@ -71,7 +72,7 @@ Es muy complicado definir qué es buen código. Entran en juego toda una serie d
 
 En conjunto, podemos decir que todas estas características son deseables para cualquier base de código. Sin embargo, es difícil afirmar en qué grado es suficiente haberlas desarrollado para considerarlo satisfactorio. Podemos aspirar a un código suficientemente bueno que siempre es mejorable, pero *no existe el código perfecto*.
 
-En buena medida esto ocurre porque el código es una expresión de un conocimiento compartido que siempre es incompleto y refinable. Además, es también el resultado de nuestra capacidad para expresar ese conocimiento en un lenguaje de programación, capacidad que siempre puede crecer como resultado de *la experiencia y el aprendizaje*.
+En buena medida esto ocurre porque el código es una expresión de un conocimiento compartido que siempre es incompleto y refinable. Además, `es también el resultado de nuestra capacidad para expresar ese conocimiento en un lenguaje de programación`, capacidad que siempre puede crecer como resultado de *la experiencia y el aprendizaje*.
 
 Puede que sea más fácil definir lo que no es buen código. El mal código carece de las propiedades que hemos mencionando anteriormente:
 
