@@ -37,7 +37,7 @@ La visualización en `tiempo real del flujo de trabajo y su progreso`, junto con
 Ventajas e incovenientes del método Kanban 
 
 | VENTAJAS                                                               | INCONVENIENTES                                                  |
-|------------------------------------------------------------------------|-----------------------------------------------------------------|
+| ---------------------------------------------------------------------- | --------------------------------------------------------------- |
 | Sistema de producción flexible frente a la demanda.                    | Sólo recomendable para procesos de producción repetitivos.      |
 | Optimización de los tiempos de producción y de entrega.                | No permite plazos de abastecimientos grandes.                   |
 | Se evitan procesos innecesarios que aumenten el tiempo del desarrollo. | El almacenamiento y manejo de stock puede resultar muy costoso. |

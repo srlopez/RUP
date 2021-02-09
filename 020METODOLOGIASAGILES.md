@@ -72,17 +72,17 @@ Son numerosas las ventajas que aporta la metodología de desarrollo ágil, entre
  
 A continuación se muestra una comparativa entre Ágiles y Clásicas
 
-| Metodologías ágiles | Metodologías tradicionales | 
-|--|--|
-| Flexibilidad y capacidad de respuesta rápida ante modificaciones en el proyecto. | Rigidez y capacidad de respuesta lenta ante modificaciones en el proyecto. |
-| Clientes más comprometidos e implicados en el desarrollo del proyecto. | Mínima interacción entre clientes y desarrolladores. |
-| Pequeños equipos de trabajo (un promedio de 10 integrantes). | Grandes grupos de trabajo y con distintas distribuciones. |
-| Tiempos de entregas más cortos. |Tiempos de entregas más extendidos. |
-| Gran diversidad de roles en el equipo de desarrollo. | Mínima diversidad de roles en el equipo de desarrollo. |
-| Pocas normas y políticas, procesos menos controlados. | Gran cantidad de normas y polticas, procesos muy controlados. |
-| Garantía de que el producto cumpla las expectativas del cliente (evaluación continua). | No hay seguridad de que el producto cumpla todos los requisitos del cliente. |
-| Posibilidad de respuesta ante cambios. | Obligado seguimiento estricto de lo planeado al comienzo del desarrollo. |
-| Poca dependencia de la arquitectura de software. | Dependencia mediante modelos de la arquitectura software |
+| Metodologías ágiles                                                                    | Metodologías tradicionales                                                    |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Flexibilidad y capacidad de respuesta rápida ante modificaciones en el proyecto.       | Rigidez y capacidad de respuesta lenta ante modificaciones en el proyecto.    |
+| Clientes más comprometidos e implicados en el desarrollo del proyecto.                 | Mínima interacción entre clientes y desarrolladores.                          |
+| Pequeños equipos de trabajo (un promedio de 10 integrantes).                           | Grandes grupos de trabajo y con distintas distribuciones.                     |
+| Tiempos de entregas más cortos.                                                        | Tiempos de entregas más extendidos.                                           |
+| Gran diversidad de roles en el equipo de desarrollo.                                   | Mínima diversidad de roles en el equipo de desarrollo.                        |
+| Pocas normas y políticas, procesos menos controlados.                                  | Gran cantidad de normas y polticas, procesos muy controlados.                 |
+| Garantía de que el producto cumpla las expectativas del cliente (evaluación continua). | No hay seguridad de que el producto cumpla todos Flos requisitos del cliente. |
+| Posibilidad de respuesta ante cambios.                                                 | Obligado seguimiento estricto de lo planeado al comienzo del desarrollo.      |
+| Poca dependencia de la arquitectura de software.                                       | Dependencia mediante modelos de la arquitectura software                      |
 
 
 ### Trabajo del Alumno

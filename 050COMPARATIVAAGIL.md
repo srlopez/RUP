@@ -11,7 +11,7 @@
 ## Comparativa entre metodologías ágiles
 
 |                                      | Scrum                                                       | XP                                                        | Kanban                                     | Lean                                   |
-|--------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|--------------------------------------------|----------------------------------------|
+| ------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------ | -------------------------------------- |
 | Tiempo de iteración fija             | 2-4 sem.                                                    | 1-6 sem.                                                  |                                            |                                        |
 | Tamaño Equipo                        | Pequeños a medianos. Scrum of scrums para equipos grandes   | Pequeños a medianos y próximos                            |                                            |                                        |
 | Comunicación                         | Informal. Stand-up meeting diario.                          | Informal. Stand-up meeting diario.                        | Énfasis elementos visuales de comunicación | Formal.En algunos casos vía documentos |
