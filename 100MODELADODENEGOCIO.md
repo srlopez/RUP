@@ -1,5 +1,24 @@
 # MODELADO DE NEGOCIO
 
+- [MODELADO DE NEGOCIO](#modelado-de-negocio)
+      - [Palabras clave](#palabras-clave)
+      - [Conceptos en este Módulo](#conceptos-en-este-módulo)
+  - [2.1 Introdución al modelado del negocio](#21-introdución-al-modelado-del-negocio)
+  - [2.2 Vista general del sistema](#22-vista-general-del-sistema)
+  - [2.3 Casos de uso del Negocio](#23-casos-de-uso-del-negocio)
+    - [2.3.1 Actores del negocio y trabajadores del negocio.](#231-actores-del-negocio-y-trabajadores-del-negocio)
+    - [2.3.2 Oportunidades de automatización](#232-oportunidades-de-automatización)
+  - [2.4 Diagrama de actividad de Negocio](#24-diagrama-de-actividad-de-negocio)
+    - [2.4.1 Elementos Básicos](#241-elementos-básicos)
+    - [2.4.2 Nodos de Flujo de Control](#242-nodos-de-flujo-de-control)
+  - [2.5 Aspectos dependientes del Estado de un negocio](#25-aspectos-dependientes-del-estado-de-un-negocio)
+  - [2.6 Observaciones](#26-observaciones)
+  - [2.7 El proceso hasta ahora](#27-el-proceso-hasta-ahora)
+    - [MI](#mi)
+  - [2.8 Preguntas](#28-preguntas)
+
+--- 
+
 > El **modelado de negocio** es la primera actividad que se lleva a cabo durante el desarrollo de la mayoría de los proyectos en la industria del software. Aunque los **diagramas de casos de uso de negocio** y otros diagramas UML se utilizan actualmente para ayudar a los equipos a **comprender los procesos de negocio**, a veces las conexiones entre esos elementos no son claras. 
 
 Este documento muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando **diagramas de actividad de negocio** y **diagramas de máquinas de estado** que describen los procesos clave de negocio y los objetos clave de negocio.   
@@ -581,17 +600,17 @@ También se pueden realizar otras actividades de mitigación de riesgos durante 
 ## 2.7 El proceso hasta ahora
 
 
-|                                    | Inicio | Elaboración | Construcción | Transición |
-| ---------------------------------- | ------ | ----------- | ------------ | ---------- |
-| **M**odelado del Negocio               | [MI](#MI)     |             |              |            |
-| **R**equerimientos                     |        |             |              |            |
-| **A**nalisis y Diseño                  |        |             |              |            |
-| **I**mplementación                     |        |             |              |            |
-| **P**ruebas/Test                       |        |             |              |            |
-| **G**estión de Proyectos               |        |             |              |            |
-| **D**espliegue                         |        |             |              |            |
-| **C**onfiguración y Gestión del cambio |        |             |              |            |
-| **E**ntorno                            |        |             |              |            |
+|                                        | Inicio    | Elaboración | Construcción | Transición |
+| -------------------------------------- | --------- | ----------- | ------------ | ---------- |
+| **M**odelado del Negocio               | [MI](#MI) |             |              |            |
+| **R**equerimientos                     |           |             |              |            |
+| **A**nalisis y Diseño                  |           |             |              |            |
+| **I**mplementación                     |           |             |              |            |
+| **P**ruebas/Test                       |           |             |              |            |
+| **G**estión de Proyectos               |           |             |              |            |
+| **D**espliegue                         |           |             |              |            |
+| **C**onfiguración y Gestión del cambio |           |             |              |            |
+| **E**ntorno                            |           |             |              |            |
 
 ### MI
 Construir una vista general del sistema:  

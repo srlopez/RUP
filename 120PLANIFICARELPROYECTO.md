@@ -3,6 +3,21 @@
 **Panificar el proyecto basándose en los casos de uso**
 **PARTIMOS DE QUE YA HEMOS CALCULADO LA DURACIÓN DEL PROYECTO**
 
+- [PLANIFICAR el proyecto basado en CASOS DE USO](#planificar-el-proyecto-basado-en-casos-de-uso)
+  - [4.3 Planificación un proyecto iterativo](#43-planificación-un-proyecto-iterativo)
+    - [4.3.1 Estimación de la duración de las iteraciones](#431-estimación-de-la-duración-de-las-iteraciones)
+    - [4.3.2 Número de iteraciones](#432-número-de-iteraciones)
+    - [4.3.5 Definición de la prioridad del caso de uso](#435-definición-de-la-prioridad-del-caso-de-uso)
+    - [4.3.6 Fase de planificación e iteraciones](#436-fase-de-planificación-e-iteraciones)
+  - [4.4 El proceso visto hasta ahora](#44-el-proceso-visto-hasta-ahora)
+    - [MI](#mi)
+    - [RI](#ri)
+    - [ADI](#adi)
+    - [GPI](#gpi)
+  - [4.5 Preguntas](#45-preguntas)
+
+---
+
 Explica cómo organizar una serie de `iteraciones incrementales` basadas en una `lista priorizada de casos de uso y riesgos`, que es la columna vertebral del plan de desarrollo con el Proceso Unificado.
 
 ```diff

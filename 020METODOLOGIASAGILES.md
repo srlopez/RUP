@@ -3,6 +3,7 @@
   - [¿Qué es Agil?](#qué-es-agil)
   - [Ventajas](#ventajas)
   - [Trabajo del Alumno](#trabajo-del-alumno)
+  
 ---
 
 Con la búsqueda de un nuevo entorno y marco de trabajo que se ajuste mejor a las necesidades y exigencias del mercado actual, ven la luz nuevos métodos de desarrollos mucho más avanzados y competentes que los tradicionales. El movimiento ágil irrumpe para quedarse.
@@ -33,7 +34,7 @@ A partir de estos _4 valores fundamentales_ se establecen un conjunto de _12 pri
 9.- *Búsqueda de la excelencia*. La atención continua a la excelencia técnica y al buen diseño mejora la agilidad.  
 10.- *La simplicidad*, como arte de maximizar la cantidad de trabajo que se hace, es esencial.   
 11.- Autorregulación. Las mejores arquitecturas, requisitos y diseños emergen de *equipos que se autoorganiza*n.  
-12.- Revisión permanente. En intervalos regulares, el equipo *reflexiona sobre la forma de ser más efectiv*o y perfecciona su comportamiento en consecuencia. 
+12.- Revisión permanente. En intervalos regulares, el equipo *reflexiona sobre la forma de ser más efectivo* y perfecciona su comportamiento en consecuencia. 
 
 Años después, y con la intención de promover el “movimiento ágil” en proyectos y otras aplicaciones, varios de estos críticos se unen para fundar La Alianza Ágil.
 
@@ -86,4 +87,4 @@ A continuación se muestra una comparativa entre Ágiles y Clásicas
 
 ### Trabajo del Alumno
 
-Buscar artículos en los que las Metodologías Ágiles han fracasado
+Buscar artículos en los que las Metodologías Ágiles han fracasado.

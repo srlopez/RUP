@@ -1,12 +1,46 @@
 # MODELADO CONCEPTUAL
 
+- [MODELADO CONCEPTUAL](#modelado-conceptual)
+      - [Palabras clave](#palabras-clave)
+      - [Conceptos](#conceptos)
+  - [7.1 Introducción a los patrones del modelo conceptual](#71-introducción-a-los-patrones-del-modelo-conceptual)
+  - [7.2 Alta cohesión](#72-alta-cohesión)
+  - [7.3 Clases especificativas](#73-clases-especificativas)
+  - [7.4 Cantidad](#74-cantidad)
+  - [7.5 Medidas](#75-medidas)
+  - [7.6 Estrategia](#76-estrategia)
+  - [7.7 Composición](#77-composición)
+  - [7.8 Jerarquía de organización](#78-jerarquía-de-organización)
+  - [7.9 Unión de objetos](#79-unión-de-objetos)
+    - [7.9.1 Copiar y reemplazar](#791-copiar-y-reemplazar)
+    - [7.9.2 Superseding](#792-superseding)
+    - [7.9.3 Esencia/Apariencia](#793-esenciaapariencia)
+    - [7.9.4 Deshacer una unión](#794-deshacer-una-unión)
+  - [7.10 Cuenta/Transacción](#710-cuentatransacción)
+  - [7.11 Rango](#711-rango)
+  - [7.12 Patrones temporales](#712-patrones-temporales)
+    - [7.12.1 Efectividad/Validez](#7121-efectividadvalidez)
+    - [7.12.2 Historia](#7122-historia)
+    - [7.12.3 Temporal](#7123-temporal)
+    - [7.12.4 Bitemporal](#7124-bitemporal)
+  - [7.13 Discusión](#713-discusión)
+  - [7.14 El proceso visto hasta ahora](#714-el-proceso-visto-hasta-ahora)
+    - [MI](#mi)
+    - [RI](#ri)
+    - [RE](#re)
+    - [ADI](#adi)
+    - [ADIE](#adie)
+    - [GPI](#gpi)
+  - [7.15 Preguntas](#715-preguntas)
 
-Construir un modelo conceptual es mucho más que poner conceptos, asociaciones y atributos juntos. Frecuentemente el modelo no funciona por estar equivocado, sino por ser demasiado complejo de mantener. Los patrones de análisis consisten en soluciones ya probadas que pueden resolver familias de problemas recurrentes. Cuando se utilizan adecuadamente, estos patrones pueden reducir significativamente la complejidad de un modelo conceptual que de otro modo sería ingenuo. Este capítulo presenta y a veces reinterpreta algunos patrones como alta cohesión, cantidad, estrategia, cuenta, temporal y otros.
+---
 
-#### Palabras clave
+Construir un modelo conceptual es mucho más que poner conceptos, asociaciones y atributos juntos. Frecuentemente el modelo no funciona por estar equivocado, sino por ser demasiado complejo de mantener. Los patrones de análisis consisten en soluciones ya probadas que pueden resolver familias de problemas recurrentes. Cuando se utilizan adecuadamente, estos patrones pueden reducir significativamente la complejidad de un modelo conceptual que de otro modo sería ingenuo. Este capítulo presenta y a veces reinterpreta algunos patrones como alta cohesión, cantidad, estrategia, cuenta, temporal y otros.   
+
+#### Palabras clave   
 Design pattern; analysis pattern; high cohesion; temporal pattern; conceptual modeling
 
-#### Conceptos
+#### Conceptos   
 
 - Alta cohesión  
 - Clases de especificaciones  
@@ -20,7 +54,7 @@ Design pattern; analysis pattern; high cohesion; temporal pattern; conceptual mo
 - Patrones temporales  
 
 ## 7.1 Introducción a los patrones del modelo conceptual   
-Los diagramas de clase que representan modelos conceptuales casi siempre se vuelven más complejos y difíciles de mantener de lo que los analistas y otros miembros del equipo desearían. Existen técnicas que reducen la complejidad de estos diagramas y, al mismo tiempo, mejoran su expresividad. Los modelos ingenuos pueden ser innecesariamente complejos.
+`Los diagramas de clase que representan modelos conceptuales casi siempre se vuelven más complejos y difíciles de mantener de lo que los analistas y otros miembros del equipo desearían. Existen técnicas que reducen la complejidad de estos diagramas y, al mismo tiempo, mejoran su expresividad`. Los modelos ingenuos pueden ser innecesariamente complejos.
 Estas técnicas se denominan patrones de análisis y pueden entenderse como un caso especial de patrones de diseño (Gamma, Helm, Johnson y Vlissides, 1995) que se aplican específicamente al modelo conceptual. La mayoría de los patrones presentados en este capítulo fueron descritos por primera vez por Fowler (2003).
 El análisis o los patrones de diseño no son reglas que deben ser obedecidas, sino recomendaciones basadas en la experiencia previa. Es responsabilidad del analista decidir cuándo aplicar un determinado patrón en los modelos.
 

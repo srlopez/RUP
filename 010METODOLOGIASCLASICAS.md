@@ -9,7 +9,7 @@
     - [Modelo V](#modelo-v)
     - [Modelo de desarrollo evolutivo (espiral)](#modelo-de-desarrollo-evolutivo-espiral)
     - [Modelo Big Bang](#modelo-big-bang)
-  - [Desventajas de las metodologías de desarrollo](#desventajas-de-las-metodologías-de-desarrollo)
+  - [Desventajas de las metodologías clásicas - METODOLOGÍAS CLÁSICAS](#desventajas-de-las-metodologías-clásicas---metodologías-clásicas)
 
 ---
 
@@ -87,7 +87,16 @@ Para este modelo, se requiere poca planificación. No sigue ningún proceso conc
 
 `Este modelo no es recomendable para grandes proyectos de software, pero es bueno para aprender y experimentar.`
 
-## Desventajas de las metodologías de desarrollo
+## Desventajas de las metodologías clásicas - [METODOLOGÍAS CLÁSICAS](#metodologías-clásicas)
+  - [Conceptos de Metodologías de desarrollo](#conceptos-de-metodologías-de-desarrollo)
+    - [Ciclo de vida](#ciclo-de-vida)
+  - [Tipos de metodologías clásicas de desarrollo](#tipos-de-metodologías-clásicas-de-desarrollo)
+    - [Modelo de cascada](#modelo-de-cascada)
+    - [Modelo Iterativo](#modelo-iterativo)
+    - [Modelo V](#modelo-v)
+    - [Modelo de desarrollo evolutivo (espiral)](#modelo-de-desarrollo-evolutivo-espiral)
+    - [Modelo Big Bang](#modelo-big-bang)
+  - [Desventajas de las metodologías clásicas de desarrollo](#desventajas-de-las-metodologías-clásicas-de-desarrollo)de desarrollo
 Cómo se ha podido ver, las metodologías tradicionales presentan numerosos inconvenientes que limitan su funcionamiento en el actual marco laboral. 
 
 El **modelo de cascada** se caracteriza por ser un modelo **muy rígido**, que no permite retroceder ni avanzar etapas a conveniencias del dasarrollador. Al ser un método secuencial, obliga a finalizar una fase para poder pasar a la siguiente. Además, el producto no es presentando al cliente hasta su completo desarrollo, sin dar posibilidad de testeo ni evaluación durante su desarrollo. Todo esto se traduce en un continuo estado de incertidumbre e inseguridad, que en un mercado como el actual, donde el cliente se muestra indeciso y exigente, supone a las empresas correr un riesgo innecesario y con un alto precio a pagar. 

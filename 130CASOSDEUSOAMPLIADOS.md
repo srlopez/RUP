@@ -1,5 +1,48 @@
 # CASOS DE USO AMPLIADOS/COMPLETOS/DETALLADOS
 
+- [CASOS DE USO AMPLIADOS/COMPLETOS/DETALLADOS](#casos-de-uso-ampliadoscompletosdetallados)
+  - [Palabras clave](#palabras-clave)
+  - [Conceptos](#conceptos)
+  - [5.1 Introdución a los casos de uso ampliados](#51-introdución-a-los-casos-de-uso-ampliados)
+  - [5.2 Flujo principal](#52-flujo-principal)
+  - [5.3 Flujos alternativos](#53-flujos-alternativos)
+    - [5.3.1 Escenarios](#531-escenarios)
+    - [5.3.2 Variantes](#532-variantes)
+    - [5.3.3 Manejo de excepciones](#533-manejo-de-excepciones)
+  - [5.4 Recomendaciones de redacción](#54-recomendaciones-de-redacción)
+    - [5.4.1 Caso de uso esencial versus real](#541-caso-de-uso-esencial-versus-real)
+    - [5.4.2 Información explícita](#542-información-explícita)
+    - [5.4.3 Identificación y selección](#543-identificación-y-selección)
+    - [5.4.4 Pasos obligatorios](#544-pasos-obligatorios)
+    - [5.4.5 Pasos complementarios](#545-pasos-complementarios)
+    - [5.4.6 Pasos inadecuados](#546-pasos-inadecuados)
+  - [5.5 Casos de uso y fragmentos incluidos](#55-casos-de-uso-y-fragmentos-incluidos)
+  - [5.6 Expansión de los casos de uso `estereotipados`](#56-expansión-de-los-casos-de-uso-estereotipados)
+    - [5.6.1 Expasión de Informe/Report](#561-expasión-de-informereport)
+    - [5.6.2 Expansión de CRUD](#562-expansión-de-crud)
+  - [5.7 Otras secciones de un caso de uso ampliado](#57-otras-secciones-de-un-caso-de-uso-ampliado)
+    - [5.7.1 Partes interesadas](#571-partes-interesadas)
+    - [5.7.2 Precondiciones](#572-precondiciones)
+    - [5.7.3 Post-conditiones de éxito.](#573-post-conditiones-de-éxito)
+    - [5.7.4 Cuestiones pendientes](#574-cuestiones-pendientes)
+  - [5.8 Diagramas de secuencia del sistema](#58-diagramas-de-secuencia-del-sistema)
+    - [5.8.1 Elementos de un diagrama de secuencia](#581-elementos-de-un-diagrama-de-secuencia)
+    - [5.8.2 Casos de uso ampliados como diagramas de secuencia del sistema](#582-casos-de-uso-ampliados-como-diagramas-de-secuencia-del-sistema)
+    - [5.8.3 Conexión de la interfaz al controlador-fachada](#583-conexión-de-la-interfaz-al-controlador-fachada)
+    - [5.8.4 Estrategia **sin Estado**](#584-estrategia-sin-estado)
+    - [5.8.5 Estrategia de Estado completo](#585-estrategia-de-estado-completo)
+    - [5.8.6 Flujos alternativos en los diagramas de secuencia del sistema](#586-flujos-alternativos-en-los-diagramas-de-secuencia-del-sistema)
+  - [5.9 El proceso visto hasta ahora](#59-el-proceso-visto-hasta-ahora)
+    - [MI](#mi)
+    - [RI](#ri)
+    - [RE](#re)
+    - [ADI](#adi)
+    - [ADIE](#adie)
+    - [GPI](#gpi)
+  - [5.10 Preguntas](#510-preguntas)
+
+---
+
 Este documento explica cómo **detallar los casos de uso** como **texto** y cómo evolucionarlos a **diagramas de secuencia del sistema** para descubrir qué operaciones de alto nivel debe implementar el sistema. 
 
 Se concentra en explicar lo que es **realmente necesario** para la descripción de un caso de uso durante la elaboración, cuando su funcionalidad debe ser completamente entendida. Se evitan los detalles técnicos y de interfaz. Sólo los **flujos de información**, incluidos los **flujos de variantes** y **excepciones**, se incluyen en una descripción de **caso de uso esencial**; en este documento se explica cómo descubrirlos sistemáticamente. También explica cómo transformar una descripción textual e informal de un caso de uso en un diagrama secuencial, que es un artefacto de más elevada ceremonia.
