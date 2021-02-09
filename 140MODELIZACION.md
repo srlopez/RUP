@@ -863,7 +863,7 @@ Refinar el modelo conceptual:
 - Detallar los atributos y asociaciones con los estereotipos, la multiplicidad y las limitaciones, según sea necesario. 
 - Organizar el modelo utilizando la herencia, las clases de asociación y las especificaciones temporales.
 - Añadir invariantes según sea necesario.   
-Implementación
+
 
 ### GPI
 Estimar el esfuerzo total, el cronograma ideal y el tamaño medio del equipo para el proyecto.   
@@ -872,7 +872,6 @@ Estimar la duración y el número de iteraciones para cada fase.
 
 Preparar la fase de planificación y el plan de Iteración para la primera iteración.
   
-
 
 ## 6.10 Preguntas  
 1. Trate de imaginar una situación del mundo real en la que la estructura correcta a utilizar sea una secuencia. Recuerde que una secuencia real permite que los elementos se repitan y asigna posición a los elementos. Trate de no dejarse engañar por el uso del lenguaje natural de la palabra "lista". Una "lista de la compra", por ejemplo, no es una secuencia, porque los elementos no se repiten y su posición en la lista es irrelevante; se puede organizar una lista de estudiantes en orden alfabético, pero una vez más, la repetición no está permitida y el orden es de nuevo irrelevante aunque conveniente. Por lo tanto, esas no son secuencias reales.
