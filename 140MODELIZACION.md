@@ -442,18 +442,17 @@ ya que no hay propiedades generalizadas.
 La generalización tampoco debe utilizarse cuando las subclases no tienen propiedades (atributos, asociaciones o métodos12) que las diferencien entre sí, como se muestra en la `Figura 6.37`.
 
 ![](img/F6.37.png)    
-`Figura 6.37 Situación en la que no se recomienda la especialización`
- porque no hay propiedades especializadas en subclases.
+`Figura 6.37 Situación en la que no se recomienda la especialización porque no hay propiedades especializadas en subclases`.
   
 En estos casos, la solución ideal es utilizar un único atributo, posiblemente escrito con una enumeración, para diferenciar los grupos de instancias de objetos que tienen las mismas propiedades (Figura 6.38).
 
 ![](img/F6.38.png)    
-`Figura 6.38 Un modelo más adecuado para la situación de la `Figura 6.37`.`
+`Figura 6.38 Un modelo más adecuado para la situación de la Figura 6.37.`
   
 Además de estas reglas, antes de decidir sobre el uso de la herencia, es aconsejable verificar si la generalización representa realmente una clasificación estructural de los elementos, y no una organización asociativa o temporal, como se ve en las siguientes secciones.
 
-### 6.6.2 Clases asociativas  
-Un tema frecuentemente malentendido en el modelado conceptual está relacionado con la definición de generalización entre clases que no son realmente subtipos estructurales, sino roles. Por ejemplo, una librería puede tener dos "tipos" de personas: clientes y trabajadores. Después de descubrir que ambos tienen nombre, dirección, teléfono, etc., un analista podría asumir que son dos conceptos que deben generalizarse como Persona. Pero esa solución aparentemente sencilla (Figura 6.39) genera un problema complicado, porque no son diferentes tipos de personas, sino diferentes roles que las personas pueden jugar cuando se relacionan con una empresa.
+### 6.6.2 Clases asociativas  - IDEM E/R
+Un tema frecuentemente malentendido en el modelado conceptual está relacionado con la definición de generalización entre clases que no son realmente subtipos estructurales, sino roles. Por ejemplo, una librería puede tener dos "tipos" de personas: clientes y trabajadores. Después de descubrir que ambos tienen nombre, dirección, teléfono, etc., un analista podría asumir que son dos conceptos que deben generalizarse como Persona. Pero esa solución aparentemente sencilla (`Figura 6.39`) genera un problema complicado, porque no son diferentes tipos de personas, sino diferentes roles que las personas pueden jugar cuando se relacionan con una empresa.
 
 
 ![](img/F6.39.png)    
@@ -479,34 +478,32 @@ La diferencia entre usar una clase de asociación y un concepto intermediario es
 `Figura 6.42 Una reserva siendo modelada como una clase de asociación.`
   
 En el caso de la `Figura 6.41`, una reserva asocia a un cliente a un libro. En el caso de la `Figura 6.42` el cliente y el libro están directamente asociados, y la reserva, como clase de asociación, es una consecuencia de esa asociación. Sin embargo, en la `Figura 6.41`, el mismo cliente puede tener muchas reservas para el mismo libro (nada en el modelo lo impide), mientras que en la `Figura 6.42` un cliente puede tener sólo una reserva para cada libro. El vínculo entre el cliente y el libro puede existir o no; no es una bolsa. Sin embargo, si ambas funciones de la asociación en la `Figura 6.42` estuvieran marcadas con {bag}, entonces un usuario podría tener más de una reserva para el mismo libro y el modelo en la `Figura 6.42` sería equivalente al de la `Figura 6.41`.  
-La cuestión de tener diferentes registros para la misma persona, como se discutió anteriormente, frecuentemente crea problemas en los sistemas de información. Por ejemplo, un estudiante entra en la universidad y se registra como tal. Luego, recibe una beca y se crea un nuevo registro. Luego, trabaja en un laboratorio y se registra de nuevo. Finalmente, es contratado como profesor y se crea un nuevo registro. Aparece muchas veces en los registros de la universidad, como si fuera otra persona. Sus viejos registros se vuelven obsoletos; la dirección y los números de teléfono por lo general sólo se actualizan en los registros más recientes. Esto sucede porque los sistemas suelen utilizar la herencia (Figura 6.43), o registros completamente separados (Figura 6.44) en estos casos.
+La cuestión de tener diferentes registros para la misma persona, como se discutió anteriormente, frecuentemente crea problemas en los sistemas de información. Por ejemplo, un estudiante entra en la universidad y se registra como tal. Luego, recibe una beca y se crea un nuevo registro. Luego, trabaja en un laboratorio y se registra de nuevo. Finalmente, es contratado como profesor y se crea un nuevo registro. Aparece muchas veces en los registros de la universidad, como si fuera otra persona. Sus viejos registros se vuelven obsoletos; la dirección y los números de teléfono por lo general sólo se actualizan en los registros más recientes. Esto sucede porque los sistemas suelen utilizar la herencia (`Figura 6.43`), o registros completamente separados (`Figura 6.44`) en estos casos.
 
 
 ![](img/F6.43.png)    
-`Figura 6.43 Representación inadecuada de muchos registros   `
-para la misma persona con herencia.
+`Figura 6.43 Representación inadecuada de muchos registros para la misma persona con herencia.`
  
 ![](img/F6.44.png)   
-`Figura 6.44 Representación inadecuada de muchos registros`
- para la misma persona como conceptos separados.
+`Figura 6.44 Representación inadecuada de muchos registros para la misma persona como conceptos separados`.
   
 Para evitar este problema, como se ha visto antes, la solución es reconocer que una persona es siempre la misma. Los roles de la persona en la institución cambian, pero la persona no se convierte en una persona nueva. Por lo tanto, la solución para esta situación es más adecuada cuando se basa en clases de asociación, como se muestra en la `Figura 6.45`.
 
 
 ![](img/F6.45.png)    
-`Figura 6.45 Representación de muchos registros para la misma persona   `
-como clases de asociación.
+`Figura 6.45 Representación de muchos registros para la misma persona como clases de asociación.`
   
 En la `Figura 6.45`, si una persona puede desempeñar el mismo papel más de una vez, entonces la multiplicidad a la izquierda de la asociación debe ser *.  
 Una excepción razonable puede ser admitida si sólo existe un tipo de persona en el contexto del sistema. Por ejemplo, si el sistema sólo gestiona la información sobre los profesores y ese es el único papel que una persona puede desempeñar en la universidad en el contexto de ese sistema de información, entonces sería más fácil crear una clase llamada Profesor, y en el contexto de ese sistema, Profesor es sinónimo de Persona porque no hay otro tipo de personas. Lo mismo sucede en el ejemplo de **`Livir`**, donde se decidió mantener al Cliente como la única clase que representa a las personas, en lugar de transformarla en una clase de asociación.
 
 ### 6.6.3 Clases modales   
-Las clases modales se utilizan para modelar conceptos con instancias que pueden cambiar de un estado a otro durante su existencia, cambiando, posiblemente, la estructura de sus propiedades, incluyendo atributos, asociaciones y comportamiento. Aunque algunos lenguajes de programación permiten que las instancias cambien su estructura cambiando su clase, esto no se asume como un principio de modelado porque tales cambios pueden crear problemas estructurales impredecibles.  
+`Las clases modales se utilizan para modelar conceptos con instancias que pueden cambiar de un estado a otro durante su existencia, cambiando, posiblemente, la estructura de sus propiedades, incluyendo atributos, asociaciones y comportamiento`. Aunque algunos lenguajes de programación permiten que las instancias cambien su estructura cambiando su clase, esto no se asume como un principio de modelado porque tales cambios pueden crear problemas estructurales impredecibles.  
 Incluso si una instancia pudiera cambiar su clase, redefinir sus atributos y asociaciones sigue siendo un problema. Sin embargo, existen técnicas de modelado que permiten representar situaciones en las que se necesitarían objetos que cambien de clase sin utilizar esta característica. La idea no es cambiar la clase de objeto, sino su estado. Cuando se enciende un televisor, no se convierte en un nuevo tipo de televisor: sólo cambia de estado.  
 Se pueden identificar tres situaciones cada vez más complejas relacionadas con el modelado de estados:
-- Transición estable: Los diferentes estados de un objeto no afectan a su estructura, sino sólo a sus valores de propiedad (atributos y enlaces).
-- Transición monótona creciente: A medida que el objeto cambia de estado, sólo puede conservar sus propiedades o adquirir otras nuevas.
-- Transición no monótona:13 A medida que el objeto cambia de estado, puede conservar, adquirir o perder propiedades.  
+- `Transición estable`: Los diferentes estados de un objeto no afectan a su estructura, sino sólo a sus valores de propiedad (atributos y enlaces).
+- `Transición monótona creciente`: A medida que el objeto cambia de estado, sólo puede conservar sus propiedades o adquirir otras nuevas.
+- `Transición no monótona`: A medida que el objeto cambia de estado, puede conservar, adquirir o perder propiedades.  
+    
 Las soluciones de modelado para las transiciones crecientes estables y monótonas son bastante simples. Sin embargo, para modelar la transición no monótona, es necesario un patrón de diseño llamado State (Gamma, Helm, Johnson y Vlissides, 1995), como se ve en las siguientes subsecciones.
 
 ### 6.3.1 Transición estable  
@@ -530,8 +527,7 @@ No sería adecuado modelar esa situación con herencia, como se ve en la `Figura
 
 
 ![](img/F6.48.png)    
-`Figura 6.48 Una forma inadecuada de modelar una transición monótona creciente`
- con la herencia.
+`Figura 6.48 Una forma inadecuada de modelar una transición monótona creciente con la herencia.`
   
 Otra solución que no es muy agradable, pero que sigue siendo muy popular, consiste en crear una única factura de clase y permitir que ciertos atributos sean nulos hasta que la clase cambie su estado, como se muestra en la `Figura 6.49`. Normalmente, la verificación de la coherencia de la instancia se realiza en los métodos de actualización. Pero también se puede utilizar una invariante (como se explica en la Sección 6.7) para garantizar que ninguna instancia alcance un estado inválido, como, por ejemplo, con una fecha de pago definida y un valor de pago nulo.
 
@@ -548,7 +544,7 @@ Sería mejor modelar el concepto de factura para que la consistencia de los obje
   
 Con el modelo presentado en la `Figura 6.50` es imposible que una factura tenga una fecha de pago definida y un valor de pago indefinido, y esto se garantiza sin realizar ninguna otra limitación sobre sus atributos o asociaciones.  
 El estado de una factura es un atributo derivado, que se calcula de la siguiente manera: si no hay ningún pago vinculado a la factura, entonces la factura es nueva; de lo contrario, se paga. En OCL esa condición puede expresarse como
-   
+```   
 Context Invoice::state
   derive:
     if self.payment->isEmpty() then
@@ -556,12 +552,12 @@ Context Invoice::state
     else
       InvoiceState::paid
     endif
-  
+```  
 La expresión anterior introduce dos nuevas características de OCL:
-- if-then-else-endif, que es una de las funciones de selección de OCL. Si la condición después de if es verdadera, entonces la función resulta en la evaluación de la expresión después de if; de lo contrario, resulta en la evaluación de la expresión después de if.
-- isEmpty(), que es una función aplicada a una estructura de colección y devuelve true si la colección está vacía o es falsa. Es una manera fácil de comprobar si hay algún objeto vinculado a otro objeto o no.
+- `if-then-else-endif`, que es una de las funciones de selección de OCL. Si la condición después de if es verdadera, entonces la función resulta en la evaluación de la expresión después de if; de lo contrario, resulta en la evaluación de la expresión después de if.
+- `isEmpty()`, que es una función aplicada a una estructura de colección y devuelve true si la colección está vacía o es falsa. Es una manera fácil de comprobar si hay algún objeto vinculado a otro objeto o no.
 
-### 6.3.3 Transición no monótona  
+### 6.3.3 Transición no monótona  <-NO Estudiar
 Con la transición no monótona, un objeto puede ganar y perder propiedades a medida que cambia de estado.  
 Afortunadamente, no es frecuente que un sistema de información requiere que se pierda información. Sin embargo, a veces, eso es exactamente lo que se debe hacer.  
 Hay muchas maneras de concebir y modelar un sistema de reservas para un hotel, por ejemplo. Una de ellas consiste en considerar el alojamiento como una entidad que evoluciona a partir de una reserva en tres pasos:
@@ -592,8 +588,9 @@ En la `Figura 6.53`, los atributos nrPeople y fee existen en todos los estados p
 - Alojamiento Finalizado: Un alojamiento, además del número de personas y la tarifa, tiene fechas efectivas de entrada y salida, y una habitación efectiva que fue asignada. La fecha estimada de salida ya no es necesaria y se descarta.  
 Desde el punto de vista de una Habitación, se puede vincular a un máximo de un CurrentLodging (0..1), pero se puede asociar a muchos FinishedLodging (*).
  De esta manera, la propiedad temporal de esa asociación ya está modelada también, porque la asociación de una habitación a alojamiento puede ser como mucho una en el presente, pero muchas en el pasado.
-### 6.7 Invariantes  
-Hay situaciones en las que la expresividad de los diagramas no es suficiente para representar reglas que deben ser registradas en el modelo conceptual. En estos casos, el analista debe utilizar invariantes.  
+
+### 6.7 Invariantes  <- REGLAS DE NEGOCIO
+`Hay situaciones en las que la expresividad de los diagramas no es suficiente para representar reglas que deben ser registradas en el modelo conceptual. En estos casos, el analista debe utilizar invariantes`.  
 Las invariantes son restricciones generales sobre las instancias de las clases. Algunas restricciones están representadas en los roles de asociación; por ejemplo, una restricción que establece que una orden no debe tener más de cinco ítems puede ser representada como en la `Figura 6.54`.
 
 ![](img/F6.54.png)    
@@ -605,36 +602,35 @@ Sin embargo, no todas las restricciones posibles pueden estar representadas en l
 `Figura 6.55 Un ejemplo de una clase con una invariante.`
   
 El valor total de un pedido es un valor derivado de la `Figura 6.55`. La función de suma en OCL devuelve la suma de los elementos numéricos que se producen para cada uno de los elementos del conjunto. La expresión entre paréntesis después de la suma indica cómo se obtiene cada valor numérico individual a partir de los elementos del conjunto. La expresión utilizada para definir el valor total en la `Figura 6.55` es una abreviatura de
-   
+```   
 Context Order::totalValue:Money
   derive:
     self.item->sum(anItem|anItem.subtotal)
-  
+```  
 Alguien también podría intentar escribir la expresión anterior como self.item.subtotal->sum(aSubtotal|aSubtotal) o self.item.subtotal->sum(). Sin embargo, en ese caso, como la posición de función es un set y no una bolsa o secuencia, los subtotales también serían un set. Si dos ítems tienen el mismo valor para el subtotal, entonces aparecería sólo una vez en el set y la suma no reflejaría las intenciones del modelador.  
 El subtotal de la clase item es también un valor derivado calculado mediante la siguiente expresión:
-   
+```   
 Context Item::subtotal:Money
   derive:
     self.quantity*self.price
-  
+```  
 El precio del artículo tiene un valor inicial definido como el precio del libro que está vinculado al artículo:
-   
+```   
 Context Item::price:Money
   init:
    self.book.price
-  
+```  
 Ahora bien, si existe una restricción que indica que ningún pedido puede tener un valor total superior a 1000 dólares, no sería posible representarlo en la multiplicidad de roles, como se muestra en la `Figura 6.54`. Sin embargo, la restricción podría representarse utilizando una invariante como la siguiente:
-   
+```   
 Context Order
   inv:  
      self.totalValue<=1000
-  
+```  
 Las invariantes pueden aparecer en el diagrama indicado como restricciones asociadas a una clase. La invariante mencionada anteriormente se representa justo debajo del nombre de la clase de orden en la `Figura 6.55`.  
 La declaración invariante en OCL no tiene un subcontexto; debe ser verdadera para cada instancia de la clase, no para un atributo o rol de asociación en particular.  
 Muchos desarrolladores de software, cuando se enfrentan a la necesidad de utilizar restricciones como invariantes, eligen incorporar estas reglas en métodos que actualizan los atributos y enlaces de los objetos. Por ejemplo, considerando la `Figura 6.55`, se podría agregar una prueba de restricción al método que agrega un nuevo ítem al pedido para verificar si el valor total supera los mil dólares; en ese caso, se impediría que se completara la operación.  
 El problema con ese enfoque es que la verificación se haría únicamente con ese método, pero no sería una regla general para todos los métodos. El desarrollador conoce la regla ahora, pero ¿qué pasa si otro desarrollador asume el proyecto más tarde? ¿Qué pasa con el mantenimiento? Un desarrollador que cambie el sistema algunos años más tarde no sabría necesariamente que esa regla existe. Probablemente no revisaría el documento de requisitos (asumiendo que todavía existe y está actualizado), y podría introducir un error conceptual en el sistema si permite que otros métodos no sigan esa regla.  
-Por ejemplo, si la verificación se implementó sólo en la operación que añade un item nuevo a un pedido, ¿qué sucede si el item
- tiene su precio modificado? ¿Qué pasa si el artículo ha cambiado de cantidad?  
+Por ejemplo, si la verificación se implementó sólo en la operación que añade un item nuevo a un pedido, ¿qué sucede si el item tiene su precio modificado? ¿Qué pasa si el artículo ha cambiado de cantidad?  
 Por lo tanto, las reglas conceptuales generales que siempre se aplican deberían ser explícitas en el modelo conceptual y no estar relegadas a las verificaciones en el código de programación. Los casos incoherentes pueden prevenirse. Si es posible, tales restricciones pueden ser representadas en la estructura del diagrama; de lo contrario, deben ser representadas por invariantes.  
 Otro ejemplo, que ocurre con frecuencia, es la necesidad de restringir dos asociaciones que de otro modo serían independientes. En la `Figura 6.56`, se observa que los estudiantes están asociados a una carrera elegida, cada carrera tiene cursos, y los estudiantes toman cursos.
 
@@ -643,11 +639,11 @@ Otro ejemplo, que ocurre con frecuencia, es la necesidad de restringir dos asoci
   
 Sin embargo, el modelo representado en la figura no garantiza que los estudiantes elijan cursos asociados a su carrera. Según el modelo, un estudiante puede tomar cualquier curso, y si ese no es el caso, una restricción debe ser añadida al modelo. UML permite añadir restricciones entre asociaciones (con el uso de líneas discontinuas). Esta notación es una forma alternativa para una invariante.  
 Para garantizar que un estudiante sólo pueda tomar cursos relacionados con su propia carrera, se debe proporcionar una invariante como la siguiente:
-   
+```   
 Context Student
   inv:     
     self.course.career=self.career
-  
+```  
 La expresión utiliza una característica de conjuntos (no permitiendo que los elementos se repitan) para verificar que todos los cursos tomados por el estudiante pertenecen a la carrera del estudiante. La expresión self.career resulta en la carrera del estudiante (un conjunto con un solo elemento debido a la multiplicidad del rol de estudiante a carrera). Por otro lado, la expresión self.course.career resulta en el conjunto de todas las carreras asociadas a todos los cursos realizados por el estudiante. Si hay cursos de carreras diferentes, entonces ese conjunto no podría ser igual a la carrera personal (que tiene un solo elemento). De lo contrario, si todas las carreras son iguales, entonces el set self.course.career contendrá un solo elemento (porque los sets no repiten elementos). Si ese elemento es el mismo que self.career, entonces la invariante será verdadera y válida.
 
 ### 6.8 Construcción iterativa del modelo conceptual  
@@ -665,25 +661,30 @@ Aplicando esta técnica al caso de uso de la `Figura 5.10`, se pueden encontrar 
 
 
   
-Caso de uso 01: Pedir Libros
-    1. El cliente proporciona palabras clave para la búsqueda de libros.
-    2. El sistema presenta una lista de libros a la venta que coincide con las palabras clave, incluyendo al menos el título, autor, precio, número de páginas, editorial, ISBN, e imagen de portada.
-    3. El cliente selecciona los libros de la lista e indica la cantidad deseada para cada uno. 
-    4. El sistema genera el resumen del pedido (título, autor, cantidad, precio unitario y subtotal para cada libro) y el valor total. 
-    5. El cliente termina el pedido.   
-Excepción 3a: La cantidad solicitada es superior a la cantidad en stock de uno o más libros. 
-3a.1. El sistema informa al usuario de las cantidades disponibles para cada libro en el que el usuario ha pedido más de lo que está disponible. 
-3a.2. El cliente cambia las cantidades deseadas para satisfacer las cantidades en stock. 3a.3. Avance al paso 4.   
-Excepción 5a: El cliente aún no está identificado. 
-5a.1. El cliente proporciona una identificación válida. 
-5a.2. Vuelva al paso 5.   
-Excepción 5b: El cliente no tiene una cuenta. 
-5b.1. El cliente se registra proporcionando su nombre de usuario, contraseña y dirección de correo electrónico.
-5b.2.  Volver al paso 5.   
-Excepción 5c: No se seleccionó ningún libro para la compra. 
-5c.1. Volver al paso 1. 
+>**Caso de uso 01: Pedir Libros**  
+ 1. El cliente proporciona palabras clave para la búsqueda de libros.
+ 2. El sistema presenta una lista de libros a la venta que coincide con las palabras clave, incluyendo al menos el _título_, _autor_, _precio_, _número de páginas_, _editorial_, _ISBN_, e _imagen de portada_.  
+ 3. El cliente selecciona los libros de la lista e indica la _cantidad_ deseada para cada uno.   
+ 4. El sistema genera el _resumen del pedido (título, autor, cantidad, precio unitario y subtotal para cada libro)_ y el _valor total_.   
+ 5. El cliente termina el pedido.  
+    
+**Excepción 3a**: La cantidad solicitada es superior a la cantidad en stock de uno o más libros.   
+`3a.1.` El sistema informa al usuario de las cantidades disponibles para cada libro en el que el usuario ha pedido más de lo que está disponible. 
+`3a.2.` El cliente cambia las cantidades deseadas para satisfacer las cantidades en stock. 
+`3a.3.` Avance al paso 4.  
 
-![](img/F6.57.png)    
+**Excepción 5a**: El cliente aún no está identificado.   
+`5a.1.` El cliente proporciona una identificación válida.  
+`5a.2.` Vuelva al paso 5.   
+
+**Excepción 5b**: El cliente no tiene una cuenta.   
+`5b.1.` El cliente se registra proporcionando su nombre de usuario, contraseña y dirección de correo electrónico.  
+`5b.2.`  Volver al paso 5.   
+
+**Excepción 5c**: No se seleccionó ningún libro para la compra. 
+`5c.1.` Volver al paso 1. 
+
+  
 `Figura 6.57 Caso de uso con los conceptos y atributos candidatos subrayados.`
   
 Aunque no exista un modelo conceptual preliminar, este caso de uso es suficiente para identificar algunos conceptos que pertenecen al dominio del sistema. Si el modelo conceptual preliminar ya existe, entonces el caso de uso ayuda a refinar el modelo, indicando nuevos conceptos, nuevos atributos o cambios de estructura. Para el ejemplo, suponemos que ya existe un modelo conceptual preliminar, que se representa en la `Figura 6.58`.
@@ -693,25 +694,25 @@ Aunque no exista un modelo conceptual preliminar, este caso de uso es suficiente
 `Figura 6.58 Modelo conceptual preliminar para el ejemplo actual.`
   
 Los términos identificados en el texto del caso de uso de la `Figura 6.57` son, en orden de aparición:
-- Cliente: Una clase que ya está en el modelo conceptual.
-- Palabras clave: Las palabras clave se utilizan para la búsqueda; en este punto no se consideran atributos de conceptos complejos por sí solos (aunque podrían serlo si hay que registrar el historial o las preferencias de búsqueda).
-- Libro: Una clase que ya está en el modelo conceptual.
-- Venta: En el contexto de ese caso de uso y en este punto de análisis, "venta" y "pedido" podrían considerarse sinónimos. Por lo tanto, esta es una clase que ya está en el modelo conceptual.
-- Título, autor, precio y número de páginas: Atributos del libro. El autor podría ser considerado un concepto complejo si la información sobre los autores es más compleja que un solo nombre.
-- Editorial: Una clase que ya está en el modelo. El caso de uso probablemente se refiere al nombre del editor.
-- ISBN e imagen de portada: Atributos del libro.
-- Cantidad deseada: No se puede considerar un atributo del Libro porque varía según la orden. Tampoco puede considerarse un atributo del pedido porque varía según el libro (puede haber muchos libros en un pedido). La cantidad deseada es, por lo tanto, un atributo de la asociación entre un libro y un pedido, representado por un concepto intermedio o por una clase de asociación llamada Item.
-- Resumen de la Orden: Se refiere a una Orden; no parece ser un concepto nuevo.
-- Título, autor (o nombre del autor), cantidad, precio unitario y subtotal: Excepto el subtotal, ya se han mencionado todos los atributos. El subtotal puede ser un atributo derivado de un elemento. El precio unitario es equivalente al precio, que ya se considera un atributo del Libro. Sin embargo, de hecho también puede ser un atributo del Item.
-- Valor total: Atributo derivado de la Orden.
-- Termina el pedido: Esto indica una acción que representa un cambio en el estado de una orden. Tal vez un atributo sería suficiente para representar este estado, pero sería aconsejable un mayor análisis para ver si la finalización de una orden no es una operación más compleja (que es lo que es).
-- Cantidad solicitada: Lo mismo que la cantidad.
-- Cantidad en stock: Probablemente un nuevo atributo del Libro.
-- Cantidades disponibles: Sinónimo de cantidad en stock.
-- Identificado: ¿Podría ser el estado de un cliente? Tal vez no. Se refiere a si el usuario está conectado o no.
-- Identificación válida: Esto pertenece al dominio de seguridad. Sin embargo, es probable que el modelo conceptual tenga una manera de identificar a los clientes. Por lo general, los números de identificación, como el número de Seguro Social, se utilizan para ese propósito.
-- Cuenta: Esto también tiene que ver con el inicio de sesión.
-- Nombre de usuario, contraseña y dirección de correo electrónico: Dependiendo del tipo de marco de seguridad que se utilice (o no), estos pueden ser atributos de un cliente (o atributos de un usuario que está vinculado a un cliente), o incluso pueden ser completamente abordados por el marco de seguridad e ignorados en el modelo conceptual. Por ahora se dejan como temas de seguridad, y no se incluyen en el modelo conceptual.  
+- `Cliente`: Una clase que ya está en el modelo conceptual.
+- `Palabras clave`: Las palabras clave se utilizan para la búsqueda; en este punto no se consideran atributos de conceptos complejos por sí solos (aunque podrían serlo si hay que registrar el historial o las preferencias de búsqueda).
+- `Libro`: Una clase que ya está en el modelo conceptual.
+- `Venta`: En el contexto de ese caso de uso y en este punto de análisis, "venta" y "pedido" podrían considerarse sinónimos. Por lo tanto, esta es una clase que ya está en el modelo conceptual.
+- `Título`, `autor`, `precio` y `número de páginas`: Atributos del libro. El autor podría ser considerado un concepto complejo si la información sobre los autores es más compleja que un solo nombre.
+- `Editorial`: Una clase que ya está en el modelo. El caso de uso probablemente se refiere al nombre del editor.
+- `ISBN` e imagen de portada: Atributos del libro.
+- `Cantidad deseada`: No se puede considerar un atributo del Libro porque varía según la orden. Tampoco puede considerarse un atributo del pedido porque varía según el libro (puede haber muchos libros en un pedido). La cantidad deseada es, por lo tanto, un atributo de la asociación entre un libro y un pedido, representado por un concepto intermedio o por una clase de asociación llamada Item.
+- `Resumen de la Orden`: Se refiere a una Orden; no parece ser un concepto nuevo.
+- `Título`, `autor` (o nombre del autor), `cantidad`, `precio unitario` y `subtotal`: Excepto el subtotal, ya se han mencionado todos los atributos. El subtotal puede ser un atributo derivado de un elemento. El precio unitario es equivalente al precio, que ya se considera un atributo del Libro. Sin embargo, de hecho también puede ser un atributo del Item.
+- `Valor total`: Atributo derivado de la Orden.
+- Termina el pedido: Esto indica una acción que representa un `cambio en el estado de una orden`. Tal vez un atributo sería suficiente para representar este estado, pero sería aconsejable un mayor análisis para ver si la finalización de una orden no es una operación más compleja (que es lo que es).
+- `Cantidad solicitada`: Lo mismo que la cantidad.
+- `Cantidad en stock`: Probablemente un nuevo atributo del Libro.
+- `Cantidades disponibles`: Sinónimo de cantidad en stock.
+- `Identificado`: ¿Podría ser el estado de un cliente? Tal vez no. Se refiere a si el usuario está conectado o no.
+- `Identificación válida`: Esto pertenece al dominio de seguridad. Sin embargo, es probable que el modelo conceptual tenga una manera de identificar a los clientes. Por lo general, los números de identificación, como el número de Seguro Social, se utilizan para ese propósito.
+- `Cuenta`: Esto también tiene que ver con el inicio de sesión.
+- `Nombre de usuario`, `contraseña` y `dirección de correo electrónico`: Dependiendo del tipo de marco de seguridad que se utilice (o no), estos pueden ser atributos de un cliente (o atributos de un usuario que está vinculado a un cliente), o incluso pueden ser completamente abordados por el marco de seguridad e ignorados en el modelo conceptual. Por ahora se dejan como temas de seguridad, y no se incluyen en el modelo conceptual.  
 A partir de la información recopilada anteriormente, el modelo conceptual preliminar puede ser refinado, y se volvería similar al que se muestra en la `Figura 6.59`, donde se destacan las nuevas clases y atributos.
 
 
@@ -722,7 +723,7 @@ Nótese que un solo caso de uso agregó nueva información significativa al mode
 No todas las asociaciones de la `Figura 6.59` tienen sus multiplicidades definidas. El UML por defecto para la multiplicidad de roles no definidos es 1, pero la situación en la `Figura 6.59` es que las asociaciones sin multiplicidad definida simplemente no fueron analizadas hasta este punto y se consideran "por definir".
 
 ### 6.8.2 Conceptos dependientes e independientes  
-Un concepto depende de otros si necesita ser asociado a ellos para tener sentido, es decir, para representar información que sea mínimamente significativa.14 Mirando la `Figura 6.59`, se puede ver que un pedido no tendría sentido a menos que estuviera asociado a un cliente y a un conjunto de ítems. Sin esas asociaciones, el concepto de Orden no tendría sentido. La orden también tiene otras asociaciones en esa figura, pero son opcionales.  
+`Un concepto depende de otros si necesita ser asociado a ellos para tener sentido`, es decir, para representar información que sea mínimamente significativa. Mirando la `Figura 6.59`, se puede ver que un pedido no tendría sentido a menos que estuviera asociado a un cliente y a un conjunto de ítems. Sin esas asociaciones, el concepto de Orden no tendría sentido. La orden también tiene otras asociaciones en esa figura, pero son opcionales.  
 Un concepto es independiente si tiene un significado aunque no esté asociado a otros.15 Por ejemplo, el concepto de editor puede ser entendido sólo a partir de sus atributos, sin estar asociado a otros conceptos. Las asociaciones existentes para un editor son opcionales. Por lo tanto, el concepto de editor, en ese sentido, es independiente.  
 Pero, ¿para qué sirve esta distinción? Antes se discutió que sólo los conceptos más simples pueden ser manejados por los casos de uso de CRUD. Los conceptos dependientes no deben considerarse simples en principio, mientras que los conceptos independientes pueden ser simples en principio.  
 En la `Figura 6.59`, casi todos los conceptos son dependientes. Por ejemplo, una entrega depende de un pedido, una confirmación depende de una entrega, etc. Sólo Publisher, Book y Customer son conceptos independientes y candidatos a ser gestionados por casos de uso de CRUD.  
@@ -759,20 +760,21 @@ Así, cuando dos conceptos complejos se relacionan entre sí, el constructo a ut
 El ejemplo de la `Figura 6.63`, a diferencia de los demás, respeta una regla de cohesión que establece que un concepto sólo debe contener sus propias propiedades. Como el ID es un atributo del propietario, no debe representarse como un atributo de un coche (como en la `Figura 6.62`). Otra razón para tener asociaciones visibles no disfrazadas es más práctica: es más fácil ver qué objetos tienen referencias a otros. Más adelante, discutimos cómo estas líneas de visibilidad pueden ser usadas para diseñar código efectivo y de buena calidad orientado a objetos.
 
 ### 6.8.4 Ejemplo de construcción iterativa del modelo conceptual
-### 6.8.1 muestra cómo se puede perfeccionar el modelo conceptual preliminar con información del primer caso de uso detallado (Pedir Libros).  
+
+La seccion 6.8.1 muestra cómo se puede perfeccionar el modelo conceptual preliminar con información del primer caso de uso detallado (Pedir Libros).  
+
 Aplicando de nuevo ese proceso, simulando una segunda iteración para el caso de uso 02 Orden de pago, se descubren nuevos conceptos y atributos (Figura 6.64).
 
   
-Caso de uso 02: Orden de pago 
-    1. El sistema genera el resumen del pedido pendiente (título, autor, cantidad, precio unitario y subtotal para cada libro), así como el precio total del pedido y una lista de direcciones de entrega registradas para el cliente. 
-    2. El cliente selecciona una dirección de entrega.
-    3. El sistema presenta la tarifa de envio, la fecha de llegada programada y una lista de tarjetas de crédito ya registradas para el cliente (marca y los últimos cuatro dígitos del número de la tarjeta de crédito). 
-    4. El cliente selecciona una de sus tarjetas de crédito para el pago. 
-    5. El sistema envía al operador de la tarjeta de crédito correspondiente los siguientes datos: número de tarjeta, nombre del propietario, validez, código de seguridad, valor total de la compra y código de la tienda. 
-    6. El operador de la tarjeta de crédito aprueba la venta enviando un código de autorización. 
-    7. El sistema informa al cliente de que la venta ha sido autorizada y le proporciona el número de seguimiento del paquete.   
+> **Caso de uso 02: Orden de pago**    
+1. El sistema genera el resumen del pedido pendiente (título, autor, cantidad, precio unitario y subtotal para cada libro), así como el precio total del pedido y una lista de direcciones de entrega registradas para el cliente. 
+2. El cliente selecciona una dirección de entrega.
+3. El sistema presenta la tarifa de envio, la fecha de llegada programada y una lista de tarjetas de crédito ya registradas para el cliente (marca y los últimos cuatro dígitos del número de la tarjeta de crédito). 
+4. El cliente selecciona una de sus tarjetas de crédito para el pago. 
+5. El sistema envía al operador de la tarjeta de crédito correspondiente los siguientes datos: número de tarjeta, nombre del propietario, validez, código de seguridad, valor total de la compra y código de la tienda. 
+6. El operador de la tarjeta de crédito aprueba la venta enviando un código de autorización. 
+7. El sistema informa al cliente de que la venta ha sido autorizada y le proporciona el número de seguimiento del paquete.   
 
-![](img/F6.64.png)  
 `Figura 6.64 Caso 02: Pago de libros con los conceptos y atributos candidatos identificados.`
   
 Los elementos identificados en este caso de uso son:
@@ -789,6 +791,7 @@ Los elementos identificados en este caso de uso son:
 - Aprobación: Esto sucede cuando se recibe un código de autorización (véase el siguiente punto).
 - Código de autorización: Puede ser pensado como un atributo de la orden. Pero sólo puede existir cuando una tarjeta de crédito ya está enlazada con el pedido. Por lo tanto, sería mejor colocarlo como un atributo de la asociación entre tarjeta de crédito y orden.
 - Número de seguimiento del paquete entregado: Puede ser un atributo de la entrega.  
+  
 Los nuevos elementos se destacan en la `Figura 6.65`, que es la tercera versión del modelo conceptual para el ejemplo de **`Livir`**. Nótese que todavía hay algunos conceptos sin atributos y que algunas asociaciones quedan con una multiplicidad indefinida. Esto se debe a que los casos de uso analizados hasta este punto no produjeron información para refinar esos elementos. Se perfeccionarán más tarde cuando se amplíen otros casos de uso y se incorpore su información en el modelo conceptual.
 
 ![](img/F6.65.png)    
@@ -796,13 +799,13 @@ Los nuevos elementos se destacan en la `Figura 6.65`, que es la tercera versión
   
 Observe que en el ejemplo sólo se utilizó el flujo principal de este caso de uso. Todavía hay que analizar e incluir flujos alternativos de este caso de uso. Recientemente, Jacobson et al. (2011) han propuesto la tecnología de caso de uso 2.0, que sugiere específicamente que un caso de uso debe ser tratado en rodajas, y no como un todo indivisible.  
 Al menos dos invariantes deben añadirse al diagrama de la `Figura 6.65` para evitar la existencia de información inconsistente: la dirección del pedido debe ser una de las direcciones del cliente del pedido y la tarjeta de crédito utilizada para pagar el pedido debe ser una de las tarjetas de crédito del cliente. Estas invariantes se pueden definir en la clase de orden como
-   
+```   
 Context Order
   inv:
     self.customer.address->includes(self.address)
       and
     self.customer.creditCard->includes(self.creditCard)
-  
+```  
 El predicado OCL includes verifica si el objeto recibido como argumento está incluido en el conjunto. Es equivalente al operador matemático "⊇". Por ejemplo, auto->includes (auto-dirección) significa auto-dirección del cliente ⊇ auto-dirección, es decir, auto-dirección del cliente contiene auto-dirección. Se asume que si el elemento recibido como argumento es el conjunto vacío, entonces la expresión es verdadera. Por lo tanto, si la dirección de entrega y la tarjeta de crédito todavía no están definidas, entonces la invariante no está siendo violada.  
 El análisis del segundo caso de uso ha incrementado el modelo conceptual con un número significativo de nuevas clases y atributos. La idea es que la cantidad de novedades disminuye a medida que avanzan las iteraciones, ya que, al final, sólo se abordarán los CRUDs de los elementos ya estudiados y los informes con información que ya deberían estar en el sistema. No se espera que aporten nueva información al modelo conceptual.  
 Obsérvese que la inversión de ese orden dejaría para las iteraciones finales la inserción de muchas clases y atributos, y esto requeriría mucho trabajo en el diseño, y posiblemente se necesitaría algo de refactorización de la arquitectura para acomodar esas necesidades. Por eso es tan fundamental iniciar el proyecto con los casos de uso más complejos y sólo después incorporar los más sencillos a la arquitectura.
@@ -810,35 +813,51 @@ Obsérvese que la inversión de ese orden dejaría para las iteraciones finales 
 ### 6.9 El proceso hasta ahora
 
 
-  
-Inicio  
-Elaboración  
-Modelado del Negocio  
-Construir una vista general del sistema:
+
+| | Inicio | Elaboración | Construcción | Transición |
+| -- | -- | -- | -- | -- |
+| **M**odelado del Negocio | [MI](#MI) | | | | 
+| **R**equerimientos | [RI](#RI) | [RI](#RE) | | | 
+| **A**nalisis y Diseño | [ADI](#ADI) | [ADIE](#ADIE) | | | 
+| **I**mplementación  | | | | |
+| **P**ruebas/Test  | | | | | 
+| **G**estión de Proyectos  | [GPI](#GPI) | | | |
+| **D**espliegue  | | | | |
+| **C**onfiguración y Gestión del cambio | | | | |
+| **E**ntorno | | | | |
+
+### MI
+Construir una vista general del sistema:  
 - Dibujar un caso de uso del negocio y determinar el ámbito de automatización para el proyecto.
 - Dibujar un diagrama de actividad para el caso de uso del negocio
 - Dibujar un diagrama de maquina de estado para los procesos clave del sistema
-  
-Requerimientos  
+
+
+### RI
 Preparar un diagrama de caso de uso del sistema (requisitos funcionales)
 - Identificar los actores del sistema desde el modelo de caso de uso del negocio.
 - Identificar los casos de uso del sistema desde  el modelo de caso de uso del negocio, y el diagrama de actividad y maquinas de estado desde el modelo de negocio.
-  
+
 Identificar los requisitos no funcionales como anotaciones de los casos de uso:
 - Identificar las principales reglas de negocio asociadas a los casos de uso.
 - Identificar las principales puntos de calidad asociados a los casos de uso.
-  
-Identificar requisitos suplementarios.  
+
+Identificar requisitos suplementarios. 
+
+### RE
 Detalle de requisitos ampliando los casos de uso: 
 - Identificar el flujo principal. 
-- Identificar flujos alternativos: variantes y manejadores de excepciones.   
-Analisis y Diseño  
+- Identificar flujos alternativos: variantes y manejadores de excepciones. 
+  
+### ADI
 Preparar un modelo conceptual preliminar observando los casos de uso del sistema y los conceptos expresados en el.  
+
+### ADIE
 Elaborar los diagramas de secuencia del sistema: 
- - Representar el flujo principal de un caso de uso como un diagrama de secuencia del sistema. 
+- Representar el flujo principal de un caso de uso como un diagrama de secuencia del sistema. 
 - Representar los comandos y consultas del sistema utilizando estrategias de estado o sin estado. 
 - Completar los diagramas de secuencia del sistema con flujos alternativos. 
-  
+
 Refinar el modelo conceptual: 
 - Identificar conceptos, atributos y asociaciones en el texto de los casos de uso ampliado. 
 - Detallar los atributos y asociaciones con los estereotipos, la multiplicidad y las limitaciones, según sea necesario. 
@@ -846,37 +865,19 @@ Refinar el modelo conceptual:
 - Añadir invariantes según sea necesario.   
 Implementación
 
-  
-Pruebas/Test
+### GPI
+Estimar el esfuerzo total, el cronograma ideal y el tamaño medio del equipo para el proyecto.   
 
-  
-Gestión del Proyecto  
-Estimar el esfuerzo total, el cronograma ideal y el tamaño medio del equipo para el proyecto.  
 Estimar la duración y el número de iteraciones para cada fase.  
+
 Preparar la fase de planificación y el plan de Iteración para la primera iteración.
+  
 
 
-
-            ​ 6.10 Preguntas
+## 6.10 Preguntas  
 1. Trate de imaginar una situación del mundo real en la que la estructura correcta a utilizar sea una secuencia. Recuerde que una secuencia real permite que los elementos se repitan y asigna posición a los elementos. Trate de no dejarse engañar por el uso del lenguaje natural de la palabra "lista". Una "lista de la compra", por ejemplo, no es una secuencia, porque los elementos no se repiten y su posición en la lista es irrelevante; se puede organizar una lista de estudiantes en orden alfabético, pero una vez más, la repetición no está permitida y el orden es de nuevo irrelevante aunque conveniente. Por lo tanto, esas no son secuencias reales.
 2. ¿Cuál es el propósito de la clase de controlador? ¿Cuál es su relación con conceptos dependientes e independientes?
 3. ¿Por qué no se debe escribir un atributo con un nombre de clase? ¿Por qué no se debe utilizar un atributo para hacer referencia a otra clase?
 4. Elaborar una lista de conceptos y subconceptos (subtipos del concepto original, como, por ejemplo, perro y sabueso) de sentido común. Luego, trate de identificar el tipo de cada relación: estructural, asociativa o temporal. Trate de tener al menos un ejemplo de cada tipo en su lista.
 5. ¿Cuál es la diferencia entre una asociación normal, una agregación y una composición?
 6. Enumere algunos ejemplos de tipos de datos que podrían definirse como primitivos.
-
-1No necesariamente, porque muchos analistas pueden elegir lenguaje natural u otros lenguajes de especificación. Sin embargo, como OCL es parte del paquete UML, es aconsejable utilizarlo.
-2En este punto, algunos lectores que también son programadores podrían estar preocupados por problemas de rendimiento con el código que se utilizará para implementar los atributos derivados. Como son por definición "calculados", parece una pérdida de tiempo de procesamiento repetir esos cálculos si los valores originales de coste y precio no cambian. Sin embargo, los lectores pueden permanecer tranquilos porque los mecanismos de optimización de código están disponibles para los atributos derivados. Por ejemplo, el valor calculado para un atributo derivado puede guardarse en la caché y recalcularse sólo cuando se cambia uno de sus componentes. Por ejemplo, el beneficio debe recalcularse sólo cuando la instancia de Libro cambia los valores de precio o coste.
-3La regla de formación del ISBN se explica en http://www.isbn.org/standards/home/isbn/us/isbnqa.asp.
-4Algunos lenguajes como Smalltalk permiten que las constantes cambien su valor en tiempo de ejecución, pero esto no suele ser el caso y no se recomienda para la mayoría de las aplicaciones.
-5Un patrón de diseño que establece que una clase con una sola instancia puede ser accesible globalmente.
-6Ver también un ejemplo en la `Figura 6.18`.
-7 De hecho, en OCL, incluso un solo objeto se considera una colección con un solo elemento. Esto es equivalente a la noción natural de un conjunto, pero no a la noción matemática, porque en la teoría de conjuntos, un conjunto con un elemento no es el elemento. En OCL un conjunto con un elemento y el elemento son la misma cosa.
-8En el caso de un grupo de personas p, si alguien quiere obtener el grupo de todas las edades, puede escribir p.age. Sin embargo, el tamaño del conjunto no es una propiedad de la gente; es una propiedad de la estructura del conjunto. Por lo tanto, para obtener el tamaño del conjunto se debe utilizar la expresión p->size(). Si se escribiera como p.size, entonces estaría representando el conjunto de los tamaños de cada persona, no el tamaño del conjunto.
-9 "Una asociación puede representar una composición (es decir, una relación total o parcial). Sólo las asociaciones binarias pueden ser agregaciones. La composición es una forma fuerte de agregación que requiere que se incluya una instancia parcial como máximo en un compuesto a la vez. Si se borra un compuesto, todas sus partes se borran normalmente con él. Tenga en cuenta que una parte puede (cuando se permite) ser eliminada de un compuesto antes de que el compuesto sea eliminado, y por lo tanto no puede ser eliminado como parte del compuesto. Las composiciones pueden estar vinculadas en un gráfico acíclico dirigido con características de supresión transitivas; es decir, la eliminación de un elemento en una parte del gráfico también dará lugar a la eliminación de todos los elementos del subgráfico debajo de ese elemento" (Object Management Group, 2011).
-10Sólo intenta buscar en Google imágenes con la clave de Palabras "UML" y "inheritance". Verás muchos ejemplos de mal uso de la herencia, como, por ejemplo, Persona como generalización de Estudiante y Profesor.
-11 Más específicamente, un objeto es también una instancia de todas sus superclases (Sección 6.6.1). La idea es que el conjunto de superclases no debe cambiar después de la creación de la instancia.
-12Los métodos sólo se consideran cuando se están modelando clases de diseño. Recuerde que las clases conceptuales no tienen métodos.
-13El caso de la disminución monótona también puede ser considerado aquí (una transición que sólo puede eliminar propiedades de una instancia).
-14Hay un paralelismo entre los conceptos dependientes y los verbos transitivos. La frase "Él abrió" no tiene sentido, porque el verbo necesita un complemento, como por ejemplo, "Él abrió la lata".
-15Existe un paralelismo entre los conceptos independientes y los verbos intransitivos. La frase "Dormía" tiene sentido porque el verbo no requiere un complemento. Sin embargo, incluso los verbos intransitivos pueden tener información complementaria (por ejemplo, "durmió tres horas"), como lo hacen los conceptos independientes.
