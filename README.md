@@ -12,4 +12,5 @@ Notas de Trabajo
   - [Requistos de Alto Nivel](110REQUISITOSDEALTONIVEL.md) 
   - [Planinificación](120PLANIFICARELPROYECTO.md)
   - [Casos de uso Completos](130CASOSDEUSOAMPLIADOS.md)
-  - [Modelización](140MODELIZACION.md)
+  - [Modelización](140MODELIZACION.md)  
+  - [Patrones de Modelado](150MODELADO.md)
