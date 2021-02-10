@@ -1,8 +1,8 @@
 # MODELADO CONCEPTUAL
 
 - [MODELADO CONCEPTUAL](#modelado-conceptual)
-      - [Palabras clave](#palabras-clave)
-      - [Conceptos](#conceptos)
+      - [**Palabras clave**](#palabras-clave)
+      - [**Conceptos**](#conceptos)
   - [7.1 Introducción a los patrones del modelo conceptual](#71-introducción-a-los-patrones-del-modelo-conceptual)
   - [7.2 Alta cohesión](#72-alta-cohesión)
   - [7.3 Clases especificativas](#73-clases-especificativas)
@@ -37,10 +37,10 @@
 
 Construir un modelo conceptual es mucho más que poner conceptos, asociaciones y atributos juntos. Frecuentemente el modelo no funciona por estar equivocado, sino por ser demasiado complejo de mantener. Los patrones de análisis consisten en soluciones ya probadas que pueden resolver familias de problemas recurrentes. Cuando se utilizan adecuadamente, estos patrones pueden reducir significativamente la complejidad de un modelo conceptual que de otro modo sería ingenuo. Este capítulo presenta y a veces reinterpreta algunos patrones como alta cohesión, cantidad, estrategia, cuenta, temporal y otros.   
 
-#### Palabras clave   
+#### **Palabras clave**   
 Design pattern; analysis pattern; high cohesion; temporal pattern; conceptual modeling
 
-#### Conceptos   
+#### **Conceptos**   
 
 - Alta cohesión  
 - Clases de especificaciones  
@@ -489,7 +489,5 @@ Preparar la fase de planificación y el plan de Iteración para la primera itera
 5. Complete el diagrama de la Figura 7.12 con información sobre pedidos, artículos, libros y clientes. A continuación, utilice OCL para definir el importe del atributo derivado para ambas subclases de Descuento.
 
 
-1Por lo general, la alta cohesión se menciona en conjunción con un acoplamiento bajo. Sin embargo, como los problemas de acoplamiento parecen surgir cuando se diseñan las colaboraciones de objetos, la discusión sobre el acoplamiento bajo se deja para la Sección 9.6.
-2Compuesto es el nombre clásico de este patrón. Sin embargo, si los elementos básicos pueden ser compartidos por diferentes elementos compuestos, es la asociación de agregación compartida la que se utiliza en lugar de la agregación compuesta. Esto sucede cuando se componen las estrategias.
-3El ejemplo trata sólo de cinco casos por simplificación. Se podrían incluir muchos otros.
-4Martin Fowler presenta un buen resumen de muchos patrones temporales en http://martinfowler.com/eaaDev/timeNarrative.html. 
+
+Martin Fowler presenta un buen resumen de muchos patrones temporales en http://martinfowler.com/eaaDev/timeNarrative.html. 

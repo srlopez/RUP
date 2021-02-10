@@ -212,6 +212,8 @@ Muchas veces tiende a confundirse las finalidad de ésta reunión con la de la r
 
 De nuevo tiene una duración máxima, en este caso de 3 horas y el Scrum Master se debe preocupar de que el equipo Scrum asista en su totalidad. En esta reunión deberían identificarse una serie de mejorar a implementar en los próximos sprints, teniendo un especial enfoque a la definición de `“done”` dentro del equipo como punto clave en la mejora de la calidad del producto. 
 
+![Scrum_in_a_nutshell](https://www.agile42.com/media/images/Scrum_in_a_nutshell_thumbnail.original.png)
+
 ## Scrums para proyecto de gran envergadura
 Si los creadores definen que los equipos no pueden superar nueve miembros (siempre sin contar con el Scrum master y el product owner), ¿cómo pueden acometerse proyectos de gran envergadura con Scrum? La respuesta a esta pregunta fue abordada por el propio Jeff Sutherland en el año 2001 cuando publicó el artículo *“Agile Can Scale: Inventing and Reinventing SCRUM in Five Companies”*. En este artículo el autor cuando su experiencia en cuanto al uso de Scrum en grandes proyectos con cientos de personas trabajando a la vez. El fundamento de su propuesta radica en el hecho de aumentar el número de equipos en lugar de aumentar el número de integrantes en los equipos. 
 
