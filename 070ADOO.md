@@ -3,7 +3,6 @@
 - [ADOO](#adoo)
   - [- Preguntas](#--preguntas)
   - [Análisis y Diseño de sistemas orientado a Objetos](#análisis-y-diseño-de-sistemas-orientado-a-objetos)
-  - [El proceso visto hasta ahora](#el-proceso-visto-hasta-ahora)
   - [Preguntas](#preguntas)
 ---
 
@@ -24,25 +23,6 @@ Para construir código realmente orientado a objetos, los desarrolladores deben 
 Sin lugar a dudas utilizaremos el [UP y UML](060UP.md).
 
 
-## El proceso visto hasta ahora
-Tras cada paso, una tabla muestra qué actividades de análisis y diseño han sido cubiertas, destacando aquellas que fueron cubiertas por el tema actual. 
-
-![UP](https://eternalsunshineoftheismind.files.wordpress.com/2013/03/rup.jpg)
-
-En este módulo `Entrornos de Desarrollo`  abordaremos las fases de Inicio y Elaboración, y y dentro de ellos las disciplinas de Modelado de Negocio, Requisitos, Análisis y Diseño, Implementación, Pruebas y dejamos de lado algunos aspectos de la gestión de proyectos, y si se puede abordaremos la Construcción, el resto de disciplinas se las dejamos a otros módulos.
-
-
-|                                    | Inicio | Elaboración | Construcción | Transición |
-| ---------------------------------- | ------ | ----------- | ------------ | ---------- |
-| Modelado del Negocio               | x      | x           |              |            |
-| Requerimientos                     | x      | x           |              |            |
-| Analisis y Diseño                  | x      | x           |              |            |
-| Implementación                     | x      | ?           |              |            |
-| Pruebas/Test                       | x      | x           |              |            |
-| Gestión de Proyectos               | ?      | ?           |              |            |
-| Despliegue                         |        |             |              |            |
-| Configuración y Gestión del cambio |        |             |              |            |
-| Entorno                            |        |             |              |            |
 
 
 

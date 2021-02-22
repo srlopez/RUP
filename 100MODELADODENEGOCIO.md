@@ -4,7 +4,7 @@
       - [Palabras clave](#palabras-clave)
       - [Conceptos en este Módulo](#conceptos-en-este-módulo)
   - [2.1 Introdución al modelado del negocio](#21-introdución-al-modelado-del-negocio)
-  - [2.2 Vista general del sistema](#22-vista-general-del-sistema)
+  - [2.2 Visión general del sistema -> Documento de Vista general](#22-visión-general-del-sistema---documento-de-vista-general)
   - [2.3 Casos de uso del Negocio](#23-casos-de-uso-del-negocio)
     - [2.3.1 Actores del negocio y trabajadores del negocio.](#231-actores-del-negocio-y-trabajadores-del-negocio)
     - [2.3.2 Oportunidades de automatización](#232-oportunidades-de-automatización)
@@ -21,7 +21,7 @@
 
 > El **modelado de negocio** es la primera actividad que se lleva a cabo durante el desarrollo de la mayoría de los proyectos en la industria del software. Aunque los **diagramas de casos de uso de negocio** y otros diagramas UML se utilizan actualmente para ayudar a los equipos a **comprender los procesos de negocio**, a veces las conexiones entre esos elementos no son claras. 
 
-Este documento muestra cómo los casos de uso de negocio pueden ser utilizados para producir una visión de alto nivel de un negocio, y cómo pueden ser detallados usando **diagramas de actividad de negocio** y **diagramas de máquinas de estado** que describen los procesos clave de negocio y los objetos clave de negocio.   
+Este documento muestra cómo los casos de uso de negocio pueden ser utilizados para producir `una visión de alto nivel de un negocio`, y cómo pueden ser detallados usando **diagramas de actividad de negocio** y **diagramas de máquinas de estado** que describen los procesos clave de negocio y los objetos clave de negocio.   
 También muestra cómo se pueden utilizar los diagramas de casos de uso del negocio para definir el alcance de un sistema.
 
 #### Palabras clave
@@ -43,7 +43,7 @@ Se asume que el conocimiento que los analistas tienen sobre el negocio es mínim
 El objetivo de esta fase es descubrir si vale la pena hacer el análisis sin profundizar demasiado en el proyecto.  
 Normalmente, antes de empezar a **descubrir y analizar los requisitos del sistema**, es necesario comprender los objetivos de la organización.   
 
-Esta visión puede ser obtenida por la disciplina UP llamada modelado de negocios.
+Esta visión puede ser obtenida por la disciplina UP llamada `modelado de negocios`.
 
 > El modelado de negocio es, por lo tanto, una actividad que apoya el descubrimiento de los requisitos del sistema ayudando al equipo a percibir el contexto empresarial más amplio en el que operará el futuro sistema. 
 
@@ -75,8 +75,8 @@ Otro aspecto importante del modelado de negocio es acercar **el equipo de expert
 
 El modelado de negocios es muy importante cuando se introducen cambios significativos en el comportamiento de un grupo de personas.   
 En este caso, el contexto empresarial y las consecuencias de la instalación de un nuevo sistema deben ser reconocidos y estudiados.   
-Puede ser menos importante cuando no se esperan tales cambios de comportamiento.
-Algunos factores que aumentan o disminuyen la necesidad de un modelo de negocio en un proyecto son:  
+Puede ser menos importante cuando no se esperan tales cambios de comportamiento.  
+**Algunos factores que aumentan o disminuyen la necesidad de un modelo de negocio en un proyecto son**:  
 
 - **Los requisitos bien definidos y estables** al principio del proyecto (por ejemplo, crear un sustituto para un sistema existente) reducen la necesidad de realizar un intenso modelado de negocio.  
 - Si el nuevo sistema va a **cambiar** la forma en que las personas hacen su trabajo, entonces se debe prestar especial atención al modelado de negocios, especialmente cuando el modelo de negocios va a ser cambiado o reconstruido después de la automatización de algunos casos de uso de negocios.  
@@ -87,7 +87,7 @@ Algunos factores que aumentan o disminuyen la necesidad de un modelo de negocio 
 
 No importa el nivel de detalle y esfuerzo que se deba poner en el modelado de negocios, cada proyecto debe comenzar con documentación preliminar que permita comprender su alcance. Un proyecto con un alcance mal definido puede dar lugar a molestias o incluso peleas entre el cliente y el equipo de desarrollo, en cuanto a la inclusión (o falta de inclusión) de ciertas características.
 
-## 2.2 Vista general del sistema
+## 2.2 Visión general del sistema -> Documento de Vista general
 
 Las actividades relacionadas con la definición del **alcance de un proyecto** deben tomar generalmente una fracción relativamente pequeña del tiempo de todo el proyecto, aunque pueden existir variaciones dependiendo del tipo de proyecto: los proyectos con requisitos simples y bien definidos pueden requerir no más de un par de días de modelado de negocios, mientras que los proyectos complejos y grandes pueden requerir semanas o meses. En el momento de la definición del alcance, toda la información sobre el negocio de la empresa debe ser explorada mediante entrevistas a los usuarios, clientes y especialistas en la materia, así como mediante el examen de documentos, informes, sistemas existentes y bibliografía relacionada.
 
@@ -137,7 +137,7 @@ El documento se divide en dos partes:
 - Las restricciones de la versión 1.0.
 
 ```diff
-!Vista general del proyecto Livir
+!Visión general del proyecto Livir
 Version 1.0
 
 !Visión:
@@ -186,7 +186,7 @@ Aunque UML todavía no tiene un símbolo estándar para diferenciar los **casos 
 ![Caso de uso de Negocio](img/F2.2.jpg)    
 `Figura 2.2 Caso de uso de Negocio.`
 
-En este ejemplo, **“Sell books”** es un caso de uso de negocio porque implica una relación entre la empresa y una entidad externa (un cliente), produciendo un resultado perceptible y consistente: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.  
+En este ejemplo, **“Sell books”** es un caso de uso de negocio porque `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente`: uno o más libros vendidos. Este caso de uso posiblemente será realizado por el cliente con la colaboración de algunos trabajadores dentro de la empresa; puede o no utilizar sistemas de software.  
 
 >Los nombres de los casos de uso deben elegirse cuidadosamente, ya que en esta etapa resumirán la información crítica sobre el sistema, y las decisiones equivocadas pueden impedir que el equipo y las partes interesadas compartan la comprensión de la intención real de los actores y trabajadores de la empresa. Blain4 presenta algunas de las mejores prácticas recogidas de muchas fuentes:  
 
@@ -204,15 +204,15 @@ En este ejemplo, **“Sell books”** es un caso de uso de negocio porque implic
   
 - Los buenos nombres de casos de uso son consistentes. Las mismas reglas de nomenclatura y las mismas convenciones de nomenclatura deben aplicarse a lo largo de un proyecto o grupo de proyectos. Evite, por ejemplo, nombrar un caso de uso Generar informe de ventas y otro Informe de reservas de productos. Elige un verbo para ese significado y úsalo consistentemente.
     
-Además, Probasco (2001) propone que la lista de nombres de casos de uso se asemeje a una **lista de tareas pendientes**. Por lo tanto, en lugar de escribir _Retirada de efectivo_, _Transferencia de fondos_ y _Servicio de cajero automático_, sería mejor escribir _Retirar efectivo_, _Transferir fondos_ y _Servirse del cajero automático_, respectivamente.  
-Probasco también insiste en que el significado del nombre de un caso de uso debe ser preciso. Por ejemplo, ¿es _auction_ un buen caso de uso? ¿Es un verbo o un sustantivo? Si considera que se trata de un sustantivo y que debe añadirse un verbo, ¿es _Execute auction_ un buen nombre? El verbo _Ejecutar_ sería probablemente la elección de un programador, pero probablemente no tiene ningún significado para un subastador (¿Va a morir de un disparo la subasta?). En este caso, una idea sería hablar con un especialista en dominios para obtener un nombre mejor. Por otra parte, incluso si "_auction_" es en realidad un verbo, no está suficientemente claro. ¿Es la subasta de un solo artículo? ¿Es la subasta de un conjunto completo de artículos? ¿Es simplemente un participante de la subasta que hace una oferta? En ese caso, los nombres como _Subastar un artículo_, _Subastar artículos_ o _Realizar puja_ serían más claros.
+Otra manera de ver la lista de nombres de casos de uso es que puede asemejarse a una **lista de tareas pendientes**. Por lo tanto, en lugar de escribir _Retirada de efectivo_, _Transferencia de fondos_ y _Servicio de cajero automático_, sería mejor escribir _Retirar efectivo_, _Transferir fondos_ y _Servirse del cajero automático_, respectivamente.  
+El significado del nombre de un caso de uso debe ser preciso. Por ejemplo, ¿es _auction_ un buen caso de uso? ¿Es un verbo o un sustantivo? Si considera que se trata de un sustantivo y que debe añadirse un verbo, ¿es _Execute auction_ un buen nombre? El verbo _Ejecutar_ sería probablemente la elección de un programador, pero probablemente no tiene ningún significado para un subastador (¿Va a morir de un disparo la subasta?). En este caso, una idea sería hablar con un especialista en dominios para obtener un nombre mejor. Por otra parte, incluso si "_auction_" es en realidad un verbo, no está suficientemente claro. ¿Es la subasta de un solo artículo? ¿Es la subasta de un conjunto completo de artículos? ¿Es simplemente un participante de la subasta que hace una oferta? En ese caso, los nombres como _Subastar un artículo_, _Subastar artículos_ o _Realizar puja_ serían más claros.
 
 ### 2.3.1 Actores del negocio y trabajadores del negocio.
 Durante el modelado de negocios hay dos tipos de actores que deben ser abordados (Figura 2.3):
 
-- Actores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso, pero que no forman parte de la empresa objetivo. Es decir, no están bajo el control de la empresa. Los actores del negocio pueden ser, por ejemplo, clientes, editores, auditores externos, empresas asociadas o incluso otros sistemas automáticos con los que la empresa objetivo pueda interactuar.
+- **Actores del negocio**: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso, pero que no forman parte de la empresa objetivo. Es decir, no están bajo el control de la empresa. Los actores del negocio pueden ser, por ejemplo, clientes, editores, auditores externos, empresas asociadas o incluso otros sistemas automáticos con los que la empresa objetivo pueda interactuar.
 
-- Trabajadores del negocio: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso y que forman parte de la empresa objetivo. Pueden ser los empleados de la empresa, sus departamentos o incluso los sistemas de software existentes pertenecientes a la empresa. Gráficamente, se distinguen de los actores del negocio por el uso del estereotipo `<<worker>>`.
+- **Trabajadores del negocio**: Personas, organizaciones o incluso sistemas que realizan algunas actividades pertenecientes al proceso y que forman parte de la empresa objetivo. Pueden ser los empleados de la empresa, sus departamentos o incluso los sistemas de software existentes pertenecientes a la empresa. Gráficamente, se distinguen de los actores del negocio por el uso del estereotipo `<<worker>>`.
   
 <!--
 @startuml
