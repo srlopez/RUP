@@ -575,7 +575,7 @@ Es importante recordar que el objetivo del modelado de negocio suele ser encontr
 Así, en la mayoría de los casos, el objetivo del equipo es concentrarse en descubrir información sobre el negocio,  y no en especificar formalmente cómo funciona el negocio como si fuera una máquina.
 
 Todavía se puede hacer una pregunta: ¿Qué elementos del negocio merecen la producción de una máquina de estado o un diagrama de actividad? 
-A menos que se indique lo contrario, no es aconsejable preparar un diagrama para cada uno de los elementos de la empresa, porque, si se hace, la ejecución de Inicio llevaría demasiado tiempo y sus objetivos se verían obstaculizados.   
+A menos que se indique lo contrario, no es aconsejable preparar un diagrama para cada uno de los elementos de la empresa, porque, si se hace, la ejecución de Iniciación llevaría demasiado tiempo y sus objetivos se verían obstaculizados.   
 
 Lo que normalmente se necesita en ese momento es un modelo para algunos **elementos clave**, de modo que su comportamiento pueda ser mejor comprendido y sus necesidades puedan ser derivadas más tarde.
 Una pista para identificar esos elementos clave es preguntarse cuáles son los objetos de negocio.   
@@ -600,7 +600,7 @@ También se pueden realizar otras actividades de mitigación de riesgos durante 
 ## 2.7 El proceso hasta ahora
 
 
-|                                        | Inicio    | Elaboración | Construcción | Transición |
+|                                        | Iniciación | Elaboración | Construcción | Transición |
 | -------------------------------------- | --------- | ----------- | ------------ | ---------- |
 | **M**odelado del Negocio               | [MI](#MI) |             |              |            |
 | **R**equerimientos                     |           |             |              |            |
@@ -613,7 +613,8 @@ También se pueden realizar otras actividades de mitigación de riesgos durante 
 | **E**ntorno                            |           |             |              |            |
 
 ### MI
-Construir una vista general del sistema:  
+Construir una vista general del sistema: 
+- Documento de Visión general. 
 - Dibujar un caso de uso del negocio y determinar el ámbito de automatización para el proyecto.
 - Dibujar un diagrama de actividad para el caso de uso del negocio
 - Dibujar un diagrama de maquina de estado para los procesos clave del sistema

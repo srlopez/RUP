@@ -43,3 +43,6 @@ Ventajas e incovenientes del método Kanban
 | Se evitan procesos innecesarios que aumenten el tiempo del desarrollo. | El almacenamiento y manejo de stock puede resultar muy costoso. |
 | Control y supervisión del proyecto en todo momento.                    | Productos fiables y de calidad.                                 |
 | Garantía de un flujo de trabajo adecuado y sin atascos.                | Fácil integración con otras metodologías de desarrollo.         |
+
+
+[Un PDF Simplificado](http://www.navegapolis.com/files/flujo_tableros_kanban.pdf)

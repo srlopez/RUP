@@ -179,7 +179,7 @@ Por otro lado, es posible que los casos de uso completos ocurran dentro de otros
 
 La asociación de dependencia entre los casos de uso es estereotipada y extendida para indicar que el proceso de **Pedir libros** puede ser ocasionalmente `extendido` por el proceso de **Registro del cliente**. Ambos procesos pueden ocurrir independientemente uno del otro, pero el registro del cliente también puede ocurrir durante el pedido de libros.
 
-Para evitar abusar de la `<<extend>>` en el diagrama de casos de uso, es importante tener en cuenta que sólo los casos de uso completos deben mantenerse en el diagrama. Se deben evitar fragmentos como los que se muestran en las figuras 3.2 y 3.4, incluso si son puntos de extensión de un caso de uso. Estos fragmentos se abordarán adecuadamente más adelante, cuando se detallen los casos de uso de alto nivel. En la práctica, en este punto, cualquier asociación entre casos de uso como extender o incluir debe evitarse en el diagrama, ya que normalmente no añaden información útil para la fase de inicio.
+Para evitar abusar de la `<<extend>>` en el diagrama de casos de uso, es importante tener en cuenta que sólo los casos de uso completos deben mantenerse en el diagrama. Se deben evitar fragmentos como los que se muestran en las figuras 3.2 y 3.4, incluso si son puntos de extensión de un caso de uso. Estos fragmentos se abordarán adecuadamente más adelante, cuando se detallen los casos de uso de alto nivel. En la práctica, en este punto, cualquier asociación entre casos de uso como extender o incluir debe evitarse en el diagrama, ya que normalmente no añaden información útil para la fase de Iniciación.
 
 
 ### 3.3.4 Esencial
@@ -195,7 +195,7 @@ Por lo tanto, los casos de uso esencial deben ser considerados como la opción c
 
 
 ### 3.3.5 Breve
-Durante Inicio los casos de uso suelen ser breves, lo que significa que **se describen sólo por su nombre** o, en algunos casos, por una o dos frases. Sin embargo, esta no es la única manera de describir un caso de uso. Más adelante se ampliarán y contendrán más detalles sobre los requisitos. 
+Durante la Iniciación los casos de uso suelen ser breves, lo que significa que **se describen sólo por su nombre** o, en algunos casos, por una o dos frases. Sin embargo, esta no es la única manera de describir un caso de uso. Más adelante se ampliarán y contendrán más detalles sobre los requisitos. 
 
 Tipos de casos de uso con respecto al nivel de detalle:
 
@@ -298,9 +298,9 @@ Como puede verse en la Figura 3.7, el diagrama de casos de uso con notas se volv
 ### 3.5.2 ¡Elegir requisitos no es diseño!
 Un sistema que va a ser analizado es como un bosque. Para explorar un bosque desconocido no se puede empezar por examinar cada planta y cada animal. Hay un dicho popular que dice que los árboles no te dejan ver el bosque. El bosque es el sistema y los árboles son los requisitos. Sólo al final del proceso un equipo puede decir que ha adquirido conocimientos sobre las piezas más pequeñas. En primer lugar, hay que ver el conjunto, y sólo después se pueden estudiar los detalles.
 
-Por lo tanto, la fase de `inicio` debe proporcionar una visión del todo - para que lo que es más importante se pueda ver primero - y luego, el todo se puede dividir en partes para que los detalles puedan ser analizados y finalmente se pueda diseñar una solución. La organización de las iteraciones en las fases de `Elaboración` y `Construcción` corresponde a la división del bosque en sectores, con el fin de ver cada sector a la vez, y de esa manera, poder hacer frente a la inherente complejidad. Por lo tanto, **uno de los objetivos finales de la fase inicial es organizar la división del trabajo en términos de casos de uso, que se explorarán en las próximas iteraciones**.
+Por lo tanto, la fase de `Iniciación` debe proporcionar una visión del todo - para que lo que es más importante se pueda ver primero - y luego, el todo se puede dividir en partes para que los detalles puedan ser analizados y finalmente se pueda diseñar una solución. La organización de las iteraciones en las fases de `Elaboración` y `Construcción` corresponde a la división del bosque en sectores, con el fin de ver cada sector a la vez, y de esa manera, poder hacer frente a la inherente complejidad. Por lo tanto, **uno de los objetivos finales de la fase inicial es organizar la división del trabajo en términos de casos de uso, que se explorarán en las próximas iteraciones**.
 
-Durante el inicio, la obtención de requisitos debe ser rápida y genérica. La manera correcta de hacerlo es considerar la extensión de los requisitos, no sus detalles. El analista debe entender la extensión de lo que el sistema debe hacer, sin detallar cómo lo hará. Sólo durante las iteraciones de Elaboración se profundizará en el análisis de requerimientos.
+Durante la Iniciación, la obtención de requisitos debe ser rápida y genérica. La manera correcta de hacerlo es considerar la extensión de los requisitos, no sus detalles. El analista debe entender la extensión de lo que el sistema debe hacer, sin detallar cómo lo hará. Sólo durante las iteraciones de Elaboración se profundizará en el análisis de requerimientos.
 
 El tiempo utilizado para la obtención de requisitos debe ser de descubrimiento, no de invención. Durante este período, el equipo de analistas, junto con los clientes, usuarios y otros grupos de interés, tratará de enumerar la mayoría de las capacidades y restricciones sin preocuparse por detallarlas. Los detalles sobre los requisitos se tendrán en cuenta en las próximas iteraciones.
 
@@ -317,7 +317,7 @@ El documento de requisitos, que puede estar formado por los esquemas de casos de
   
 **Sería inútil desarrollar un buen diagrama de casos de uso, y luego no poder saber si los requisitos que allí se incorporan fueron incluidos en el diseño**. La existencia de *mecanismos automáticos* para llevar a cabo esta verificación es crucial. Por lo tanto, es importante mantener relaciones de trazabilidad entre los casos de uso y otras partes del diseño. 
 
-Es necesario tener en cuenta que los requisitos cambian necesariamente durante el desarrollo de un proyecto. Por lo tanto, el cambio debe ser gestionado, no evitado, después del  Inicio.
+Es necesario tener en cuenta que los requisitos cambian necesariamente durante el desarrollo de un proyecto. Por lo tanto, el cambio debe ser gestionado, no evitado, después de la  Iniciación.
 
 A veces, los requisitos cambian después de la implementación del sistema. Las condiciones del contexto, las regulaciones, las políticas de la compañía o los métodos de trabajo pueden cambiar en cualquier momento. Aunque el analista no puede prever estos cambios, se pueden crear mecanismos para acomodarlos con el fin de facilitar el proceso de cambio cuando sea necesario. Existen patrones de diseño específicos para tratar estas inestabilidades de los requisitos (como, por ejemplo, el patrón de la Estrategia). Los cambios son totalmente impredecibles. Si el sistema no está estructurado para adaptarse a los cambios en los requisitos, probablemente será difícil implementarlo.
 
@@ -427,7 +427,7 @@ No se rellenaron todos los campos porque, como ya se ha dicho, los requisitos no
 
 
 ## 3.6 Modelo conceptual preliminar
-Posteriores documentos presentan en detalle las técnicas de modelación conceptual, es necesario mencionar aquí que existen relaciones de interdependencia entre los casos de uso del sistema y el llamado modelo conceptual preliminar (Larman, 2004). El modelo conceptual preliminar se construye durante el Inicio, y consiste en un **diagrama de clase** que representa las principales unidades de información del sistema. Todavía no es necesario representar atributos. Aunque las asociaciones deben aparecer en ese modelo, no es necesario detallar sus características.
+Posteriores documentos presentan en detalle las técnicas de modelación conceptual, es necesario mencionar aquí que existen relaciones de interdependencia entre los casos de uso del sistema y el llamado modelo conceptual preliminar (Larman, 2004). El modelo conceptual preliminar se construye durante la Iniciación, y consiste en un **diagrama de clase** que representa las principales unidades de información del sistema. Todavía no es necesario representar atributos. Aunque las asociaciones deben aparecer en ese modelo, no es necesario detallar sus características.
 
 Analizando el diagrama de casos de uso del sistema, se pueden descubrir muchos conceptos importantes. Estos conceptos se representan como clases en el modelo conceptual preliminar; representan la estructura de la información que será manejada por el sistema. Al mismo tiempo, un analista, observando el modelo conceptual, podría notar si el diagrama de caso de uso es suficientemente completo. Esta verificación suele ocurrir cuando se identifican nuevas entidades en un proceso de negocio, y es necesario que el sistema las registre de alguna manera.
 
@@ -491,7 +491,7 @@ Cada caso de uso individual será detallado por otros medios. Además, el CRUD y
 ## 3.7 El proceso visto hasta ahora
 
 
-| | Inicio | Elaboración | Construcción | Transición |
+| | Iniciación | Elaboración | Construcción | Transición |
 | -- | -- | -- | -- | -- |
 | **M**odelado del Negocio | [MI](#MI) | | | | 
 | **R**equerimientos | [RI](#RI) | | | | 
