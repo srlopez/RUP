@@ -595,7 +595,10 @@ Por otro lado, el diagrama de máquina de estados es útil cuando una sola entid
 +El propósito de los diagramas es ayudar a entender el contexto y los requisitos generales iniciales de un proyecto y un sistema. 
 !El modelado de negocios es una de las actividades clave que ayuda a un equipo a identificar y prepararse para los riesgos del proyecto. 
 ```
-También se pueden realizar otras actividades de mitigación de riesgos durante la fase inicial, como pruebas de concepto, talleres, prototipos, pruebas previas, etc. Cualquier estrategia que ayude a comprender el panorama general e identificar los principales riesgos y complejidades de un proyecto es válida.
+También se pueden realizar otras actividades de mitigación de riesgos durante la fase inicial, como pruebas de concepto, talleres, prototipos, pruebas previas, etc. 
+```diff
+- Cualquier estrategia que ayude a comprender el panorama general e identificar los principales riesgos y complejidades de un proyecto es válida.
+```
 
 ## 2.7 El proceso hasta ahora
 
