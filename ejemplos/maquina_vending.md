@@ -7,7 +7,14 @@ VSCODE settings.json
 PlantUML Server:
 https://www.plantuml.com/plantuml
 -->
-
+- [Máquina Vending](#máquina-vending)
+  - [Modelado de Negocio](#modelado-de-negocio)
+    - [Visión general del Sistema a desarrolar.](#visión-general-del-sistema-a-desarrolar)
+    - [Diagrama de **Caso de uso de NEGOCIO**](#diagrama-de-caso-de-uso-de-negocio)
+    - [Diagrama de **Actividad del NEGOCIO**](#diagrama-de-actividad-del-negocio)
+    - [Diagrama de Estado de la Golosina](#diagrama-de-estado-de-la-golosina)
+  - [Casos de Uso de Sistema y Requisitos](#casos-de-uso-de-sistema-y-requisitos)
+  - [Casos de Uso Completos](#casos-de-uso-completos)
 ## Modelado de Negocio
 
 ### Visión general del Sistema a desarrolar.
@@ -77,7 +84,9 @@ stop
 
 Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
 
-![Diagrama](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md)
+![Diagrama](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md#estado)
+
+<br id=estado/>
 
 ```plantuml
 @startuml
