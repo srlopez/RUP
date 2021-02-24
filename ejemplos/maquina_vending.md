@@ -9,7 +9,7 @@ https://www.plantuml.com/plantuml
 -->
 - [Máquina Vending](#máquina-vending)
   - [Modelado de Negocio](#modelado-de-negocio)
-    - [Visión general del Sistema a desarrolar.](#visión-general-del-sistema-a-desarrolar)
+    - [Visión general del Sistema a desarrollar.](#visión-general-del-sistema-a-desarrollar)
     - [Diagrama de **Caso de uso de NEGOCIO**](#diagrama-de-caso-de-uso-de-negocio)
     - [Diagrama de **Actividad del NEGOCIO**](#diagrama-de-actividad-del-negocio)
     - [Diagrama de Estado de la Golosina](#diagrama-de-estado-de-la-golosina)
@@ -17,7 +17,7 @@ https://www.plantuml.com/plantuml
   - [Casos de Uso Completos](#casos-de-uso-completos)
 ## Modelado de Negocio
 
-### Visión general del Sistema a desarrolar.
+### Visión general del Sistema a desarrollar.
 
 Queremos que la interacción de las personas con nuestras máquinas sea fácil, eficiente y segura. De esta manera queremos que:
 - El usuario (sea un cliente o un reponedor pueda ver la matriz de los productos) visualizando el nombre del producto y el precio. Se pedirá un PIN de acceso, en caso de ser válido se mostrará también la cantidad del producto
