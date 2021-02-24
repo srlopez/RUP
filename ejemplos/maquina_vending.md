@@ -77,6 +77,8 @@ stop
 
 Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
 
+![Diagrama](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/blob/main/ejemplos/maquina_vending.md)
+
 ```plantuml
 @startuml
 skinparam state {
