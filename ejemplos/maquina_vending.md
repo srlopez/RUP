@@ -38,8 +38,7 @@ Un caso de uso de negocio `implica una relación entre la empresa y una entidad 
 
 ![Diagrama Caso de uso de Sistema](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0)
 
-<details>
-  <summary>PlantUml Code</summary>
+<details><summary>Code</summary>
   
 ```plantuml
 @startuml
@@ -67,6 +66,8 @@ Presenta las actividades principales de la empresa en relación con el producto 
 
 ![Diagrama de Actividad](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1)
 
+<details><summary>Code</summary>
+
 ```plantuml
 @startuml
 title Máquina Vending
@@ -87,6 +88,7 @@ start
 stop
 @enduml
 ```
+</details>
 
 
 ### Diagrama de Estado de la Golosina
@@ -94,6 +96,8 @@ stop
 Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
 
 ![Diagrama](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2)
+
+<details><summary>Code</summary>
 
 ```plantuml
 @startuml
@@ -125,6 +129,7 @@ Disponible: Cantidad>0
 Agotado: Cantidad=0
 @enduml
 ```
+</details>
 
 Modelando el negocio descubrimos a partir de los diagramas presentados, un poco más sobre el Dominio de nuestra aplicación.
 
