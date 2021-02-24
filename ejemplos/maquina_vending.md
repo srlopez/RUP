@@ -38,7 +38,7 @@ Un caso de uso de negocio `implica una relación entre la empresa y una entidad 
 
 ![Diagrama Caso de uso de Sistema](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0 "")
 
-<img src="[Diagrama de Caso de Uso de Negocio](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0)" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0" alt=""/>
 
 
 <details><summary>Code</summary>
