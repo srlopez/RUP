@@ -1,0 +1,14 @@
+left to right direction
+:Cliente:/ as cli
+:Proveedor:/ as pro
+:<<worker>>\nAdministrador:/ as jefe
+:<<worker>>\nReponedor:/ as repo
+(Comprar Golosinas)/ as comprar
+rectangle Límite_de_Automatización:_La_Máquina {
+  (Vender Golosinas)/ as vender
+  (Reponer Golosinas)/ as reponer
+}
+cli -- vender
+repo -- reponer
+pro -- comprar
+comprar -- jefe

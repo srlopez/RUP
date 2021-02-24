@@ -1,0 +1,26 @@
+skinparam state {
+    ' StartColor PaleGreen
+    ' EndColor Red
+    BackgroundColor White
+    ' BackgroundColor<<Junction>> GreenYellow  
+    BorderColor Gray
+    ' FontName Consolas
+}
+left to right direction
+[*] -d-> Registrado
+Registrado --> Encargado : Pedido
+Encargado --> EnStock : Recibido 
+EnStock -r-> EnMaquina : Reparto
+state EnMaquina {    
+  top to bottom direction
+  [*] --> Disponible    
+  Disponible --> Agotado : [OK]
+  Agotado --> Disponible
+  Agotado --> [*]
+}
+
+EnStock : Esperamos alerta de máquina
+Registrado : Producto en nuestro sistema
+Encargado: Pedido realizado
+Disponible: Cantidad>0
+Agotado: Cantidad=0
