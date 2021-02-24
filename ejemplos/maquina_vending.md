@@ -38,6 +38,9 @@ Un caso de uso de negocio `implica una relación entre la empresa y una entidad 
 
 ![Diagrama Caso de uso de Sistema](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0)
 
+<details>
+  <summary>PlantUml Code</summary>
+  
 ```plantuml
 @startuml
 left to right direction
@@ -56,6 +59,7 @@ pro -- comprar
 comprar -- jefe
 @enduml
 ```
+</details>
 
 ### Diagrama de **Actividad del NEGOCIO**
 
