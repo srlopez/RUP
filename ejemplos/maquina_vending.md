@@ -36,7 +36,7 @@ Presenta objetivos a largo plazo del Negocio.
 El caso de uso:
 Un caso de uso de negocio `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente` para la empresa y el actor.
 
-![Diagrama Caso de uso de Sistema](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/ejemplos/maquina_vending.md&idx=0)
+![Diagrama Caso de uso de Sistema](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0)
 
 ```plantuml
 @startuml
@@ -61,7 +61,7 @@ comprar -- jefe
 
 Presenta las actividades principales de la empresa en relación con el producto `lifemotiv` del negocio.
 
-![Diagrama de Actividad](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/ejemplos/maquina_vending.md&idx=1)
+![Diagrama de Actividad](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1)
 
 ```plantuml
 @startuml
