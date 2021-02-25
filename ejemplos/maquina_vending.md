@@ -165,6 +165,19 @@ Modelando el negocio descubrimos a partir de los diagramas presentados, un poco 
 ```plantuml
 @startuml
 title == Máquina Vending ==\n<i>Casos de uso</i>
+'  skinparam handwritten true
+skinparam usecase {
+  BackgroundColor White
+  BorderColor DarkSlateGray
+  ArrowColor Grey
+}
+skinparam actor {
+  BackgroundColor White
+  BorderColor DarkSlateGray
+  ArrowColor Grey
+}
+
+
 left to right direction
 :User: as cli
 :Reponedor: as repo <<worker>>
