@@ -85,7 +85,7 @@ Presenta las actividades principales de la empresa en relación con el producto 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1" alt=""/>
 
 
-<details><summary>Code #1</summary>
+<details><summary><img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1" alt=""/></summary>
 
 ```plantuml
 @startuml
