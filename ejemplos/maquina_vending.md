@@ -18,6 +18,7 @@ https://www.plantuml.com/plantuml
     - [Casos de uso de SISTEMA](#casos-de-uso-de-sistema)
     - [Diagrama Conceptual del Dominio](#diagrama-conceptual-del-dominio)
   - [Casos de Uso Completos](#casos-de-uso-completos)
+  - [Diagrama de Secuencia UC](#diagrama-de-secuencia-uc)
   
 ## Enunciado
 
@@ -182,12 +183,12 @@ left to right direction
 :User: as cli
 :Reponedor: as repo <<worker>>
 rectangle ADMIN\nMode as admin {
-  (Reponer\nGolosinas) as reponer
-  (Informe) as infor
-  (Apagar\nmáquina) as off
+  (Reponer\nGolosinas\n<b>UC3</b>) as reponer 
+  (Informe\n<b>UC4</b>) as infor <<report>>
+  (Apagar\nmáquina\n<b>UC5</b>) as off
   rectangle USER\nMode {
-    (Ver\nDispensador) as ver
-    (Comprar\nGolosinas) as vender
+    (Ver\nDispensador\n<b>UC1</b>) as ver 
+    (Comprar\nGolosinas\n<b>UC2</b>) as vender 
   }
 }
 note "- Pago de máximo 5 monedas\n- Cambio sin monedas de 2€\n- Se admite monedas de 2€, 1€, .5€, .2€ y .1€"  as N1  #white
@@ -247,3 +248,5 @@ class  Efectivo
 </details>
 
 ## Casos de Uso Completos
+
+## Diagrama de Secuencia UC
