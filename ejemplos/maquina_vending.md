@@ -8,25 +8,41 @@ PlantUML Server:
 https://www.plantuml.com/plantuml
 -->
 - [Máquina Vending](#máquina-vending)
+  - [Enunciado](#enunciado)
   - [Modelado de Negocio](#modelado-de-negocio)
     - [Visión general del Sistema a desarrollar.](#visión-general-del-sistema-a-desarrollar)
     - [Diagrama de **Caso de uso de NEGOCIO**](#diagrama-de-caso-de-uso-de-negocio)
     - [Diagrama de **Actividad del NEGOCIO**](#diagrama-de-actividad-del-negocio)
-    - [Diagrama de Estado de la Golosina](#diagrama-de-estado-de-la-golosina)
+    - [Diagrama de **Máquina de Estado** de la Golosina](#diagrama-de-máquina-de-estado-de-la-golosina)
   - [Casos de Uso de Sistema y Requisitos](#casos-de-uso-de-sistema-y-requisitos)
+    - [Casos de uso de SISTEMA](#casos-de-uso-de-sistema)
+    - [Diagrama Conceptual del Dominio](#diagrama-conceptual-del-dominio)
   - [Casos de Uso Completos](#casos-de-uso-completos)
+  
+## Enunciado
+
+Ver el enunciado+
+
+- Dos empresas A de Golosinas y B de Refrescos
+- Los Dispensadores salen con las etiquetas de producto y precios establecidas
+- Los Dispensadores pueden ser de dimensiones distintas
+- La seguridad en A es por PIN, y en B es por algoritmo
+- La máquina funcionará en modo USER o en modo ADMIN para las funciones de administración.
+- Se oye hablar de fusión de empresas
+
 ## Modelado de Negocio
 
 ### Visión general del Sistema a desarrollar.
 
 Queremos que la interacción de las personas con nuestras máquinas sea fácil, eficiente y segura. De esta manera queremos que:
-- El usuario (sea un cliente o un reponedor pueda ver la matriz de los productos) visualizando el nombre del producto y el precio. Se pedirá un PIN de acceso, en caso de ser válido se mostrará también la cantidad del producto
+- El usuario (sea un cliente o un reponedor pueda ver la matriz de los productos) visualizando el nombre del producto y el precio. Para modo ADMIN se pedirá un PIN de acceso, en caso de ser válido se mostrará también la cantidad del producto
 - Para adquirir un producto bastará indicar las coordenadas del producto e introducir el importe del pago.
-- El reponedor repone la cantidad de productos hasta el máximo y tambien rellena la caja de cambios y retira el importe en el cajón.
-- Debe existir la posibilidad de obtener un informe y de apagar la máquina.
+- En modo ADMIN: 
+  - El reponedor repone la cantidad de productos hasta el máximo y también rellena la caja de cambios y retira el importe en el cajón.
+  - Existe la posibilidad de obtener un informe, que será recordada antes de apagar la máquina.
 
 Condicionantes/Reglas de negocio:
-- Sólo manejamos monedas de 2,1,0.5,0.2 y 0.1 €uros.
+- Sólo manejamos monedas de 2€, 1€, .5€, .2€ y .1€ €uros.
 - El cambio será con el mínimo numero de monedas posibles y no devolvemos moedas de 2€
 - El pago será como máximo con 5 monedas
 
@@ -42,11 +58,12 @@ Un caso de uso de negocio `implica una relación entre la empresa y una entidad 
 
 ```plantuml
 @startuml
+title == Máquina Vending ==\nModelado de Dominio
 left to right direction
 :Cliente:/ as cli
 :Proveedor:/ as pro
-:<<worker>>\nAdministrador:/ as jefe
-:<<worker>>\nReponedor:/ as repo
+:Administrador\nprincipal:/ as jefe <<worker>>
+:Reponedor:/ as repo <<worker>>
 (Comprar Golosinas)/ as comprar
 rectangle Límite_de_Automatización:_La_Máquina {
   (Vender Golosinas)/ as vender
@@ -71,7 +88,7 @@ Presenta las actividades principales de la empresa en relación con el producto 
 
 ```plantuml
 @startuml
-title Máquina Vending
+title == Máquina Vending ==\nDiagrama de Actividad
 |Proveedor|
 |Administrador|
 |Reponedor|
@@ -92,7 +109,7 @@ stop
 </details>
 
 
-### Diagrama de Estado de la Golosina
+### Diagrama de **Máquina de Estado** de la Golosina
 
 Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
 
@@ -103,6 +120,7 @@ Presenta las posibilidades en las que se puede encontrar el producto sobre el qu
 
 ```plantuml
 @startuml
+title == Máquina Vending ==\nMáquina de Estado Golosina
 skinparam state {
     ' StartColor PaleGreen
     ' EndColor Red
@@ -138,5 +156,74 @@ Modelando el negocio descubrimos a partir de los diagramas presentados, un poco 
 
 ## Casos de Uso de Sistema y Requisitos
 
+### Casos de uso de SISTEMA
+
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3" alt=""/>
+
+<details><summary>Code</summary>
+
+```plantuml
+@startuml
+title == Máquina Vending ==\n<i>Casos de uso</i>
+left to right direction
+:User: as cli
+:Reponedor: as repo <<worker>>
+rectangle ADMIN\nMode {
+  (Reponer\nGolosinas) as reponer
+  (Informe) as infor
+  (Apagar\nmáquina) as off
+  rectangle USER\nMode {
+    (Ver\nDispensador) as ver
+    (Comprar\nGolosinas) as vender
+  }
+}
+repo -l-|> cli
+cli -- vender
+cli -- ver
+repo -- reponer
+repo -- off
+repo -- infor
+
+vender .r.> ver: include
+off .r.> infor: extends
+@enduml
+```
+</details>
+
+### Diagrama Conceptual del Dominio
+
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4" alt=""/>
+
+<details><summary>Code</summary>
+
+```plantuml
+@startuml
+' left to right direction
+title == Máquina Vending ==\n<i>Modelo Conceptual</i>
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+legend center
+    <b>Maquina de Vending</b>
+endlegend
+hide  circle
+
+Maquina .. Dispensador 
+Maquina .. ControladorDePagos
+Maquina .. Seguridad
+Dispensador .. Producto
+Producto .. Refresco
+Producto .. Golosina 
+class  Efectivo
+
+@enduml
+```
+</details>
 
 ## Casos de Uso Completos
