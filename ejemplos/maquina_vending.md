@@ -192,7 +192,7 @@ rectangle ADMIN\nMode as admin {
   }
 }
 note "- Pago de máximo 5 monedas\n- Cambio sin monedas de 2€\n- Se admite monedas de 2€, 1€, .5€, .2€ y .1€"  as N1  #white
-note "Se aplica el sistema de\nSeguridad"  as N2  #white
+note "Se aplica el sistema de\nSeguridad"  as N2  #white 
 
 repo -l-|> cli
 cli -- vender
