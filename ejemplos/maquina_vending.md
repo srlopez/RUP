@@ -167,7 +167,7 @@ Indicamos los Requisitos NO FUNCIONALES en Notas
 
 ```plantuml
 @startuml
-title == Máquina Vending ==\n<i>Casos de uso</i>
+title == Máquina Vending ==\n<i>Casos de Uso de SISTEMA</i>
 '  skinparam handwritten true
 skinparam usecase {
   BackgroundColor White
