@@ -55,7 +55,7 @@ Un caso de uso de negocio `implica una relación entre la empresa y una entidad 
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0" alt=""/>
 
-<details><summary>Code</summary>
+<details><summary>Code #0</summary>
 
 ```plantuml
 @startuml
@@ -85,7 +85,7 @@ Presenta las actividades principales de la empresa en relación con el producto 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1" alt=""/>
 
 
-<details><summary>Code</summary>
+<details><summary>Code #1</summary>
 
 ```plantuml
 @startuml
@@ -117,7 +117,7 @@ Presenta las posibilidades en las que se puede encontrar el producto sobre el qu
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2" alt=""/>
 
 
-<details><summary>Code</summary>
+<details><summary>Code #2</summary>
 
 ```plantuml
 @startuml
@@ -159,9 +159,11 @@ Modelando el negocio descubrimos a partir de los diagramas presentados, un poco 
 
 ### Casos de uso de SISTEMA
 
+Indicamos los Requisitos NO FUNCIONALES en Notas
+
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3" alt=""/>
 
-<details><summary>Code</summary>
+<details><summary>Code #3</summary>
 
 ```plantuml
 @startuml
@@ -215,7 +217,7 @@ off .r.> infor: extends
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4" alt=""/>
 
-<details><summary>Code</summary>
+<details><summary>Code #4</summary>
 
 ```plantuml
 @startuml
