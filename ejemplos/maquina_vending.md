@@ -168,7 +168,7 @@ title == Máquina Vending ==\n<i>Casos de uso</i>
 left to right direction
 :User: as cli
 :Reponedor: as repo <<worker>>
-rectangle ADMIN\nMode {
+rectangle ADMIN\nMode as admin {
   (Reponer\nGolosinas) as reponer
   (Informe) as infor
   (Apagar\nmáquina) as off
@@ -177,12 +177,19 @@ rectangle ADMIN\nMode {
     (Comprar\nGolosinas) as vender
   }
 }
+note "- Pago de máximo 5 monedas\n- Cambio sin monedas de 2€\n- Se admite monedas de 2€, 1€, .5€, .2€ y .1€"  as N1  #white
+note "Se aplica el sistema de\nSeguridad"  as N2  #white
+
 repo -l-|> cli
 cli -- vender
 cli -- ver
 repo -- reponer
 repo -- off
 repo -- infor
+
+admin -- N2
+vender -- N1
+
 
 vender .r.> ver: include
 off .r.> infor: extends
