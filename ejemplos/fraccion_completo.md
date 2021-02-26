@@ -125,7 +125,7 @@ CtrlTerminal -- ViewTerminal
 
 ```plantuml
 @startuml
-title Use Case 1
+title <b>Sumar Dos Fracciones</b>\n<i>Diagrama de secuencia - UseCase1</i>
 skinparam monochrome true
 ' skinparam handwritten true
 ' skinparam defaultFontName Comic Sans MS
