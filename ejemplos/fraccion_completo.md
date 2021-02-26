@@ -47,6 +47,16 @@ suma -- n1
 ```
 </details>
 
+### Caso de Uso Completo
+
+Use case 01: **Sumar Dos Fracciones**
+1. El sistema pide una fracción
+2. El usuario introduce f1
+3. El sistema pide otr fracción
+4. El usuario introduce f2
+5. El sistema suma f1 y f2 y presenta el resultado
+6. El sistema se acaba
+
 ### Diagrama Conceptual del Dominio
 N/A
 
