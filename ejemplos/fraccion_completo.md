@@ -29,6 +29,11 @@ skinparam actor {
   BorderColor DarkSlateGray
   ArrowColor Grey
 }
+skinparam note {
+  BackgroundColor White
+  BorderColor DarkSlateGray
+}
+note "Requisito funcional" as n1
 
 left to right direction
 :User: as cli
@@ -37,6 +42,7 @@ rectangle sistema {
 }
 
 cli -- suma
+suma -- n1
 @enduml
 ```
 </details>
@@ -93,8 +99,8 @@ class ViewTerminal{
   +void mostrarResultado()
 }
 
-CtrlTerminal *-- Calculadora
-CtrlTerminal *-- ViewTerminal
+CtrlTerminal -- Calculadora
+CtrlTerminal -- ViewTerminal
 
 
 @enduml
