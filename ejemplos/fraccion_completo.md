@@ -33,7 +33,7 @@ skinparam note {
   BackgroundColor White
   BorderColor DarkSlateGray
 }
-note "Requisito funcional" as n1
+note "Requisito funcional #1" as n1
 
 left to right direction
 :User: as cli
