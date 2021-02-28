@@ -196,6 +196,9 @@ El código en el controlador:
 ### Versión con una caja de `loop` y `alt` 
 >Versión pedagócica para mostrar alternativas de cómo se puede modelar un diagrama de secuencia mostrando un ciclo de repetición, y las alternativas secuencias en caso de escenarios distintos. 
 
+`Loop` para indicar un ciclo. Se describe la condición de salida.
+`Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
+
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3" alt=""/>
 
 <details><summary>Code #3</summary>
