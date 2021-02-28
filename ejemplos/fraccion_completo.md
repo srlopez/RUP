@@ -129,8 +129,8 @@ class ViewTerminal{
   +void mostrarResultado()
 }
 
-CtrlTerminal -- Calculadora
-CtrlTerminal -- ViewTerminal
+CtrlTerminal -- Calculadora: Usa >
+CtrlTerminal -- ViewTerminal: Usa >
 @enduml
 ```
 </details>
