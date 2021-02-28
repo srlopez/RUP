@@ -15,7 +15,7 @@ N/A
 
 Mostramos tres posibles casos de uso, pero sólo nos enfocamos en **UC1**
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md" alt=""/>
 
 <details><summary>Code #0</summary>
 
