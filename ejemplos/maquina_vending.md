@@ -353,7 +353,7 @@ class  Efectivo
 En progreso ....
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=5&a=1" alt=""/>
 
 <details><summary>Code #5</summary>
 
