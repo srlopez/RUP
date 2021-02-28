@@ -66,8 +66,10 @@ El cliente indicará la `posición/coordenadas` del producto que quiere, identif
 
 A continuación el usuario deberá introducir su importe en monedas, en un máximo de 5 monedas. 
 
-LA INTRODUCCION DE MONDEDA POR CONSOLA -> Un String
-LA INTRODUCCION DE MONEDAS EN MODO GRAFICO ->
+>LA INTRODUCCION DE MONDEDA POR CONSOLA -> Un String  
+>LA INTRODUCCION DE MONEDAS EN MODO GRAFICO -> Botones
+
+
 > Si tras introducir el máximo de 5 monedas y no ha llegado al importe total de la golosina se le devolverán estas, indicando con un mensaje está situación. 
 > Cuando se alcance el importe total con las 5 o menos monedas, se expende la mercancía, indicando esta situación con un mensaje, si se ha superado el importe de la golosina, además se dará el `cambio` (para ello se utilizará el mínimo número de monedas)
 > Para introducir el importe se le pedirá al usuario que introduzca el valor de la moneda que introduce (la máquina acepta monedas de `2€`/`1€`/`0,50€`/`0,20€`/`0,10€`) si la moneda no es reconocible se devolverá y se pedirá nueva moneda, si es reconocible se acumulará hasta obtener el valor de la golosina o valor superior (la máquina da cambio, indicando mediante un mensaje las monedas que devolverá).
@@ -75,7 +77,6 @@ LA INTRODUCCION DE MONEDAS EN MODO GRAFICO ->
 
 Durante el pago, **no acepta otro tipo de monedas** que las indicadas anteriormente, se introducen y si tienen cabida en los canales de monedas  se introducirán automáticamente en estos canales, **si no tienen cabida por estar lleno o son monedas de 2 €, estas van a un cajón aparte** (deberás llevar control del importe que se va introduciendo en este cajón para hacer el cuadre de caja al final del día)
 Para proporcionar `cambio`, **no devuelve monedas de 2€**, y el cambio será con el menor número de monedas posibles.
-
 
 **Mostrar matriz de productos:** 
 En modo USER mostrará la etiqueta y el precio.
@@ -129,13 +130,15 @@ Presenta objetivos a largo plazo del Negocio (de nuestro cliente).
 El caso de uso:
 Un caso de uso de negocio `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente` para la empresa y el actor.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0&a=1" alt=""/>
 
 <details><summary>Code #0</summary>
 
 ```plantuml
 @startuml
 title == Máquina Vending ==\nModelado de Dominio
+skinparam monochrome true
+
 left to right direction
 :Cliente:/ as cli
 :Proveedor:/ as pro
@@ -160,13 +163,15 @@ Aparece reflejada la Compra de Golosinas, pero no se incluye dentro del sistem a
 
 Presenta las actividades principales de la empresa en relación con el producto `lifemotiv` del negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1&a=1" alt=""/>
 
 <details><summary>Code #1</summary>
 
 ```plantuml
 @startuml
 title == Máquina Vending ==\nDiagrama de Actividad
+skinparam monochrome true
+
 |Proveedor|
 |Administrador|
 |Reponedor|
@@ -192,7 +197,7 @@ Aparece el Proveedor y algunas actividades que nos ayudan a comprender mejor el 
 
 Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2&a=1" alt=""/>
 
 
 <details><summary>Code #2</summary>
@@ -239,7 +244,7 @@ Modelando el negocio descubrimos a partir de los diagramas presentados, un poco 
 
 Indicamos los Requisitos NO FUNCIONALES en Notas
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3&a=1" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -307,7 +312,7 @@ off .r.> infor: extends
 
 Presenta las Clases sin detallar, y sin ser exhaustivo, que inicialmente compondran nuestro diagrama de Clases.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4&a=1" alt=""/>
 
 <details><summary>Code #4</summary>
 
@@ -375,18 +380,34 @@ participant Pagos as p
 ' collections  
 
 'group Comprar Producto
-c -> v: Muestra Matriz
-v -> u: Print Matriz
-c -> v: Pide Coord
-v -> u: Scann Coord
-u -> v: (Coord)
-v -> c: (Coord)
-c -> s: (Coord)
-s -> d: (Coord)
-d -> s:
-s -> c:
-c -> v:
-v -> u:
+c -> v: obtenerProductos
+v -> u: mostrarProductos
+c -> v: ---Pide Coord
+v -> u: ---Scann Coord
+u -> v: ---(Coord)
+v -> c: ---(Coord)
+c -> s: esXYValido (xy)
+s -> c: (xy)
+c -> c: <b>[xy Inválido]</b>\n<i>Exit</i>
+c -> s: hayArtículoDisponible (xy)
+s -> c: (art)
+c -> c: <b>[art No Disponible]</b>\n<i>Exit</i>
+c -> s: obtenerNombreProductoYPrecio (xy)
+c -> v: Indicar info precio a introducir
+v -> c: (pago Efectivo)
+c -> c: <b>[pago Inválido]</b>\n<i>Exit</i>
+c -> v: Indicar info pago
+alt INCORRECTO Nº MONEDAS
+c -> c: <b>[monedas máximo superado]</b>\n<i>Exit</i>
+else NO DISPONEMOS DE CAMBIOS
+c -> c: <b>[Cambio imposibilitado]</b>\n<i>Exit</i>
+else PAGO INSUFICIENTE
+c -> c: <b>[Importe insuficiente]</b>\n<i>Exit</i>
+end
+c -> s: procederAlPago(pago, precio)
+c -> s: efectuarRetirada(xy)
+c -> v: Informar venta realizada.
+
 
 
 'end

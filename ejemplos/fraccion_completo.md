@@ -162,17 +162,17 @@ participant "Calculadora\n<<Sistema>>" as s
 
 'group Comprar Producto
 c -> v: leerFraccion
-v -> u: "Indica una fracción (0/1): "
-u -> v: Fraccion (f1)
+v -[#LightGrey]> u: "Indica una fracción (0/1): "
+u -[#LightGrey]> v: Fraccion (f1)
 v -> c: Fraccion (f1)
 c -> v: leerFraccion
-v -> u: "Indica una fracción (0/1): "
-u -> v: Fraccion (f2)
+v -[#LightGrey]> u: "Indica una fracción (0/1): "
+u -[#LightGrey]> v: Fraccion (f2)
 v -> c: Fraccion (f2)
 c -> s: suma(f1,f2)
 s -> c: Fraccion (result)
 c -> v: mostrarResultado(result)
-v -> u: "Suma :" (result)
+v -[#LightGrey]> u: "Suma :" (result)
 
 'end
 @enduml
@@ -184,7 +184,7 @@ El código en el controlador:
 ```java
   public void useCase1() {
       // Punto de Entrada al Caso de Uso #1 
-      // Indicando el número de mensaje que se indica en el diagrama 
+      // Indicando el número de mensaje en el diagrama 
       Fraccion f1 = viewTerminal.leerFraccion(); // 1..4
       Fraccion f2 = viewTerminal.leerFraccion(); // 5..8
       Fraccion result = sistema.suma(f1, f2); // 9..10
