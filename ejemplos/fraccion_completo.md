@@ -183,11 +183,12 @@ v -> u: "Suma :" (result)
 El código en el controlador:
 ```java
   public void useCase1() {
-      // Punto de Entrada al Caso de Uso #1
-      Fraccion f1 = viewTerminal.leerFraccion();
-      Fraccion f2 = viewTerminal.leerFraccion();
-      Fraccion result = sistema.suma(f1, f2);
-      viewTerminal.mostrarResultado(result);
+      // Punto de Entrada al Caso de Uso #1 
+      // Indicando el número de mensaje que se indica en el diagrama 
+      Fraccion f1 = viewTerminal.leerFraccion(); // 1..4
+      Fraccion f2 = viewTerminal.leerFraccion(); // 5..8
+      Fraccion result = sistema.suma(f1, f2); // 9..10
+      viewTerminal.mostrarResultado(result); // 11
   }
 ```
 
