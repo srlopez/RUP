@@ -15,7 +15,7 @@ N/A
 
 Mostramos tres posibles casos de uso, pero sólo nos enfocamos en **UC1**
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -82,7 +82,7 @@ N/A
 
 Se muestra _Fracción_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase _Calculadora_. Y a efectos pedagógicos se han introducido (no tienen porqué presentarse), dos clases de la arquitectura MVC.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=9" alt=""/>
 
 <details><summary>Code #1</summary>
 
