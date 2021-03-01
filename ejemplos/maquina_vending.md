@@ -20,6 +20,7 @@ https://www.plantuml.com/plantuml
     - [Diagrama Conceptual del Dominio](#diagrama-conceptual-del-dominio)
   - [Casos de Uso Completos](#casos-de-uso-completos)
   - [Diagrama de Secuencia UC](#diagrama-de-secuencia-uc)
+  - [Código de la aplicación](#código-de-la-aplicación)
   
 
 ## Enunciado 
@@ -414,3 +415,8 @@ c -> v: Informar venta realizada.
 @enduml
 ```
 </details>
+
+
+
+## Código de la aplicación
+[Código completo en GitHub](https://github.com/srlopez/javaVendingMVC)
