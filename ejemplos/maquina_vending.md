@@ -310,7 +310,7 @@ off .r.> infor: extends
 ```
 </details>
 
-En la medida de lo posible adoptaremos el siguiente criterio para mostrar un caso de uso; un caso de uso es iniciado por un actor, una <<extensión>> y una <<inclusión>> de caso de uso tamién son iniciadas por un usuario, la extensión es opcional, y la inclusión es necesaria. 
+En la medida de lo posible adoptaremos el siguiente criterio para mostrar un caso de uso; un caso de uso es iniciado por un actor, una `<<extensión>>` y una `<<inclusión>>` de caso de uso tamién son iniciadas por un usuario, la extensión es opcional, y la inclusión es necesaria. 
 
 En el ejemplo un usuario puede iniciar cualquiera de los casos de uso reflejados, pero además para el caso de uso 2 (**UC2**) se incluye necesariamente realizar el **UC1**, y para el caso de **UC5** se permite opcionalmente realizar el **UC4**.
 
@@ -356,7 +356,7 @@ class  Efectivo
 
 ## Diagrama de Secuencia UC
 
-En progreso ....
+En progreso ....   
 Fijarse en el `Controlador` que será el direcotor de orquesta de todo el flujo presentado.
 Se refleja exhaustivamente el intercambio de mensajes entre el `Actor Usuario` y la `Vista`, aunque no es necesario llegar a reflejarlo tan exhaustivamente, ya que esto implica, en este caso, una Vista en modo terminal, reflejando de la aplicación de tipo cosola, esto inplicaría un CASO DE USO **NO ESENCIAL**, aunque lo que queremos mostrar es un **CASO DE USO ESENCIAL** independiente de la tecnología en que se implemente la vista.
 
