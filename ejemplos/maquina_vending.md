@@ -129,7 +129,7 @@ Requisitos/Reglas de negocio:
 
 Presenta objetivos a largo plazo del Negocio (de nuestro cliente).   
 El caso de uso:
-Un caso de uso de negocio `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente` para la empresa y el actor.
+Un **caso de uso de negocio** `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente` para la empresa y el actor.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0&a=1" alt=""/>
 
@@ -158,11 +158,11 @@ comprar -- jefe
 ```
 </details>
 
-Aparece reflejada la Compra de Golosinas, pero no se incluye dentro del sistem a automatizar.
+Aparece reflejada la `Compra de Golosinas`, pero no se incluye dentro del sistem a automatizar.
 
 ### Diagrama de **Actividad del NEGOCIO**
 
-Presenta las actividades principales de la empresa en relación con el producto `lifemotiv` del negocio.
+Presenta las **actividades principales de la empresa** en relación con el producto `lifemotiv` del negocio. En este caso el Prodcuto Golosina.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1&a=1" alt=""/>
 
@@ -196,7 +196,7 @@ Aparece el Proveedor y algunas actividades que nos ayudan a comprender mejor el 
 
 ### Diagrama de **Máquina de Estado** de la Golosina
 
-Presenta las posibilidades en las que se puede encontrar el producto sobre el que gira nuestro negocio
+Presenta las posibilidades (posibles estados) en las que se puede encontrar el producto sobre el que gira nuestro negocio. Nos ayuda a no olvidar situaciones que deberemos presentar en los caos de uso de sistema.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2&a=1" alt=""/>
 
@@ -236,13 +236,14 @@ Agotado: Cantidad=0
 ```
 </details>
 
-Modelando el negocio descubrimos a partir de los diagramas presentados, un poco más sobre el Dominio de nuestra aplicación.
+Modelando el negocio descubrimos a partir de los diagramas presentados ( elaborados apartir de conversaciones y reuniones), un poco más sobre el Dominio de nuestra aplicación.
 
 
 ## Casos de Uso de Sistema y Requisitos
 
 ### Casos de uso de SISTEMA
 
+Adoptamos el enfoque en el que los casos de uso DE SISTEMA (los normales) son REQUISITOS FUNCIONALES.
 Indicamos los Requisitos NO FUNCIONALES en Notas
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3&a=1" alt=""/>
@@ -309,6 +310,10 @@ off .r.> infor: extends
 ```
 </details>
 
+En la medida de lo posible adoptaremos el siguiente criterio para mostrar un caso de uso; un caso de uso es iniciado por un actor, una <<extensión>> y una <<inclusión>> de caso de uso tamién son iniciadas por un usuario, la extensión es opcional, y la inclusión es necesaria. 
+
+En el ejemplo un usuario puede iniciar cualquiera de los casos de uso reflejados, pero además para el caso de uso 2 (**UC2**) se incluye necesariamente realizar el **UC1**, y para el caso de **UC5** se permite opcionalmente realizar el **UC4**.
+
 ### Diagrama Conceptual del Dominio
 
 Presenta las Clases sin detallar, y sin ser exhaustivo, que inicialmente compondran nuestro diagrama de Clases.
@@ -352,6 +357,8 @@ class  Efectivo
 ## Diagrama de Secuencia UC
 
 En progreso ....
+Fijarse en el `Controlador` que será el direcotor de orquesta de todo el flujo presentado.
+Se refleja exhaustivamente el intercambio de mensajes entre el `Actor Usuario` y la `Vista`, aunque no es necesario llegar a reflejarlo tan exhaustivamente, ya que esto implica, en este caso, una Vista en modo terminal, reflejando de la aplicación de tipo cosola, esto inplicaría un CASO DE USO **NO ESENCIAL**, aunque lo que queremos mostrar es un **CASO DE USO ESENCIAL** independiente de la tecnología en que se implemente la vista.
 
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=5&a=1" alt=""/>
