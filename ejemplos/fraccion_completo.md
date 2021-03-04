@@ -15,7 +15,7 @@ N/A
 
 Mostramos tres posibles casos de uso, pero sólo nos enfocamos en **UC1**
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md%idx=0&a=2" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -42,22 +42,39 @@ skinparam note {
   BackgroundColor White
   BorderColor DarkSlateGray
 }
-note "UC#1\nRequisito <b>Funcional</b> == UC" as n1
-note "UC#2\nRequisitos <b>No funcionales</b>\nescritos como notas" as n2
+note "Requisito <b>Funcional</b>\n<b>UC1:</b>Sumar f1+f2\n<b>UC2:</b>Multiplicar f1+f2\n<b>UC3</b>\n<b>UC4</b>\n<b>UC5</b>\n<b>UC6</b>" as n1
+note "Requisitos <b>No funcionales Lógicos</b>\n<b>Reglas de Negocio</b>\n<i>Escritos como notas</i>\n<b>RFL1:</b> Solo operamos con fracciones propias\n<b>RFL2:</b> Y de 8:00 a 15:00" as n2
+note "Requisitos <b>No funcionales Técnicos</b>\n<i>Escritos como notas</i>\n<b>RFT1:</b> Tiempo de respuesta<1sg\n<b>RFT2:</b>Operaciones persistentes" as n3
 
 left to right direction
 :User: as cli
 rectangle sistema {
-  (Sumar dos\nFracciones\n<b>UC1</b>) as suma 
-  (Caso Dos\n<b>UC2</b>) as dos<<beta>> 
-  (Caso Tres\n<b>UC3</b>) as tres<<beta>>
+  (Sumar\n2 Fracciones\n<b>UC1</b>) as uno 
+  (Multiplicar\n2 Fracciones\n<b>UC2</b>) as dos 
+  (Ranking\n<b>UC3</b>) as tres
+  (Consultar\nFraccion\n<b>UC4</b>) as cuatro
+  (Mostrar las\nOperacions\n<b>UC5</b>) as cinco
+  (Resultados\nImpropios\n<b>UC6</b>) as seis
+  (No Implementado\n<b>UC7</b>) as siete<<beta>>
 }
 
-cli -- suma
-suma -- n1
-dos -- n2
+cli -- uno
+sistema -- n2
+sistema -- n3
 cli -- dos
 cli -- tres
+cli -- cuatro
+cli -- cinco
+cli -- seis
+cli -- siete
+uno -- n1
+dos -- n1
+tres -- n1
+cuatro -- n1
+cinco -- n1
+seis -- n1
+siete -- n1
+
 @enduml
 ```
 </details>
@@ -69,8 +86,11 @@ Use case 01: **Sumar Dos Fracciones**
 1. El usuario introduce f1
 1. El sistema pide otra fracción
 1. El usuario introduce f2
-2. El sistema suma f1 y f2 y presenta el resultado
-3. El sistema se acaba
+   1. Si RFL1 f1 goto 6
+   1. Si RFL1 f2 goto 6
+   1. Si RFL2 goto 6
+1. El sistema suma f1 y f2 y presenta el resultado
+1. El sistema se acaba
 
 > La descripción de un caso de uso **completo** narra un escenario en forma de diáloguo entre el _usuario_ y el _sistema_. Se concentra en el flujo principal aunque puede incluir escenarios alternativos, con el objetivo de describir una especificación general.
 
@@ -82,7 +102,7 @@ N/A
 
 Se muestra _Fracción_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase _Calculadora_. Y a efectos pedagógicos se han introducido (no tienen porqué presentarse), dos clases de la arquitectura MVC.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=2" alt=""/>
 
 <details><summary>Code #1</summary>
 
@@ -139,8 +159,9 @@ CtrlTerminal -- ViewTerminal: Usa >
 
 ### Versión básica:  
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
+> Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=2" alt=""/>
 
 <details><summary>Code #2</summary>
 
@@ -194,12 +215,12 @@ El código en el controlador:
 
 
 ### Versión con una caja de `loop` y `alt` 
->Versión pedagócica para mostrar alternativas de cómo se puede modelar un diagrama de secuencia mostrando un ciclo de repetición, y las alternativas secuencias en caso de escenarios distintos. 
+>Versión pedagógica para mostrar alternativas de cómo se puede modelar un diagrama de secuencia mostrando un ciclo de repetición, y las alternativas secuencias en caso de escenarios distintos. 
 
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=2" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -230,6 +251,15 @@ loop mientras que f1==f2
   u -> v: Fraccion (f2)
   v -> c: Fraccion (f2)
 end
+alt NO RLF1 or NO RLF2
+c -> c: RLF1 (f1)
+c -> c: RLF1 (f2)
+c -> c: RLF2
+note right
+Verificamos las Reglas de Negocio
+Si no se cumple alguna -> Fin UC
+end note
+end
 c -> s: suma(f1,f2)
 s -> c: Fraccion (result)
 c -> v: mostrarResultado(result)
@@ -249,4 +279,6 @@ end
 
 
 ## Código de la aplicación
-[Código completo en GitHub](https://github.com/srlopez/javaPlantilla)
+[Código de plantilla  en GitHub](https://github.com/srlopez/javaPlantilla)
+
+[Código completo](https://github.com/srlopez/javaFraccionMVC) (Privado por ahora)
