@@ -43,8 +43,8 @@ skinparam note {
   BorderColor DarkSlateGray
 }
 note "Requisito <b>Funcional</b>\n<b>UC1:</b>Sumar f1+f2\n<b>UC2:</b>Multiplicar f1+f2\n<b>UC3</b>\n<b>UC4</b>\n<b>UC5</b>\n<b>UC6</b>" as n1
-note "Requisitos <b>No funcionales Lógicos</b>\n<b>Reglas de Negocio</b>\n<i>Escritos como notas</i>\n<b>RFL1:</b> Solo operamos con fracciones propias\n<b>RFL2:</b> Y de 8:00 a 15:00" as n2
-note "Requisitos <b>No funcionales Técnicos</b>\n<i>Escritos como notas</i>\n<b>RFT1:</b> Tiempo de respuesta<1sg\n<b>RFT2:</b>Operaciones persistentes" as n3
+note "Requisitos <b>No funcionales Lógicos</b>\n<b>Reglas de Negocio</b>\n<i>Escritos como notas</i>\n<b>RL1:</b> Solo operamos con fracciones propias\n<b>RL2:</b> Y de 8:00 a 15:00" as n2
+note "Requisitos <b>No funcionales Técnicos</b>\n<i>Escritos como notas</i>\n<b>RT1:</b> Tiempo de respuesta<1sg\n<b>RT2:</b>Operaciones persistentes" as n3
 
 left to right direction
 :User: as cli
@@ -81,14 +81,32 @@ siete -- n1
 
 ### Caso de Uso Completo
 
+**Documento de Requisitos**
+
+| ID | Descripción requisito | Implementado en | Invocado desde | Estado |
+| -- | -- | -- | -- | -- | 
+| UC1 | Suma de Fracciones | | | | 
+| UC2 | Multiplicación de Fracciones | | | | 
+| UC3 | Ranking de apariciones  | | | | 
+| UC4 | Consulta de Fracciones | | | | 
+| UC5 | Todas las Operaciones | | | | 
+| UC6 | Resultados Impropias | | | | 
+| UC7 | N/A | | | N/A | 
+| RL1 | Fracciones propias | | | | 
+| RL2 | De 8:00 a 15:00 | | | | 
+| RT1 | Tiempo de respuesta de operacion <1sg. | | | | 
+| RT2 | Operaciones persistentes | | | | 
+   
+   
+
 Use case 01: **Sumar Dos Fracciones**
 1. El sistema pide una fracción
 1. El usuario introduce f1
 1. El sistema pide otra fracción
 1. El usuario introduce f2
-   1. Si RFL1 f1 goto 6
-   1. Si RFL1 f2 goto 6
-   1. Si RFL2 goto 6
+   1. Si RL1 f1 goto 6
+   1. Si RL1 f2 goto 6
+   1. Si RL2 goto 6
 1. El sistema suma f1 y f2 y presenta el resultado
 1. El sistema se acaba
 
@@ -251,10 +269,10 @@ loop mientras que f1==f2
   u -> v: Fraccion (f2)
   v -> c: Fraccion (f2)
 end
-alt NO RLF1 or NO RLF2
-c -> c: RLF1 (f1)
-c -> c: RLF1 (f2)
-c -> c: RLF2
+alt NO RL1 or NO RL2
+c -> c: RL1 (f1)
+c -> c: RL1 (f2)
+c -> c: RL2
 note right
 Verificamos las Reglas de Negocio
 Si no se cumple alguna -> Fin UC
