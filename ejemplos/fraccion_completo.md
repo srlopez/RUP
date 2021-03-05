@@ -1,5 +1,4 @@
-# Suma dos Fracciones
-
+# Calculadora de Fracciones Persistentes
 
 
 ## Enunciado
