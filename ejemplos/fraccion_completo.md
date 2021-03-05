@@ -15,7 +15,7 @@ N/A
 
 Mostramos tres posibles casos de uso, pero sólo nos enfocamos en **UC1**
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=3" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -118,15 +118,15 @@ N/A
 
 ### Diagrama de Clases
 
-Se muestra _Fracción_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase _Calculadora_. Y a efectos pedagógicos se han introducido (no tienen porqué presentarse), dos clases de la arquitectura MVC.
+Se muestra _Fracción_ y _Operación_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase _Calculadora_. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=3" alt=""/>
 
 <details><summary>Code #1</summary>
 
 ```plantuml
 @startuml
-'left to right direction
+left to right direction
 skinparam class {
   skinparam monochrome true
   skinparam shadowing false
@@ -148,16 +148,81 @@ class Fraccion {
 -- Métodos --
   +String toString()
 }
+class Operacion {
+ Date fh
+-- Métodos --
+  +String toString()
+}
+class OperacionTipo<<enum>> {}
 
-class Calculadora <<Sistema>>{
+class Calculadora {
   +Fraccion suma()
-  +int multiplica()
+  +Fraccion multiplica()
+}
+class CalculadoraDB<<Sistema>> {
+  +Fraccion suma()
+  +Fraccion multiplica()
+  -registrarOperacion()
+  +qryOperacionesPor()
+  +qryRanking() 
+  +qryResultadosImpropios()
+  +qryTodaslasOperaciones()
+}
+CalculadoraDB --|> Calculadora
+Fraccion --* Operacion: f1
+Fraccion --* Operacion: f2
+Fraccion --* Operacion: resultado
+OperacionTipo -- Operacion
+CalculadoraDB ..> Operacion: crea >
+@enduml
+```
+</details>
+
+Diagrama de Clases de Arquitectura de la aplicación.
+Patrones MVC y Fachada (CalculadoraDB) al Sistema.
+Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
+
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=3" alt=""/>
+
+<details><summary>Code #2</summary>
+
+```plantuml
+@startuml
+'left to right direction
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+hide circle
+
+class Calculadora {
+  +Fraccion suma()
+  +Fraccion multiplica()
+}
+class CalculadoraDB<<Sistema>> {
+  +Fraccion suma()
+  +Fraccion multiplica()
+  -registrarOperacion()
+  +qryOperacionesPor()
+  +qryRanking() 
+  +qryResultadosImpropios()
+  +qryTodaslasOperaciones()
 }
 
 class CtrlTerminal{
 -- Métodos --
   +void run()
   +void useCase1()
+  +void useCase2()
+  +void useCase3()
+  +void useCase4()
+  +void useCase5()
+  +void useCase6()
 }
 
 class ViewTerminal{
@@ -165,13 +230,35 @@ class ViewTerminal{
   - String leerFraccionString()
   +Fraccion leerFraccion()
   +void mostrarResultado()
+  +int mostrarMenu()
 }
 
-CtrlTerminal -- Calculadora: Usa >
+class OperacionesSQLite{ 
+ -dbname 
+}
+class OperacionesMem{ 
+  -filename 
+}
+
+class IOperacionesDAO
+{
+ +cmdRegistrarOperacion(op)
+ +qryOperacionesPor(f)
+ +qryRanking() 
+ +qryResultadosImpropios()
+ +qryTodasLasOperaciones() 
+}
+
+IOperacionesDAO <- CalculadoraDB : repositorio
+CalculadoraDB --|> Calculadora
+CtrlTerminal -- CalculadoraDB: Usa >
 CtrlTerminal -- ViewTerminal: Usa >
+OperacionesSQLite --|> IOperacionesDAO
+OperacionesMem --|> IOperacionesDAO
 @enduml
 ```
 </details>
+
 
 ## Diagrama de secuencia
 
@@ -179,9 +266,9 @@ CtrlTerminal -- ViewTerminal: Usa >
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=3" alt=""/>
 
-<details><summary>Code #2</summary>
+<details><summary>Code #3</summary>
 
 ```plantuml
 @startuml
@@ -238,9 +325,9 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=2" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=3" alt=""/>
 
-<details><summary>Code #3</summary>
+<details><summary>Code #4</summary>
 
 ```plantuml
 @startuml
