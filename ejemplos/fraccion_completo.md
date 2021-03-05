@@ -3,7 +3,7 @@
 
 ## Enunciado
 
-Se nos pide que creemos un aplicativo que:
+Se nos pide que creemos un aplicativo que (RF):
 - Sume dos fraciones.
 - Multiplique dos fracciones.
 - Persistamos las operaciones y seamos capaces de:
@@ -11,6 +11,8 @@ Se nos pide que creemos un aplicativo que:
   - Consultar las operaciones por fraccion
   - Consultar el ranking de fracciones
   - Consultar los resultados impropios
+  
+Se indican los Requisitos NO Funcionales (RNF), tanto los lógicos (Reglas de Negocio) como los Técnicos en NOTAS dentro del diagrama de Casos de Uso.
 
 Con esto ya podemos empezar a jugar.  
 
