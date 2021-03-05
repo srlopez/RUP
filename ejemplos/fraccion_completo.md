@@ -4,7 +4,16 @@
 
 ## Enunciado
 
-Se nos pide que creemos un aplicativo que sume dos fraciones.
+Se nos pide que creemos un aplicativo que:
+- Sume dos fraciones.
+- Multiplique dos fracciones.
+- Persistamos las operaciones y seamos capaces de:
+  - Consultar todas las operaciones
+  - Consultar las operaciones por fraccion
+  - Consultar el ranking de fracciones
+  - Consultar los resultados impropios
+
+Con esto ya podemos empezar a jugar.  
 
 ## Modelado de Negocio
 N/A
