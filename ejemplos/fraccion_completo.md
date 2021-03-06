@@ -392,6 +392,6 @@ end
 
 
 ## Código de la aplicación
-[Código de plantilla  en GitHub](https://github.com/srlopez/javaPlantilla)
+[Código de plantilla para hacer una librería en GitHub](https://github.com/srlopez/javaPlantilla)
 
-[Código completo](https://github.com/srlopez/javaFraccionMVC) (Privado por ahora)
+[Código completo (app sin librería)](https://github.com/srlopez/javaFraccionMVC) (Open)
