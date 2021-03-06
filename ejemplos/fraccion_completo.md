@@ -25,7 +25,7 @@ N/A
 
 Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar acódigo, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=2" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -129,7 +129,7 @@ N/A
 
 Se muestra _Fracción_ y _Operación_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase `fachada` a _Calculadora_. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=2" alt=""/>
 
 <details><summary>Code #1</summary>
 
@@ -197,7 +197,7 @@ Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=2" alt=""/>
 
 <details><summary>Code #2</summary>
 
@@ -286,7 +286,7 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=2" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -345,7 +345,7 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=4" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=2" alt=""/>
 
 <details><summary>Code #4</summary>
 
