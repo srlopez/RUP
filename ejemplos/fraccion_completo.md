@@ -23,9 +23,9 @@ N/A
 
 ### Casos de uso de sistema
 
-Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar acódigo, y ver distintas posibilidades de los diagramas UML.
+Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar a código fuente, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=6" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -94,17 +94,17 @@ seis -- n1
 
 | ID | Descripción requisito | Implementado en | Invocado desde | Estado |
 | -- | -- | -- | -- | -- | 
-| UC1 | Suma de Fracciones | | | | 
-| UC2 | Multiplicación de Fracciones | | | | 
-| UC3 | Ranking de apariciones  | | | | 
-| UC4 | Consulta de Fracciones | | | | 
-| UC5 | Todas las Operaciones | | | | 
-| UC6 | Resultados Impropias | | | | 
+| UC1 | Suma de Fracciones | Calculadora.java<br>CalculadoraDB.java | Controlador.java|  Done| 
+| UC2 | Multiplicación de Fracciones | Calculadora.java<br>CalculadoraDB.java 
+| UC3 | Ranking de apariciones  | CalculadoraDB.java | Controlador.java | Done| 
+| UC4 | Consulta de Fracciones | CalculadoraDB.java| Controlador.java | Done| 
+| UC5 | Todas las Operaciones | CalculadoraDB.java | Controlador.java | Done| 
+| UC6 | Resultados Impropias | CalculadoraDB.java | Controlador.java | Done|  
 | UC7 | N/A | | | N/A | 
-| RL1 | Fracciones propias | | | | 
-| RL2 | De 8:00 a 15:00 | | | | 
-| RT1 | Tiempo de respuesta de operacion <1sg. | | | | 
-| RT2 | Operaciones persistentes | | | | 
+| RL1 | Fracciones propias | Requisitos.java | Controlador.java | Done|  
+| RL2 | De 8:00 a 15:00 | Requisitos.java | Controlador.java | Done|   
+| RT1 | Tiempo de respuesta de operacion <1sg. | | | Test | 
+| RT2 | Operaciones persistentes | repostorios | CalculadoraDB| SQLite<br>File | 
    
    
 
@@ -127,14 +127,15 @@ N/A
 
 ### Diagrama de Clases
 
-Se muestra _Fracción_ y _Operación_ como Modelo principal del Dominio, pero también se muestra el `sistema` como clase `fachada` a _Calculadora_. 
+Se muestra _Fracción_ y _Operación_ como Modelos principales del Dominio. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=6" alt=""/>
 
 <details><summary>Code #1</summary>
 
 ```plantuml
 @startuml
+title <b>Diagrama de Clases</b>\n<i>Modelo del Dominio</i>
 left to right direction
 'bottom to top direction
 skinparam class {
@@ -169,26 +170,12 @@ package aritmetica {
     MULTIPLICACION
   }
 
-  class Calculadora {
-    +Fraccion suma()
-    +Fraccion multiplica()
-  }
-  class CalculadoraDB{
-    +Fraccion suma()
-    +Fraccion multiplica()
-    -registrarOperacion()
-    +qryOperacionesPor()
-    +qryRanking() 
-    +qryResultadosImpropios()
-    +qryTodaslasOperaciones()
-  }
+  
 }
-CalculadoraDB --|> Calculadora
 Fraccion --* Operacion: f1
 Fraccion --* Operacion: f2
 Fraccion --* Operacion: resultado
 OperacionTipo --* Operacion
-CalculadoraDB --> Operacion: crea >
 @enduml
 ```
 </details>
@@ -197,12 +184,13 @@ Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=6" alt=""/>
 
 <details><summary>Code #2</summary>
 
 ```plantuml
 @startuml
+title <b>Diagrama de Clases</b>\n<i>Arquitectura de la Aplicación</i>
 left to right direction
 skinparam class {
   skinparam monochrome true
@@ -286,7 +274,7 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=6" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -345,7 +333,7 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=5" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=6" alt=""/>
 
 <details><summary>Code #4</summary>
 
