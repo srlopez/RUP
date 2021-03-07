@@ -157,6 +157,7 @@ skinparam class {
 }
 scale 1
 hide circle
+legend Ejmeplos de Relaciones 
 class "ALMACENADOR\nPEDIDOS" as A
 class "CLIENTE" as C
 class "PEDIDO" as D
@@ -168,8 +169,8 @@ class "ARTICULO" as E
 A ..> B : <b>dependencia</b>\nrelación de uso\ny arquitecturas dependientes
 B --> C : <b>asociación</b>\nRelaciónes entre clases\nnormal y que no entra en las otras
 B -u-|> D : <b>extensión</b>\ngeneralización/especialización\nHerancia e Interfaces(--)
-F o-- E: <b>agregación</b>\nNecesita la parte E\nE existe tras desaparecer B
-B *-- F: <b>composición</b>\nF es parte de B\nF desaparece con B
+F o-- E: <b>agregación</b>\nParte independiente\nde una composición mayor
+B *-- F: <b>composición</b>\nParte indispensable\nde una composición mayor
 @enduml
 ```
 </details>
