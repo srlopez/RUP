@@ -12,7 +12,7 @@ https://www.plantuml.com/plantuml
   - [Plus](#plus)
   - [Modelado de Negocio](#modelado-de-negocio)
     - [Visión general del Sistema a desarrollar.](#visión-general-del-sistema-a-desarrollar)
-    - [Diagrama de **Caso de uso de NEGOCIO**](#diagrama-de-caso-de-uso-de-negocio)
+    - [Diagrama de **Caso de Uso de NEGOCIO**](#diagrama-de-caso-de-uso-de-negocio)
     - [Diagrama de **Actividad del NEGOCIO**](#diagrama-de-actividad-del-negocio)
     - [Diagrama de **Máquina de Estado** de la Golosina](#diagrama-de-máquina-de-estado-de-la-golosina)
   - [Casos de Uso de Sistema y Requisitos](#casos-de-uso-de-sistema-y-requisitos)
@@ -20,6 +20,9 @@ https://www.plantuml.com/plantuml
     - [Diagrama Conceptual del Dominio](#diagrama-conceptual-del-dominio)
   - [Casos de Uso Completos](#casos-de-uso-completos)
   - [Diagrama de Secuencia UC](#diagrama-de-secuencia-uc)
+    - [Diagrama de Clases](#diagrama-de-clases)
+      - [Diagrama de clases del Dominio](#diagrama-de-clases-del-dominio)
+      - [Diagrama de clases de Arquitectura de la Aplicación](#diagrama-de-clases-de-arquitectura-de-la-aplicación)
   - [Código de la aplicación](#código-de-la-aplicación)
   
 
@@ -125,13 +128,13 @@ Requisitos/Reglas de negocio:
 - El cambio será con el mínimo numero de monedas posibles y no devolvemos moedas de 2€
 - El pago será como máximo con 5 monedas
 
-### Diagrama de **Caso de uso de NEGOCIO**
+### Diagrama de **Caso de Uso de NEGOCIO**
 
 Presenta objetivos a largo plazo del Negocio (de nuestro cliente).   
 El caso de uso:
 Un **caso de uso de negocio** `implica una relación entre la empresa y una entidad externa` (un cliente), `produciendo un resultado perceptible y consistente` para la empresa y el actor.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=0&v=1" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -164,7 +167,7 @@ Aparece reflejada la `Compra de Golosinas`, pero no se incluye dentro del sistem
 
 Presenta las **actividades principales de la empresa** en relación con el producto `lifemotiv` del negocio. En este caso el Prodcuto Golosina.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=1&v=1" alt=""/>
 
 <details><summary>Code #1</summary>
 
@@ -192,13 +195,13 @@ stop
 ```
 </details>
 
-Aparece el Proveedor y algunas actividades que nos ayudan a comprender mejor el Domnio de esta aplicación.
+Aparece el Proveedor y algunas `actividades` que nos ayudan a comprender mejor el Dominio de esta aplicación.
 
 ### Diagrama de **Máquina de Estado** de la Golosina
 
-Presenta las posibilidades (posibles estados) en las que se puede encontrar el producto sobre el que gira nuestro negocio. Nos ayuda a no olvidar situaciones que deberemos presentar en los caos de uso de sistema.
+Presenta las posibilidades (posibles estados) en las que se puede encontrar el producto sobre el que gira nuestro negocio. Nos ayuda a no olvidar situaciones que deberemos presentar en los `Casos de Uso de Sistema`.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=2&v=1" alt=""/>
 
 
 <details><summary>Code #2</summary>
@@ -236,7 +239,7 @@ Agotado: Cantidad=0
 ```
 </details>
 
-Modelando el negocio descubrimos a partir de los diagramas presentados ( elaborados apartir de conversaciones y reuniones), un poco más sobre el Dominio de nuestra aplicación.
+Modelando el negocio descubrimos a partir de los diagramas presentados ( elaborados a partir de conversaciones y reuniones con los *interesados*), un poco más sobre el Dominio de nuestra aplicación.
 
 
 ## Casos de Uso de Sistema y Requisitos
@@ -246,7 +249,7 @@ Modelando el negocio descubrimos a partir de los diagramas presentados ( elabora
 Adoptamos el enfoque en el que los casos de uso DE SISTEMA (los normales) son REQUISITOS FUNCIONALES.
 Indicamos los Requisitos NO FUNCIONALES en Notas
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=3&v=1" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -310,7 +313,7 @@ off .r.> infor: extends
 ```
 </details>
 
-En la medida de lo posible adoptaremos el siguiente criterio para mostrar un caso de uso; un caso de uso es iniciado por un actor, una `<<extensión>>` y una `<<inclusión>>` de caso de uso tamién son iniciadas por un usuario, la extensión es opcional, y la inclusión es necesaria. 
+En la medida de lo posible adoptaremos el siguiente criterio para mostrar un caso de uso; Un `Caso de Uso` es iniciado por un `Actor`, una `<<extensión>>` y una `<<inclusión>>` de caso de uso también son iniciadas por un usuario, la extensión es opcional, y la inclusión es necesaria para que el Caso de Uso produzca un resultado apreciable por el `Sistema` o el `Actor`. 
 
 En el ejemplo un usuario puede iniciar cualquiera de los casos de uso reflejados, pero además para el caso de uso 2 (**UC2**) se incluye necesariamente realizar el **UC1**, y para el caso de **UC5** se permite opcionalmente realizar el **UC4**.
 
@@ -318,7 +321,7 @@ En el ejemplo un usuario puede iniciar cualquiera de los casos de uso reflejados
 
 Presenta las Clases sin detallar, y sin ser exhaustivo, que inicialmente compondran nuestro diagrama de Clases.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=4&v=1" alt=""/>
 
 <details><summary>Code #4</summary>
 
@@ -346,8 +349,7 @@ Maquina .. Seguridad
 Dispensador .. Producto
 Producto .. Refresco
 Producto .. Golosina 
-class  Efectivo
-
+ControladorDePagos .. Efectivo 
 @enduml
 ```
 </details>
@@ -357,11 +359,11 @@ class  Efectivo
 ## Diagrama de Secuencia UC
 
 En progreso ....   
-Fijarse en el `Controlador` que será el direcotor de orquesta de todo el flujo presentado.
-Se refleja exhaustivamente el intercambio de mensajes entre el `Actor Usuario` y la `Vista`, aunque no es necesario llegar a reflejarlo tan exhaustivamente, ya que esto implica, en este caso, una Vista en modo terminal, reflejando de la aplicación de tipo cosola, esto inplicaría un CASO DE USO **NO ESENCIAL**, aunque lo que queremos mostrar es un **CASO DE USO ESENCIAL** independiente de la tecnología en que se implemente la vista.
+Fijarse en el `Controlador` que será el director de orquesta de todo el flujo presentado.
+Se refleja exhaustivamente el intercambio de mensajes entre el `Actor Usuario` y la `Vista`, aunque no es necesario llegar a reflejarlo tan detalladamente, ya que esto implica, en este caso, una `Vista en modo terminal`, reflejando de la aplicación de `tipo consola`, esto implicaría un CASO DE USO **NO ESENCIAL**, aunque lo que queremos mostrar es un **CASO DE USO ESENCIAL** independiente de la tecnología en que se implemente la vista.
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=5&a=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=5&v=1" alt=""/>
 
 <details><summary>Code #5</summary>
 
@@ -372,7 +374,7 @@ skinparam monochrome true
 ' skinparam defaultFontName Comic Sans MS
 ' skinparam classArrowFontName Arial
 
-title <b>Máquina Vending</b>\n<i>Secuencia de Compra de Producto</i>
+title <b>Máquina Vending</b>\n<i>Secuencia de Compra de Producto - UC2</i>
 autonumber "[0]"
 hide footbox
 
@@ -388,40 +390,252 @@ participant Pagos as p
 ' collections  
 
 'group Comprar Producto
-c -> v: obtenerProductos
-v -> u: mostrarProductos
-c -> v: ---Pide Coord
+c -> s: obtenerProductos
+c -> v: mostrarProductos
+v -> u: ---print (la matriz de productos)
+c -> v: ---print Pide Coord
 v -> u: ---Scann Coord
 u -> v: ---(Coord)
 v -> c: ---(Coord)
-c -> s: esXYValido (xy)
+alt VALIDACION DE COORDENAS
+c -> s: esXYValido\n<i>Exit</i>
+s -> d: esXYValido\n<i>Exit</i>
+d -> s: (xy)
 s -> c: (xy)
 c -> c: <b>[xy Inválido]</b>\n<i>Exit</i>
+else VALIDACION DE DISPONIBILIDAD
 c -> s: hayArtículoDisponible (xy)
+s -> d: hayArtículoDisponible (xy)
+d -> s: (art)
 s -> c: (art)
 c -> c: <b>[art No Disponible]</b>\n<i>Exit</i>
+end
 c -> s: obtenerNombreProductoYPrecio (xy)
+s -> c: (art,precio)
 c -> v: Indicar info precio a introducir
+c -> v: ---print Pide Importe de Pago
+v -> u: ---Scann Pago
+u -> v: ---(pago Efectivo)
 v -> c: (pago Efectivo)
+alt PAGO INVALIDO
 c -> c: <b>[pago Inválido]</b>\n<i>Exit</i>
-c -> v: Indicar info pago
-alt INCORRECTO Nº MONEDAS
+else  INCORRECTO Nº MONEDAS
 c -> c: <b>[monedas máximo superado]</b>\n<i>Exit</i>
 else NO DISPONEMOS DE CAMBIOS
+s -> p: hayCambiosDisponibles (precio, pago)
+p -> s: (cambios)
 c -> c: <b>[Cambio imposibilitado]</b>\n<i>Exit</i>
 else PAGO INSUFICIENTE
 c -> c: <b>[Importe insuficiente]</b>\n<i>Exit</i>
 end
 c -> s: procederAlPago(pago, precio)
+s -> p: ProcedecrAlPago (precio, pago)
+p -> s: (cambios)
 c -> s: efectuarRetirada(xy)
-c -> v: Informar venta realizada.
-
-
-
+s -> d: efectuarRetirada(xy)
+c -> v: Informar venta realizada (producto, cambio).
+v -> u: Entregar (producto, cambio).
 'end
 @enduml
 ```
 </details>
+
+
+### Diagrama de Clases
+
+#### Diagrama de clases del Dominio
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=6&v=1" alt=""/>
+
+<1details><summary>Code #6</summary>
+
+```plantuml
+@startuml
+title == Máquina Vending ==\n<i>Diagrama de Clases del Dominio</i>
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+hide  circle
+left to right direction
+
+package vending {
+  package producto {
+    class Producto {}
+    class Golosina {}
+    class Refresco {}
+  }
+
+  package hardware {
+    class Maquina {
+      +boolean esPinValido()
+      +int esPagoValido()
+      +Efectivo procederAlPago()
+      +boolean esXYValido()
+      +boolean hayProducto()
+      +String efectuarRetirada()
+      +double obtenerPrecio()
+      +String obtenerNombreProducto()
+      +String[][] mostrarProductos
+      +String[][] mostrarProductosAdmin()
+      +double rellenar()
+      +String informe()
+      +void apagar()
+    }
+    class MaquinaEstado<<Sistema>> {
+      +void apagar()
+    }
+    package subsistemas {
+      package pagos {
+        class ControladorDePagos {
+          +caja Efectivo
+          +int cajon
+          +esPagoValido()
+          +calcularCambio()
+          +procederAlPago()
+          +informe()
+        }
+        class Efectivo{
+          +cantidad
+          +valor
+          +esValido()
+          +valor()
+          +monedas()
+        }
+      }
+      package productos {
+        class Dispensador {
+          +matriz
+          +cantidad
+        }
+        class Coordenada{
+          +int x
+          +int y
+        }
+      }
+      package seguridad {
+        class ISeguridad { 
+          +esValido()
+        }
+        class SeguridadFormula {
+          +int VALOR
+          +esValido()
+        }
+        class SeguridadPin {
+          +String[] PIN
+          +esValido()
+        }
+      }
+    }
+  }
+
+}
+MaquinaEstado ..|> Maquina
+Maquina ..> ISeguridad : ctrlSeguridad
+Maquina ..> Dispensador : matriz
+Maquina ..> ControladorDePagos : ctrlPagos
+Dispensador o.. Producto: matriz
+Dispensador *.. Coordenada
+Producto <|-- Refresco
+Producto <|-- Golosina 
+ControladorDePagos ..> Efectivo : caja
+ISeguridad <|.. SeguridadFormula
+ISeguridad <|.. SeguridadPin
+@enduml
+```
+</details>
+
+#### Diagrama de clases de Arquitectura de la Aplicación
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=7&v=1" alt=""/>
+
+<details><summary>Code #7</summary>
+
+```plantuml
+@startuml
+title <b>Diagrama de Clases</b>\n<i>Arquitectura de la Aplicación</i>
+left to right direction
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+hide circle
+
+package vending {
+  package hardware {
+    class Maquina {
+      +boolean esPinValido()
+      +int esPagoValido()
+      +Efectivo procederAlPago()
+      +boolean esXYValido()
+      +boolean hayProducto()
+      +String efectuarRetirada()
+      +double obtenerPrecio()
+      +String obtenerNombreProducto()
+      +String[][] mostrarProductos
+      +String[][] mostrarProductosAdmin()
+      +double rellenar()
+      +String informe()
+      +void apagar()
+    }
+    class MaquinaEstado<<Sistema>> {
+      +void apagar()
+    }
+  }
+  package persistencia {
+    class RepositorioLite{ 
+      -dbname 
+    }
+    class RepositorioFile{ 
+      -filename 
+    }
+
+    class IRepositorio
+    {
+    +inicializar(String id);
+    +cargarProductos(Dispensador dispensador);
+    +guardarProductos(Dispensador dispensador);
+    +cargarCaja(ControladorDePagos ctrl);
+    +void guardarCaja(ControladorDePagos ctrl);
+    }
+  }
+}
+package ui {
+  class Controlador{
+  -- Métodos --
+    +void run()
+    +void useCase1()
+    +void useCase2()
+    +void useCase3()
+    +void useCase4()
+    +void useCase5()
+    +void useCase6()
+  }
+
+  class Terminal{
+  -- Métodos --
+    +int mostrarMenu()
+  }
+}
+
+
+IRepositorio <.. MaquinaEstado : repositorio
+MaquinaEstado --|> Maquina
+Controlador ..> MaquinaEstado: sistema 
+Controlador ..> Terminal: vista
+RepositorioLite --|> IRepositorio
+RepositorioFile --|> IRepositorio
+```
+</details>
+
 
 
 
