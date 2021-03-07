@@ -507,16 +507,7 @@ package vending {
           +monedas()
         }
       }
-      package productos {
-        class Dispensador {
-          +matriz
-          +cantidad
-        }
-        class Coordenada{
-          +int x
-          +int y
-        }
-      }
+
       package seguridad {
         class ISeguridad { 
           +esValido()
@@ -530,10 +521,20 @@ package vending {
           +esValido()
         }
       }
+      package productos {
+        class Dispensador {
+          +matriz
+          +cantidad
+        }
+        class Coordenada{
+          +int x
+          +int y
+        }
+      }
     }
   }
-
 }
+
 MaquinaEstado ..|> Maquina
 Maquina ..> ISeguridad : ctrlSeguridad
 Maquina ..> Dispensador : matriz
@@ -550,7 +551,8 @@ ISeguridad <|.. SeguridadPin
 </details>
 
 #### Diagrama de clases de Arquitectura de la Aplicación
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=7&v=0" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=7" alt=""/>
+
 <details><summary>Code #7</summary>
 
 ```plantuml
@@ -568,62 +570,62 @@ skinparam class {
 scale 1
 hide circle
 
-' package vending {
-'   package hardware {
-'     class Maquina {
-'       +boolean esPinValido()
-'       +int esPagoValido()
-'       +Efectivo procederAlPago()
-'       +boolean esXYValido()
-'       +boolean hayProducto()
-'       +String efectuarRetirada()
-'       +double obtenerPrecio()
-'       +String obtenerNombreProducto()
-'       +String[][] mostrarProductos
-'       +String[][] mostrarProductosAdmin()
-'       +double rellenar()
-'       +String informe()
-'       +void apagar()
-'     }
-'     class MaquinaEstado<<Sistema>> {
-'       +void apagar()
-'     }
-'   }
-'   package persistencia {
-'     class RepositorioLite{ 
-'       -dbname 
-'     }
-'     class RepositorioFile{ 
-'       -filename 
-'     }
+package vending {
+  package hardware {
+    class Maquina {
+      +boolean esPinValido()
+      +int esPagoValido()
+      +Efectivo procederAlPago()
+      +boolean esXYValido()
+      +boolean hayProducto()
+      +String efectuarRetirada()
+      +double obtenerPrecio()
+      +String obtenerNombreProducto()
+      +String[][] mostrarProductos
+      +String[][] mostrarProductosAdmin()
+      +double rellenar()
+      +String informe()
+      +void apagar()
+    }
+    class MaquinaEstado<<Sistema>> {
+      +void apagar()
+    }
+  }
+  package persistencia {
+    class RepositorioLite{ 
+      -dbname 
+    }
+    class RepositorioFile{ 
+      -filename 
+    }
 
-'     class IRepositorio
-'     {
-'     +inicializar(String id);
-'     +cargarProductos(Dispensador dispensador);
-'     +guardarProductos(Dispensador dispensador);
-'     +cargarCaja(ControladorDePagos ctrl);
-'     +void guardarCaja(ControladorDePagos ctrl);
-'     }
-'   }
-' }
-' package ui {
-'   class Controlador{
-'   -- Métodos --
-'     +void run()
-'     +void useCase1()
-'     +void useCase2()
-'     +void useCase3()
-'     +void useCase4()
-'     +void useCase5()
-'     +void useCase6()
-'   }
+    class IRepositorio
+    {
+    +inicializar(String id);
+    +cargarProductos(Dispensador dispensador);
+    +guardarProductos(Dispensador dispensador);
+    +cargarCaja(ControladorDePagos ctrl);
+    +void guardarCaja(ControladorDePagos ctrl);
+    }
+  }
+}
+package ui {
+  class Controlador{
+  -- Métodos --
+    +void run()
+    +void useCase1()
+    +void useCase2()
+    +void useCase3()
+    +void useCase4()
+    +void useCase5()
+    +void useCase6()
+  }
 
-'   class Terminal{
-'   -- Métodos --
-'     +int mostrarMenu()
-'   }
-' }
+  class Terminal{
+  -- Métodos --
+    +int mostrarMenu()
+  }
+}
 
 IRepositorio <.. MaquinaEstado : repositorio
 MaquinaEstado --|> Maquina
@@ -634,7 +636,6 @@ RepositorioFile --|> IRepositorio
 @enduml
 ```
 </details>
-
 
 
 
