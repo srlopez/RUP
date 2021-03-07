@@ -24,6 +24,7 @@ https://www.plantuml.com/plantuml
       - [Diagrama de clases del Dominio](#diagrama-de-clases-del-dominio)
       - [Diagrama de clases de Arquitectura de la Aplicación](#diagrama-de-clases-de-arquitectura-de-la-aplicación)
   - [Código de la aplicación](#código-de-la-aplicación)
+  - [Ejemplo de Ejecución](#ejemplo-de-ejecución)
   
 
 ## Enunciado 
@@ -641,3 +642,245 @@ RepositorioFile --|> IRepositorio
 
 ## Código de la aplicación
 [Código completo en GitHub](https://github.com/srlopez/javaVendingMVC)
+
+
+## Ejemplo de Ejecución
+
+```bash
+MVC Vending Consola ...
+
+#1  Máquina de Golosinas
+
+   === Golosinas Gómez ===
+   === M)ENU           ===
+
+   A.- V)er los productos 
+   B.- Retirar P)roducto  
+
+   Seleccione una opción: m
+Introduzca PIN: 1234
+
+   === Golosinas Gómez ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: b
+
+   === Golosinas Gómez ===
+   === ARTICULOS       ADM
+
+          0            1            2            3
+   +------------+------------+------------+------------+
+   | KitKat     | Chicles de | Lacasitos  | Palotes    |
+ 0 |      1,10€ |      0,80€ |      1,50€ |      0,90€ |
+   +------------+------------+------------+------------+
+   | Kinder Bue | Bolsa Hari | Chetoos    | Twix       |
+ 1 |      1,80€ |      1,00€ |      1,20€ |      1,00€ |
+   +------------+------------+------------+------------+
+   | Maiz       | M&M’S      | Papa Delta | Chicles de |
+ 2 |      0,70€ |      1,30€ |      1,20€ |      0,80€ |
+   +------------+------------+------------+------------+
+   | Gusanitos  | Crunch     | Milkybar   | Patatas fr |
+ 3 |      1,50€ |      1,10€ |      1,10€ |      1,10€ |
+   +------------+------------+------------+------------+
+
+Introduzca XY: 22
+Ha seleccionado `Papa Delta`.
+
+Introduzca 1,20€.
+
+Indique el número de monedas de 2€,1€,0.5€,0.2€ y 0.1€ separadas por `,`: 1,1,1,1,1
+Ha introducido 5 monedas por importe de 3,80€.
+
+Su `Papa Delta` 1,20€. Gracias
+
+Cambio 2,60€ [0, 2, 1, 0, 1]
+
+Presione <Enter> para continuar 
+
+   === Golosinas Gómez ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: i
+
+   === Golosinas Gómez ===
+   === INFORME         ADM
+
+Operaciones          1
+      Cajón       4,40€
+Caja de cambios
+ |  2,00€ |   1,00€ |   0,50€ |   0,20€ |   0,10€ |
+ |    0   |     3   |     5   |     5   |     5   |
+
+Presione <Enter> para continuar
+
+   === Golosinas Gómez ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: f
+¿Desea el informe (N)?n
+apagando Golosinas Gómez ...
+
+
+#2  Máquina de Refrescos
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ===
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+
+   Seleccione una opción: m
+Introduzca PIN: 94
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: v
+
+   === Refrescos Mtz.  ===
+   === ARTICULOS       ADM
+
+          0            1
+   +------------+------------+
+   🧴Coca Zero  | Fanta Nara |
+ 0 |      2,10€ |      1,80€ |
+   | 0          | 0          |
+   +------------+------------+
+   | Chus       🧴Sprite Zer |
+ 1 |      1,90€ |      2,80€ |
+   | 0          | 0          |
+   +------------+------------+
+
+Presione <Enter> para continuar
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: 2
+
+   === Refrescos Mtz.  ===
+   === ARTICULOS       ADM
+
+          0            1
+   +------------+------------+
+   🧴Coca Zero  | Fanta Nara |
+ 0 |      2,10€ |      1,80€ |
+   +------------+------------+
+   | Chus       🧴Sprite Zer |
+ 1 |      1,90€ |      2,80€ |
+   +------------+------------+
+
+Introduzca XY: 11
+Articulo no disponible
+Presione <Enter> para continuar
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: c
+Introducidos 2,00€
+
+Presione <Enter> para continuar
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: 2
+
+   === Refrescos Mtz.  ===
+   === ARTICULOS       ADM
+
+          0            1
+   +------------+------------+
+   🧴Coca Zero  | Fanta Nara |
+ 0 |      2,10€ |      1,80€ |
+   +------------+------------+
+   | Chus       🧴Sprite Zer |
+ 1 |      1,90€ |      2,80€ |
+   +------------+------------+
+
+Introduzca XY: 11
+Ha seleccionado `Sprite Zero`.
+
+Introduzca 2,80€.
+
+Indique el número de monedas de 2€,1€,0.5€,0.2€ y 0.1€ separadas por `,`: 1,1,1,1,1
+Ha introducido 5 monedas por importe de 3,80€.
+
+Su `Sprite Zero` 2,80€. Gracias
+
+Cambio 1,00€ [0, 1, 0, 0, 0]
+
+Presione <Enter> para continuar
+
+   === Refrescos Mtz.  ===
+   === M)ENU           ADM
+
+   A.- V)er los productos
+   B.- Retirar P)roducto
+   C.- R)ellenar Productos y Monedas
+   D.- I)nforme
+   E.- Exit/F)IN
+
+   Seleccione una opción: f
+¿Desea el informe (N)?s
+
+   === Refrescos Mtz.  ===
+   === INFORME         ADM
+
+Operaciones          2
+      Cajón       2,80€
+Caja de cambios
+ |  2,00€ |   1,00€ |   0,50€ |   0,20€ |   0,10€ |
+ |    0   |     5   |     5   |     5   |     5   |
+
+apagando Refrescos Mtz. ...
+
+
+#3  Máquina de Refrescos y Golosinas
+¿  ?
+
+Fin de la aplicación
+```
