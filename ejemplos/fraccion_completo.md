@@ -25,7 +25,7 @@ N/A
 
 Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar a código fuente, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&a=6" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&v=7" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -127,15 +127,101 @@ N/A
 
 ### Diagrama de Clases
 
-Se muestra _Fracción_ y _Operación_ como Modelos principales del Dominio. 
+Relación de 'Relaciones' entre Clases.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&a=6" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=7" alt=""/>
 
 <details><summary>Code #1</summary>
 
 ```plantuml
+
+@startuml
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+hide circle
+class "ALMACENADOR\nPEDIDOS" as A
+class "CLIENTE" as C
+class "PEDIDO" as D
+class "PEDIDO\nTELEMATICO" as B
+class "LINEA\nPEDIDO" as F
+class "ARTICULO" as E
+'left to right direction
+
+A ..> B : <b>dependencia</b>\nrelación de uso\ny arquitecturas dependientes
+B --> C : <b>asociación</b>\nRelaciónes entre clases\nnoraml y que no entra en las otras
+B -u-|> D : <b>extensión</b>\ngeneralización/especialización\nHerancia e Interfaces(--)
+F o-- E: <b>agregación</b>\nNecesita la parte E\nE existe tras desaparecer B
+B *-- F: <b>composición</b>\nF es parte de B\nF desaparece con B
+@enduml
+```
+</details>
+
+
+#### Diagrama Inicial
+Se muestra _Fracción_ y _Calculadora_ como los únicos Modelos de Datos (Clases) principales del Dominio base sin introducir la persistencia.
+
+
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&v=7" alt=""/>
+
+<details><summary>Code #2</summary>
+
+```plantuml
 @startuml
 title <b>Diagrama de Clases</b>\n<i>Modelo del Dominio</i>
+left to right direction
+'bottom to top direction
+skinparam class {
+  skinparam monochrome true
+  skinparam shadowing false
+  BackgroundColor White
+  BorderColor Gray
+  ' FontName Consolas
+  ArrowColor Gray
+}
+scale 1
+hide circle
+package aritmetica {
+
+  class Fraccion {
+    -int numerador
+    -int denominador
+  -- Constructores --
+    + Fraccion ()
+    + Fraccion (n, d)
+    + Fraccion (s)
+  -- Métodos --
+    +String toString()
+  }
+  class Calculadora {
+    +Fraccion suma()
+    +Fraccion multiplica()
+  } 
+}
+Fraccion <.. Calculadora: op.f1
+Fraccion <.. Calculadora: op.f2
+Fraccion <.. Calculadora: resultado
+@enduml
+```
+</details>
+
+#### Diagrama con persistencia
+
+Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones, el dominio se modifica añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
+
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&v=7" alt=""/>
+
+<details><summary>Code #3</summary>
+
+```plantuml
+@startuml
+title <b>Diagrama de Clases II</b>\n<i>Modelo del Dominio con Persistencia</i>
 left to right direction
 'bottom to top direction
 skinparam class {
@@ -169,24 +255,44 @@ package aritmetica {
     SUMA
     MULTIPLICACION
   }
-
+  class Calculadora {
+    +Fraccion suma()
+    +Fraccion multiplica()
+  }
+  class CalculadoraDB<<Sistema>> {
+    +Fraccion suma()
+    +Fraccion multiplica()
+    -registrarOperacion()
+    +qryOperacionesPor()
+    +qryRanking() 
+    +qryResultadosImpropios()
+    +qryTodaslasOperaciones()
+  }
   
 }
 Fraccion --* Operacion: f1
 Fraccion --* Operacion: f2
 Fraccion --* Operacion: resultado
-OperacionTipo --* Operacion
+OperacionTipo --* Operacion: tipo
+CalculadoraDB --|> Calculadora
+Fraccion <.. Calculadora: op.f1
+Fraccion <.. Calculadora: op.f2
+Fraccion <.. Calculadora: resultado
+Operacion <.. CalculadoraDB : persiste
+
 @enduml
 ```
 </details>
+
+#### Diagrama de Arquitectura
 
 Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&a=6" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&v=7" alt=""/>
 
-<details><summary>Code #2</summary>
+<details><summary>Code #4</summary>
 
 ```plantuml
 @startuml
@@ -274,9 +380,9 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&a=6" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&v=7" alt=""/>
 
-<details><summary>Code #3</summary>
+<details><summary>Code #6</summary>
 
 ```plantuml
 @startuml
@@ -333,9 +439,9 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&a=6" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&v=7" alt=""/>
 
-<details><summary>Code #4</summary>
+<details><summary>Code #7</summary>
 
 ```plantuml
 @startuml
