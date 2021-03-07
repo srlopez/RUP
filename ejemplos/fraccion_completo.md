@@ -127,7 +127,18 @@ N/A
 
 ### Diagrama de Clases
 
-Relación de 'Relaciones' entre Clases.
+Relación de '`Relaciones`' entre Clases (las más habituales).
+| | Descripción |
+|--|--|
+| dependencia | relación de `uso` entre objetos |
+| extensión | generalización o especialización<br>Usada para reflejar `herencias`|
+| realización | idem que extensión<br>pero para `interfaces` |
+| composición | refleja una `parte indispensable` de una clase |
+| agregación | refleja una `parte independiente` de una clase |
+| asociación | relacción `normal` entre clases<br>Suele tener *nombre*, *dirección* y *cardinalidad* |
+|  |  |
+|  |  |
+
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=7" alt=""/>
 
@@ -155,7 +166,7 @@ class "ARTICULO" as E
 'left to right direction
 
 A ..> B : <b>dependencia</b>\nrelación de uso\ny arquitecturas dependientes
-B --> C : <b>asociación</b>\nRelaciónes entre clases\nnoraml y que no entra en las otras
+B --> C : <b>asociación</b>\nRelaciónes entre clases\nnormal y que no entra en las otras
 B -u-|> D : <b>extensión</b>\ngeneralización/especialización\nHerancia e Interfaces(--)
 F o-- E: <b>agregación</b>\nNecesita la parte E\nE existe tras desaparecer B
 B *-- F: <b>composición</b>\nF es parte de B\nF desaparece con B
