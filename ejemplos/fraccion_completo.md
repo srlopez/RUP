@@ -25,7 +25,7 @@ N/A
 
 Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar a código fuente, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&v=8" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -137,10 +137,9 @@ Relación de '`Relaciones`' entre Clases (las más habituales).
 | agregación | refleja una `parte independiente` de una clase |
 | asociación | relacción `normal` entre clases<br>Suele tener *nombre*, *dirección* y *cardinalidad* |
 |  |  |
-|  |  |
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=8" alt=""/>
 
 <details><summary>Code #1</summary>
 
@@ -157,7 +156,7 @@ skinparam class {
 }
 scale 1
 hide circle
-legend Ejmeplos de Relaciones 
+legend Ejemplos de Relaciones 
 class "ALMACENADOR\nPEDIDOS" as A
 class "CLIENTE" as C
 class "PEDIDO" as D
@@ -180,7 +179,7 @@ B *-- F: <b>composición</b>\nParte indispensable\nde una composición mayor
 Se muestra _Fracción_ y _Calculadora_ como los únicos Modelos de Datos (Clases) principales del Dominio base sin introducir la persistencia.
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&v=8" alt=""/>
 
 <details><summary>Code #2</summary>
 
@@ -227,7 +226,7 @@ Fraccion <.. Calculadora: resultado
 
 Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones, el dominio se modifica añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&v=8" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -302,7 +301,7 @@ Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&v=8" alt=""/>
 
 <details><summary>Code #4</summary>
 
@@ -392,7 +391,7 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&v=8" alt=""/>
 
 <details><summary>Code #6</summary>
 
@@ -451,7 +450,7 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&v=7" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&v=8" alt=""/>
 
 <details><summary>Code #7</summary>
 
