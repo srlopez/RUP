@@ -446,7 +446,7 @@ v -> u: Entregar (producto, cambio).
 #### Diagrama de clases del Dominio
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/maquina_vending.md&idx=6&v=1" alt=""/>
 
-<1details><summary>Code #6</summary>
+<details><summary>Code #6</summary>
 
 ```plantuml
 @startuml
