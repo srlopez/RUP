@@ -125,7 +125,6 @@ Use case 01: **Sumar Dos Fracciones**
    1. Si no RL2 goto 6
 1. El sistema suma f1 y f2 y presenta el resultado
 1. El sistema finaliza el UC1
-**Flujo de Eventos**:
 - **Flujo Alternativo**:  
   N/A
 
