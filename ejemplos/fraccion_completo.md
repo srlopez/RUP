@@ -108,13 +108,14 @@ seis -- n1
    
    
 
-Use case 01: **Sumar Dos Fracciones**
-**ID**: UC01 
-**Nombre: Sumar Dos Fracciones
-**Descripción**: Calcula la suma de dos fracciones. (Y las persiste)
-**Actor Principal**: El Usuario
-**Actores secundarios**: N/A
-**Flujo de Eventos: Flujo Normal o Básico**:
+Use case 01: **Sumar Dos Fracciones**  
+**ID**: UC01   
+**Nombre UC**: *Sumar Dos Fracciones*  
+**Descripción**: Calcula la suma de dos fracciones. (Y las persiste)  
+**Actor Principal**: El Usuario  
+**Actores secundarios**: N/A  
+**Flujo de Eventos:**
+- **Flujo Normal o Básico**:
 1. El sistema pide una fracción
 1. El usuario introduce f1
 1. El sistema pide otra fracción
@@ -124,7 +125,9 @@ Use case 01: **Sumar Dos Fracciones**
    1. Si no RL2 goto 6
 1. El sistema suma f1 y f2 y presenta el resultado
 1. El sistema finaliza el UC1
-**Flujo de Eventos: Flujo Alternativo**:
+**Flujo de Eventos**:
+- **Flujo Alternativo**:  
+  N/A
 
 > La descripción de un caso de uso **completo** narra un escenario en forma de diálogo entre el _usuario_ y el _sistema_. Se concentra en el flujo principal aunque puede incluir escenarios alternativos, con el objetivo de describir la especificación general del requisito funcional recogido como caso de uso.
 
