@@ -25,7 +25,7 @@ N/A
 
 Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar a código fuente, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&t=2" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -148,7 +148,7 @@ Relación de '`Relaciones`' entre Clases (las más habituales).
 |  |  |
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&t=2" alt=""/>
 
 <details><summary>Code #1</summary>
 
@@ -215,7 +215,7 @@ Directivo "1" --> "0..*" Empleado: dirige\n<b>asociación</b>\nRelaciónes entre
 Se muestra _Fracción_ y _Calculadora_ como los únicos Modelos de Datos (Clases) principales del Dominio base sin introducir la persistencia.
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&t=2" alt=""/>
 
 <details><summary>Code #2</summary>
 
@@ -262,7 +262,7 @@ Fraccion <.. Calculadora: resultado
 
 Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones, el dominio se modifica añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&t=2" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -337,7 +337,7 @@ Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&t=2" alt=""/>
 
 <details><summary>Code #4</summary>
 
@@ -427,9 +427,9 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=5&t=2" alt=""/>
 
-<details><summary>Code #6</summary>
+<details><summary>Code #5</summary>
 
 ```plantuml
 @startuml
@@ -486,9 +486,9 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&t=1" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&t=2" alt=""/>
 
-<details><summary>Code #7</summary>
+<details><summary>Code #6</summary>
 
 ```plantuml
 @startuml
