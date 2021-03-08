@@ -3,16 +3,16 @@
 
 ## Enunciado
 
-Se nos pide que creemos un aplicativo que: (RF)
+Se nos pide que creemos un aplicativo que: (Especificación de Requisitos Funcionales; **RF**)
 - Sume dos fraciones.
 - Multiplique dos fracciones.
-- Persistamos las operaciones y seamos capaces de:
+- Seamos capaces de: <-(_Requerimiento oculto -> **persistencia**_)
   - Consultar todas las operaciones
   - Consultar las operaciones por fraccion
   - Consultar el ranking de fracciones
   - Consultar los resultados impropios
   
-Se indican los Requisitos NO Funcionales (RNF), tanto los lógicos (Reglas de Negocio) como los Técnicos en NOTAS dentro del diagrama de Casos de Uso.
+Se indican los Requisitos NO Funcionales (**RNF**), tanto los lógicos **RL** (Reglas de Negocio) como los Técnicos **RT** en NOTAS dentro del diagrama de Casos de Uso.
 
 Con esto ya podemos empezar a jugar.  
 
@@ -92,8 +92,8 @@ seis -- n1
 
 **Documento de Requisitos** a rellenar durante la evolución del proyecto.
 
-| ID | Descripción requisito | Implementado en | Invocado desde | Estado |
-| -- | -- | -- | -- | -- | 
+| ID | Descripción requisito | Implementado en | Invocado desde | Estado | Sprint | Responsable |
+| -- | -- | -- | -- | -- | -- | -- |
 | UC1 | Suma de Fracciones | Calculadora.java<br>CalculadoraDB.java | Controlador.java|  Done| 
 | UC2 | Multiplicación de Fracciones | Calculadora.java<br>CalculadoraDB.java 
 | UC3 | Ranking de apariciones  | CalculadoraDB.java | Controlador.java | Done| 
@@ -120,9 +120,9 @@ Use case 01: **Sumar Dos Fracciones**
 1. El usuario introduce f1
 1. El sistema pide otra fracción
 1. El usuario introduce f2
-   1. Si no RL1 f1 goto 6
-   1. Si no RL1 f2 goto 6
-   1. Si no RL2 goto 6
+   1. Si no RL1 f1 ir al punto 6
+   1. Si no RL1 f2 ir al punto 6
+   1. Si no RL2 ir al punto 6
 1. El sistema suma f1 y f2 y presenta el resultado
 1. El sistema finaliza el UC1
 - **Flujo Alternativo**:  
