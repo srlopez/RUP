@@ -548,3 +548,82 @@ end
 [Código de plantilla para hacer una librería en GitHub](https://github.com/srlopez/javaPlantilla)
 
 [Código completo (app sin librería)](https://github.com/srlopez/javaFraccionMVC) (Open)
+
+
+## Ejemplo de ejecución
+
+```java
+MVC Consola
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+1
+Indica una fracción (0/1): 2/3
+Indica una fracción (0/1): 5/7
+Excepción uc1: RL2 Fuera de horario (15)
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+2
+Indica una fracción (0/1): 3/7
+Indica una fracción (0/1): 8/9
+Excepción uc2: RL2 Fuera de horario (15)
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+3
+UC#3 Ranking
+7/8 4
+2/3 3
+3/7 3
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+4
+UC#4 Operaciones por Fraccion
+Indica una fracción (0/1): 3/4
+2021-03-05 17:18:23	2/3 + 3/4 = 17/12
+2021-03-05 17:18:36	6/7 * 7/8 = 3/4
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+6
+UC#6 Resultados impropios
+2021-03-04 11:19:36	2/3 + 4/8 = 7/6
+2021-03-05 09:47:31	7/8 + 9/10 = 71/40
+2021-03-05 17:18:23	2/3 + 3/4 = 17/12
+2021-03-05 17:40:25	-4/5 + -3/7 = -43/35
+ MENU
+ 1.- Sumar dos fracciones
+ 2.- Multiplicar dos fracciones
+ 3.- Ranking de fracciones
+ 4.- Consultar operaciones
+ 5.- Todas las operaciones
+ 6.- Resultados impropios
+ F.- FIN
+```
