@@ -25,7 +25,7 @@ N/A
 
 Mostramos varios posibles casos de uso, pero sólo desarrollamos en este documento enfocamos el **UC1** para mostrar cómo se puede llevar a código fuente, y ver distintas posibilidades de los diagramas UML.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=0&v=9" alt=""/>
 
 <details><summary>Code #0</summary>
 
@@ -139,37 +139,62 @@ Relación de '`Relaciones`' entre Clases (las más habituales).
 |  |  |
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=1&v=9" alt=""/>
 
 <details><summary>Code #1</summary>
 
 ```plantuml
-
+left to right direction
+'top to bottom direction
 @startuml
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+'skinparam handwritten true
+skinparam style strictuml
 skinparam class {
-  skinparam monochrome true
   skinparam shadowing false
   BackgroundColor White
   BorderColor Gray
   ' FontName Consolas
   ArrowColor Gray
 }
-scale 1
-hide circle
-legend Ejemplos de Relaciones 
-class "ALMACENADOR\nPEDIDOS" as A
-class "CLIENTE" as C
-class "PEDIDO" as D
-class "PEDIDO\nTELEMATICO" as B
-class "LINEA\nPEDIDO" as F
-class "ARTICULO" as E
-'left to right direction
 
-A ..> B : <b>dependencia</b>\nrelación de uso\ny arquitecturas dependientes
-B --> C : <b>asociación</b>\nRelaciónes entre clases\nnormal y que no entra en las otras
-B -u-|> D : <b>extensión</b>\ngeneralización/especialización\nHerancia e Interfaces(--)
-F o-- E: <b>agregación</b>\nParte independiente\nde una composición mayor
-B *-- F: <b>composición</b>\nParte indispensable\nde una composición mayor
+abstract Persona <<abstract>>{
+ +nombre
+ +edad
+ +toString()
+}
+Class Empleado {
+ +sueldo_bruto
+ +calcular_sueldo_neto()
+ +toString()
+}
+Class Cliente {
+ +dirección_facturación
+ +toString()
+}
+Class Directivo {
+ +categoría
+ +toString()
+}
+Class Empresa {
+ +facturar()
+}
+Class CreadorDeNominas {
+ +calcularNomina()
+}
+Interface IFacturar <<interface>> {
+ +facturar()
+}
+IFacturar <|.r. Empresa: <b>extensión</b>\ngeneralización/especialización\nImplementación
+Persona <|-r- Cliente: <b>extensión</b>\ngeneralización/especialización\nHerencia
+Empleado -r-|> Persona: es
+Empleado <|-- Directivo: es
+Empresa o-- Cliente: <b>agregación</b>\nParte independiente\nde una composición mayor
+Empresa *-- Empleado: <b>composición</b>\nParte indispensable\nde una composición mayor
+CreadorDeNominas ..> Empleado: <b>dependencia</b>\nrelación de uso\ny arquitecturas dependientes
+Directivo "1" --> "0..*" Empleado: dirige\n<b>asociación</b>\nRelaciónes entre clases\nnormal y que no entra en las otras
 @enduml
 ```
 </details>
@@ -179,7 +204,7 @@ B *-- F: <b>composición</b>\nParte indispensable\nde una composición mayor
 Se muestra _Fracción_ y _Calculadora_ como los únicos Modelos de Datos (Clases) principales del Dominio base sin introducir la persistencia.
 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=2&v=9" alt=""/>
 
 <details><summary>Code #2</summary>
 
@@ -226,7 +251,7 @@ Fraccion <.. Calculadora: resultado
 
 Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones, el dominio se modifica añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&v=9" alt=""/>
 
 <details><summary>Code #3</summary>
 
@@ -301,7 +326,7 @@ Diagrama de Clases de Arquitectura de la aplicación.
 Patrones MVC y Fachada (CalculadoraDB) al Sistema.
 Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&v=9" alt=""/>
 
 <details><summary>Code #4</summary>
 
@@ -391,7 +416,7 @@ OperacionesMem --|> IOperacionesDAO
 > Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&v=9" alt=""/>
 
 <details><summary>Code #6</summary>
 
@@ -450,7 +475,7 @@ El código en el controlador:
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
 
-<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&v=8" alt=""/>
+<img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=7&v=9" alt=""/>
 
 <details><summary>Code #7</summary>
 
