@@ -88,8 +88,7 @@ seis -- n1
 ```
 </details>
 
-### Caso de Uso Completo
-
+### Documento de Requistos
 **Documento de Requisitos** a rellenar durante la evolución del proyecto.
 
 | ID | Descripción requisito | Implementado en | Invocado desde | Estado | Sprint | Responsable |
@@ -107,6 +106,7 @@ seis -- n1
 | RT2 | Operaciones persistentes | repostorios | CalculadoraDB| SQLite<br>File | 
    
    
+### Caso de Uso 1 - Completo
 
 Use case 01: **Sumar Dos Fracciones**  
 **ID**: UC01   
