@@ -4,7 +4,7 @@
 ## Enunciado
 
 Se nos pide que creemos un aplicativo que: (Especificación de Requisitos Funcionales; **RF**)
-- Sume dos fraciones.
+- Sume dos fracciones.
 - Multiplique dos fracciones.
 - Seamos capaces de: <-(_Requerimiento oculto -> **persistencia**_)
   - Consultar todas las operaciones
@@ -12,7 +12,7 @@ Se nos pide que creemos un aplicativo que: (Especificación de Requisitos Funcio
   - Consultar el ranking de fracciones
   - Consultar los resultados impropios
   
-Se indican los Requisitos NO Funcionales (**RNF**), tanto los lógicos **RL** (Reglas de Negocio) como los Técnicos **RT** en NOTAS dentro del diagrama de Casos de Uso.
+Podemos indicar los Requisitos NO Funcionales (**RNF**), tanto los lógicos **RL** (Reglas de Negocio) como los Técnicos **RT** en NOTAS dentro del diagrama de Casos de Uso (**RF**).
 
 Con esto ya podemos empezar a jugar.  
 
@@ -88,8 +88,7 @@ seis -- n1
 ```
 </details>
 
-### Caso de Uso Completo
-
+### Documento de Requistos
 **Documento de Requisitos** a rellenar durante la evolución del proyecto.
 
 | ID | Descripción requisito | Implementado en | Invocado desde | Estado | Sprint | Responsable |
@@ -107,6 +106,7 @@ seis -- n1
 | RT2 | Operaciones persistentes | repostorios | CalculadoraDB| SQLite<br>File | 
    
    
+### Caso de Uso 1 - Completo
 
 Use case 01: **Sumar Dos Fracciones**  
 **ID**: UC01   
@@ -114,6 +114,8 @@ Use case 01: **Sumar Dos Fracciones**
 **Descripción**: Calcula la suma de dos fracciones. (Y las persiste)  
 **Actor Principal**: El Usuario  
 **Actores secundarios**: N/A  
+**Precondiciones**: (ej: el usuario está correctamente identificado)
+**Postcondiciones**: El sistema registra la operación correctamente.
 **Flujo de Eventos:**
 - **Flujo Normal o Básico**:
 1. El sistema pide una fracción
@@ -128,7 +130,7 @@ Use case 01: **Sumar Dos Fracciones**
 - **Flujo Alternativo**:  
   N/A
 
-> La descripción de un caso de uso **completo** narra un escenario en forma de diálogo entre el _usuario_ y el _sistema_. Se concentra en el flujo principal aunque puede incluir escenarios alternativos, con el objetivo de describir la especificación general del requisito funcional recogido como caso de uso.
+> La descripción de un caso de uso **completo** narra un escenario en forma de diálogo entre el _usuario_ y el _sistema_. Se concentra en el flujo principal aunque puede incluir escenarios alternativos, con el objetivo de describir la especificación general del requisito funcional recogido como caso de uso. Ha de incluir, código del UC, Título/Nombre, Descripción, Actores principales y secundarios y Pre y Postcondiciones.
 
 
 ### Diagrama Conceptual del Dominio
@@ -260,7 +262,7 @@ Fraccion <.. Calculadora: resultado
 
 #### Diagrama con persistencia
 
-Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones, el dominio se modifica añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
+Al añadir la persitencia para cumplir los requisitos de consultas y registro de operaciones,  se modifica el dominio añadiendo _Operación_ como Modelo de Datos a persistir y _CalculadoraDB_ como Modelo que deriva de la _Calculadora_ e interactuará con el motor de persitencia. 
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=3&t=2" alt=""/>
 
@@ -333,9 +335,9 @@ Operacion <.. CalculadoraDB : persiste
 
 #### Diagrama de Arquitectura
 
-Diagrama de Clases de Arquitectura de la aplicación.
-Patrones MVC y Fachada (CalculadoraDB) al Sistema.
-Y Clase de Acceso a Datos con Interface, mostrando dos implementaciones.
+Diagrama de Clases de Arquitectura de la aplicación. Es distinto del diagrama de clases del Modelo del Dominio. Este se centra en mostrar la Arquitectura de la aplicación, mostrarndo las clases que mecánicamente llevaran la información de la BD a la pantalla.   
+En este caso se aplican los Patrones `MVC` y `Fachada` (CalculadoraDB) al Sistema.
+Y Clase de `Acceso a Datos` con `Interface`, mostrando dos implementaciones.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=4&t=2" alt=""/>
 
@@ -424,7 +426,7 @@ OperacionesMem --|> IOperacionesDAO
 ## Diagrama de secuencia
 
 ### Versión básica:  
-> Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y que acabaremos desarrollando el código.
+> Mostramos el ejemplo más sencillo. Un escenario con un único flujo principal. Sin escenarios alternativos y a continuación el código que podría ser el guión del caso de uso dentro del Controlador.
 > Tampoco se muestran la aplicación de las Reglas de Negocio.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=5&t=2" alt=""/>
@@ -485,6 +487,9 @@ El código en el controlador:
 
 `Loop` para indicar un ciclo. Se describe la condición de salida.
 `Alt` para indicar una condición _IF_, y se describen las condiciones que escenifican las opciones.
+
+El **Ciclo** mostraría como se repiten los mensajes entre los Participantes mientras se mantiene la condición. En este ejemplo la condición es que las fracciones f1 y f2 sean distintas.  
+Mediante IF(`Alt`) mostramos como se podría modelar la verificación d euna regla de negocio sencilla y como se pueden escoger entre mensajes diferentes (`Enhorabuena` o `Inténtalo de nuevo`) dada una condición.
 
 <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/srlopez/RUP/master/ejemplos/fraccion_completo.md&idx=6&t=2" alt=""/>
 
