@@ -16,6 +16,12 @@ Se indican los Requisitos NO Funcionales (**RNF**), tanto los lógicos **RL** (R
 
 Con esto ya podemos empezar a jugar.  
 
+
+## Código de la aplicación
+[Código completo en GitHub](https://github.com/srlopez/javaApuntes)
+
+
+
 ## Modelado de Negocio
 N/A
 
